@@ -16,17 +16,17 @@
 ## Utility screenshot sources
 
 - **Target:** `CT molly Banana`
-  - **Source page title:** Inferno Guide - CS2 Map Callouts & Strategies
-  - **Source page URL:** https://www.csgold.net/en/maps/inferno
-  - **Referenced tutorial block:** `CT: Banana Control After the Update`
+  - **Source page title:** CS2 Inferno Guide to Dominating the Updated Iconic Map
+  - **Source page URL:** https://bo3.gg/articles/cs2-inferno-map-guide
+  - **Referenced section:** `Playing Defense` Banana control with one close incendiary and one deep incendiary
   - **Direct asset URL:** Not identified; retain the source page URL until a direct image URL is verified.
-  - **Screenshot availability:** Remote tutorial preview and page imagery are visible on the source page; no local screenshot is stored.
+  - **Screenshot availability:** Remote article images show the close incendiary and deep incendiary setups; no local screenshot is stored.
   - **Checked:** 2026-07-13
-  - **Map-version note:** CS2 Inferno geometry, callouts, and utility interactions checked for the guide scope on 2026-07-13; re-check before presenting this opening Banana denial setup as current.
+  - **Map-version note:** CS2 Inferno geometry, callouts, and utility interactions checked against the published guide on 2026-07-13; the source supports the close/deep Banana incendiary sequence and intended burn zones, but not a pixel-precise text lineup.
   - **Local reuse permitted:** Not verified.
   - **Status:** Remote source - not stored locally.
   - **Attribution/license or permission basis:** No local copy was made because explicit reuse permission for the source screenshots was not verified.
-  - **Replacement trigger:** Replace this source entry and linked remote reference when verified Banana-control utility timing, geometry, or permitted source availability changes.
+  - **Replacement trigger:** Replace this source entry and linked remote reference when verified CT Banana incendiary timing, burn zones, geometry, or permitted source availability changes.
 
 - **Target:** `T smoke CT/Coffins`
   - **Source page title:** Every smoke you need to know on Inferno in Counter-Strike 2

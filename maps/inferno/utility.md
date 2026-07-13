@@ -16,12 +16,12 @@
 **Timing:** Early defense<br>
 **Purpose:** Denies free Banana and reveals a rush
 
-1. **Start:** Remote source page documents the opening Banana control setup and exact defensive start position for this utility. [Remote source - not stored locally](https://www.csgold.net/en/maps/inferno)
-2. **Aim:** Remote source page documents the early Banana denial lineup and release timing for the opening utility sequence. [Remote source - not stored locally](https://www.csgold.net/en/maps/inferno)
-3. **Result:** Remote source page documents the early Banana denial result that forces Ts to respect the choke and gives CTs the rush read before the re-smoke. [Remote source - not stored locally](https://www.csgold.net/en/maps/inferno)
+1. **Start:** Open from the CT two-player Banana setup at round start. The cited guide uses this B-side opening to throw one close incendiary and one deep incendiary before the HE grenades and the follow-up smoke. [Remote source - not stored locally](https://bo3.gg/articles/cs2-inferno-map-guide)
+2. **Aim:** For the close incendiary, take a small step and release so the fire burns in front of the wall; for the deep incendiary, use another short-step throw at the farther wall so the player at Post Office burns. The source supports those two throw goals, but it does not publish a text-only crosshair landmark on the page. [Remote source - not stored locally](https://bo3.gg/articles/cs2-inferno-map-guide)
+3. **Result:** The close fire blocks the front Banana swing and the deep fire reaches Post Office; after that sequence, one CT can stay on Banana while the other helps A, and if Ts force through you fall back to Car and re-smoke. [Remote source - not stored locally](https://bo3.gg/articles/cs2-inferno-map-guide)
 
 **Fallback:** Fall back to Car and re-smoke
-**Source:** [CSGold — Inferno Guide - CS2 Map Callouts & Strategies](https://www.csgold.net/en/maps/inferno) (checked 2026-07-13; referenced tutorial block: “CT: Banana Control After the Update”)
+**Source:** [bo3.gg — CS2 Inferno Guide to Dominating the Updated Iconic Map](https://bo3.gg/articles/cs2-inferno-map-guide) (checked 2026-07-13; referenced section: “Playing Defense” Banana control with close and deep incendiaries)
 
 ### T smoke CT/Coffins
 
@@ -29,9 +29,9 @@
 **Timing:** B execute<br>
 **Purpose:** Removes the strongest site holds
 
-1. **Start:** Start in Banana at the paired B-execute smoke setup shown on the source page so the CT and Coffins throws can be chained from the choke. [Remote source - not stored locally](https://blast.tv/article/cs2-inferno-smokes)
-2. **Aim:** Use the CT smoke reference from Banana, then the Coffins smoke reference further forward in Banana; both are standard left-click throws on the source page. [Remote source - not stored locally](https://blast.tv/article/cs2-inferno-smokes)
-3. **Result:** The paired smokes block CT and Coffins/Construction so the entry can flash through and plant for Banana. [Remote source - not stored locally](https://blast.tv/article/cs2-inferno-smokes)
+1. **Start:** Set up the B execute from Banana: throw the CT smoke from the first Banana lineup spot, then move farther forward in Banana for the Coffins smoke so the pair lands together on the site hit. [Remote source - not stored locally](https://blast.tv/article/cs2-inferno-smokes)
+2. **Aim:** For CT, look just left of the corner of Church and left-click. For Coffins, aim above the scaffolding at the strip of lights and left-click. [Remote source - not stored locally](https://blast.tv/article/cs2-inferno-smokes)
+3. **Result:** The CT smoke covers CT and the boost position, the Coffins smoke blocks Coffins/Construction, and the pair lets the entry flash through and plant for Banana. [Remote source - not stored locally](https://blast.tv/article/cs2-inferno-smokes)
 
 **Fallback:** Flash through and plant for Banana
 **Source:** [BLAST.tv — Every smoke you need to know on Inferno in Counter-Strike 2](https://blast.tv/article/cs2-inferno-smokes) (checked 2026-07-13; referenced sections: “CT smoke on Inferno in CS2” and “Best B smokes on Inferno in CS2” / Coffins)
