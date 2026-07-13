@@ -7,7 +7,7 @@
 - 15 map folders found: Ancient, Cache, Dust II, Inferno, Mirage, Nuke, Anubis, Train, Vertigo, Overpass, Office, Italy, Boulder, Fachwerk, Shelter.
 - Every map has `README.md`, `offense.md`, `defense.md`, `utility.md`, and `assets/map-overview-source.md`.
 - Ten essential principles found in `general/01-essential-principles.md`.
-- The existing repository-wide Markdown link checker resolved 130 references successfully (reproduced 2026-07-13; no broken-link error).
+- The repository-wide Markdown link checker resolved 141 local references successfully after the Premier rollout (reproduced 2026-07-13; no broken-link error).
 
 ## Content checks
 
@@ -23,6 +23,15 @@
 - The three utility cards in `maps/inferno/utility.md` are remote-source cards and are not stored locally: `CT molly Banana` (`bo3.gg`), `T smoke CT/Coffins` (`BLAST.tv`), and `T smoke Arch or Library` (`BLAST.tv`). Each source note records the source page, checked date, map-version note, remote status, attribution basis, and replacement trigger.
 - Local image targets under `maps/inferno/` resolve; the remote overview target is explicitly recorded as remote in `maps/inferno/assets/map-overview-source.md`.
 - Intentionally pending screenshots: no local utility screenshots are stored because reuse permission was not verified; the three cards retain their remote source-page links until permitted, verified assets become available.
+
+## Premier rollout visual QA
+
+- Rollout files verified for Ancient, Cache, Dust II, Mirage, Nuke, and Anubis: each map has its existing `README.md`, `utility.md`, and `assets/map-overview-source.md` plus a local `assets/positioning-overview.svg` and `assets/utility/README.md`.
+- Six local positioning SVGs were rendered and inspected. Each is explicitly a route-teaching schematic rather than a pixel-perfect radar; Nuke separates surface/upper and lower layers and marks the Secret, Ramp, and Vent transitions.
+- Eighteen utility cards preserve exact target names from their existing utility tables. Every card states Start, Aim, Result, Fallback, and Source, and carries the table's timing and purpose.
+- All eighteen cards retain remote source-page links because local screenshot reuse permission was not verified. No remote screenshot pixels were copied into the hand-authored SVGs.
+- All six source notes record source URLs, checked dates, map-version notes, local/remote status, attribution or permission basis, and replacement triggers. Older incompatible Cache material was excluded, and Anubis cards whose media predates the January 2026 layout change explicitly require practice verification.
+- Baseline checks still find 15 complete map folders, ten essential principles, and no bomb-plant/post-plant regression in the Office, Italy, or Shelter offense/defense plans.
 
 ## Known follow-up
 
