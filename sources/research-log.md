@@ -26,7 +26,13 @@
   **Date checked:** 2026-07-13  
   **Supports:** Cache callout names and map landmarks.
 
+## Visual research — Inferno pilot (2026-07-13)
+
+- **Visual pilot:** Inferno, using the existing `maps/inferno/utility.md` table as the canonical target and purpose source.
+- **Source page checked:** CSGold Inferno map callout and overview page — https://www.csgold.net/en/maps/inferno
+- **Sourced in-game screenshots:** No screenshots were copied or stored locally in Task 1. Future lineup cards may retain a remote source-page link until the image is verified and a clear attribution/license or permission basis permits local storage.
+- **Hand-authored SVG annotations:** Positioning diagrams will be authored locally as deterministic SVG annotations; they are editorial overlays and are distinct from sourced in-game screenshots.
+
 ## Editorial synthesis
 
 The guide turns stable Counter-Strike principles into beginner-sized playbooks. Claims such as “control mid” or “smoke CT” are not presented as magic buttons: every recommendation includes the reason for the action, the teammate follow-up, and a fallback if the round changes.
-
