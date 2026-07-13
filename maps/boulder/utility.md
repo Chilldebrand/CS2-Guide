@@ -18,9 +18,9 @@ The three cards below are intentionally source-linked and pending. The current c
 **Timing:** Default<br>
 **Purpose:** Removes the longest sightline while the team learns the route
 
-1. **Start:** Pending verified current-build geometry; no fixed start position is claimed. [Current map source](https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989)
+1. **Start:** Pending current-build geometry that still needs practice verification; no fixed start position is claimed. [Current map source](https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989)
 2. **Aim:** Pending a source that documents the current central route and grenade behavior; do not infer an aim point from workshop screenshots. [Current map source](https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989)
-3. **Result:** Intended purpose only: remove the longest verified central sightline while the team learns the route. This is not a verified lineup result. [Current map source](https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989)
+3. **Result:** Intended purpose only: remove the longest central sightline while the team learns the route. This is not an authoritative lineup result and still needs practice verification. [Current map source](https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989)
 
 **Fallback:** Take space slowly
 **Source:** [Steam Workshop - Boulder](https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989) (checked 2026-07-13; current creator page; precise lineup pending)
@@ -31,9 +31,9 @@ The three cards below are intentionally source-linked and pending. The current c
 **Timing:** Execute<br>
 **Purpose:** Creates a tradeable duel
 
-1. **Start:** Pending verified current-build site-entry geometry; no fixed start position is claimed. [Current map source](https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989)
+1. **Start:** Pending current-build site-entry geometry that still needs practice verification; no fixed start position is claimed. [Current map source](https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989)
 2. **Aim:** Pending a source that documents a safe pop path and teammate visibility; no throw type is claimed. [Current map source](https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989)
-3. **Result:** Intended purpose only: create a tradeable site-entry duel after teammates verify the flash in practice. This is not a verified lineup result. [Current map source](https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989)
+3. **Result:** Intended purpose only: create a tradeable site-entry duel after teammates verify the flash in practice. This is not an authoritative lineup result. [Current map source](https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989)
 
 **Fallback:** Do not enter alone
 **Source:** [Steam Workshop - Boulder](https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989) (checked 2026-07-13; current creator page; precise lineup pending)
@@ -44,9 +44,9 @@ The three cards below are intentionally source-linked and pending. The current c
 **Timing:** Execute<br>
 **Purpose:** Flushes the common anchor
 
-1. **Start:** Pending verified current-build close-cover geometry; no fixed start position is claimed. [Current map source](https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989)
+1. **Start:** Pending current-build close-cover geometry that still needs practice verification; no fixed start position is claimed. [Current map source](https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989)
 2. **Aim:** Pending a source that proves the landing and spread; no grenade behavior is inferred from the map screenshots. [Current map source](https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989)
-3. **Result:** Intended purpose only: flush the verified close anchor after the team tests the throw on the installed build. This is not a verified lineup result. [Current map source](https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989)
+3. **Result:** Intended purpose only: flush the close anchor after the team tests the throw on the installed build. This is not an authoritative lineup result and still needs practice verification. [Current map source](https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989)
 
 **Fallback:** Clear the next box with a flash
 **Source:** [Steam Workshop - Boulder](https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989) (checked 2026-07-13; current creator page; precise lineup pending)

@@ -45,6 +45,7 @@
 - Train, Vertigo, and Overpass retain local positioning SVGs, utility asset contracts, and three canonical visual cards each.
 - Boulder and Fachwerk retain three source-linked pending cards each and now also have explicit utility asset README contracts to document how future local visual assets must be handled.
 - Boulder still lacks a current published callout topology, and Fachwerk's available callout article still predates the creator build updated 2026-07-13.
+- Boulder and Fachwerk intentionally remain pending with no authoritative local `positioning-overview.svg`.
 - No guessed route graph, local screenshot, or unsupported lineup mechanics were added for Boulder or Fachwerk.
 
 ## Hostage-map visual QA
@@ -54,13 +55,13 @@
 - Shelter continues to keep the sourced Cat Adoptions/Breezeway/Courtyard/Exterior Kennels/Dock route to Playroom distinct from the Yard/Bark Barn route to Pool.
 - Hostage terminology remained clean in the final audit.
 
-## Representative Markdown-size render QA
+## Competitive-only local SVG render QA
 
-- Representative local SVGs were rendered at `900 x 580` inside a `1020 x 700` browser viewport through a temporary localhost preview: `maps/inferno/assets/positioning-overview.svg`, `maps/ancient/assets/positioning-overview.svg`, `maps/train/assets/positioning-overview.svg`, and `maps/office/assets/positioning-overview.svg`.
-- The first Task 7 render pass exposed label/role-marker collisions on Inferno (`Banana`, `Arch`, `Car`) and Ancient (`Mid`, `A Main`, `B Ramp`).
-- Corrections were limited to label-position nudges in `maps/inferno/assets/positioning-overview.svg` and `maps/ancient/assets/positioning-overview.svg`. No route geometry, callout relationships, utility claims, or tactical meaning changed.
-- The final browser-side bounding-box check found zero text-circle overlaps and zero clipped text across all four representative `900 x 580` renders.
-- Visual inspection confirmed readable labels, consistent contrast, unclipped SVG content, intact legends, and useful hierarchy between the schematic, markers, arrows, teaching read, legend, and round rule.
+- The six Competitive-only local positioning SVGs were rendered at `900 x 580` inside a `1020 x 700` browser viewport through a temporary localhost preview: `maps/train/assets/positioning-overview.svg`, `maps/vertigo/assets/positioning-overview.svg`, `maps/overpass/assets/positioning-overview.svg`, `maps/office/assets/positioning-overview.svg`, `maps/italy/assets/positioning-overview.svg`, and `maps/shelter/assets/positioning-overview.svg`.
+- Each of the six renders was visually inspected at Markdown-like size for label readability, route clarity, contrast, intact legends, unclipped SVG bounds, and useful teaching hierarchy.
+- A follow-up browser-side bounding-box check rechecked all six files and found zero label/role-marker collisions and zero clipped text across the final `900 x 580` renders.
+- Final per-map readout: Train remained clear after the Yard/marker cleanup; Vertigo retained readable floor-transition labeling; Overpass retained readable split-route labeling; Office, Italy, and Shelter retained clean hostage-route labeling and legible safe-exit hierarchy.
+- Boulder and Fachwerk remain intentionally pending in this section as well because there is still no authoritative current local SVG source for their route geometry.
 
 ## Known follow-up
 

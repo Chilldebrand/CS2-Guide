@@ -6,7 +6,7 @@
 - Local checkout: `C:\Users\hilde\OneDrive\Documents\CS2 Guide\CS2-Guide`
 - Branch: `main`
 - Most recent pre-handoff code commit: `7cc2c1f fix: verify Competitive-only SVG rendering`
-- Final QA status and verification evidence are recorded in `docs/qa-report.md` and `.superpowers/sdd/task-7-report.md`.
+- Final QA status and durable verification evidence are recorded in `docs/qa-report.md`.
 
 ## What is already built
 
@@ -30,7 +30,7 @@ The repository contains a folder-based Markdown guide for new players focused on
 - 171 local Markdown/image targets resolved with no broken local references.
 - 15 dated map visual/source notes with required source metadata.
 - 45 visual cards checked against their utility-table targets; every card contains Start, Aim, Result, Fallback, and Source labels.
-- Representative `900 x 580` render QA passed for Inferno, Ancient, Train, and Office after final label-collision cleanup in Inferno and Ancient.
+- `docs/qa-report.md` carries the durable `900 x 580` render evidence for Train, Vertigo, Overpass, Office, Italy, and Shelter, along with the intentionally pending Boulder/Fachwerk note.
 - Hostage terminology check passed.
 - Every map utility table has five purpose-first entries with timing, thrower, purpose, and follow-up/fallback.
 
@@ -60,4 +60,4 @@ Maintenance priorities:
 - The repository is nested under the workspace folder; work inside `CS2-Guide`, not the outer workspace root.
 - `.superpowers/` is ignored scratch state used by the planning workflow.
 - Do not use destructive Git commands such as reset/checkout unless explicitly requested.
-- After any future visual maintenance, re-run the structural checks in `docs/qa-report.md`, update the QA report and source notes, commit, and then push to `origin/main`.
+- After any future visual maintenance triggered by map-pool, geometry/callout, or remote-source changes, re-run the structural checks in `docs/qa-report.md`, update the QA report and source notes, commit, and then push to `origin/main`.
