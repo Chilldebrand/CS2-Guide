@@ -50,6 +50,14 @@
 - All three source notes record current source URLs, checked dates, map-version context, local/remote status, attribution/permission basis, and replacement triggers.
 - The prescribed hostage terminology guard is run before the hostage-map commit and again in the final baseline pass.
 
+## Task 6 Markdown-size rendered visual QA
+
+- Train, Vertigo, Overpass, Office, Italy, and Shelter were served from a temporary Node `http` server at `http://127.0.0.1:8126/`, embedded inline in a local HTML preview, and rendered in the in-app browser at `900 x 580` inside a `1020 x 700` viewport. Temporary PNG captures were written outside the repository under `%TEMP%` as `task-6-<map>-900x580.png`.
+- The first render exposed role-marker collisions with labels on all six maps plus an arrow crossing Train's Yard label. The affected markers and the Yard label were repositioned without changing route geometry or tactical meaning.
+- The final browser-side bounding-box check found zero label/role-marker intersections and no clipped text across all six `900 x 580` renders. Every render retained its title, description, legend, full diagram boundary, and right-side teaching hierarchy.
+- Visual inspection confirmed readable labels, clear arrow direction, complete legends, consistent contrast, and a useful hierarchy between the map schematic, role markers, route arrows, teaching read, legend, and round rule.
+- Inspected files: `maps/train/assets/positioning-overview.svg`, `maps/vertigo/assets/positioning-overview.svg`, `maps/overpass/assets/positioning-overview.svg`, `maps/office/assets/positioning-overview.svg`, `maps/italy/assets/positioning-overview.svg`, and `maps/shelter/assets/positioning-overview.svg`.
+
 ## Known follow-up
 
 Remote overview images remain in use where local reuse permission was not verified. Boulder and Fachwerk positioning diagrams remain intentionally pending until current geometry sources support them; all local and future remote visuals should be rechecked against the installed map version after relevant map updates.
