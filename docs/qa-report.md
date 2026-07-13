@@ -7,7 +7,7 @@
 - 15 map folders found: Ancient, Cache, Dust II, Inferno, Mirage, Nuke, Anubis, Train, Vertigo, Overpass, Office, Italy, Boulder, Fachwerk, Shelter.
 - Every map has `README.md`, `offense.md`, `defense.md`, `utility.md`, and `assets/map-overview-source.md`.
 - Ten essential principles found in `general/01-essential-principles.md`.
-- 130 internal Markdown links resolved successfully.
+- The existing repository-wide Markdown link checker resolved 130 references successfully (reproduced 2026-07-13; no broken-link error).
 
 ## Content checks
 
