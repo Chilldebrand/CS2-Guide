@@ -36,6 +36,15 @@
 - **Lineup source record:** `T smoke CT/Coffins` — BLAST.tv, *Every smoke you need to know on Inferno in Counter-Strike 2* (`https://blast.tv/article/cs2-inferno-smokes`), checked 2026-07-13; remote source - not stored locally; screenshot availability visible on source page for both CT and Coffins throws, but local reuse permission not verified; map-version note: re-check B-execute landmarks and smoke coverage before treating the lineup as current; replacement trigger: replace when verified execute landmarks or a permitted source changes.
 - **Lineup source record:** `T smoke Arch or Library` — BLAST.tv, *Every smoke you need to know on Inferno in Counter-Strike 2* (`https://blast.tv/article/cs2-inferno-smokes`), checked 2026-07-13; remote source - not stored locally; screenshot availability visible on source page for Arch and Library throws, but local reuse permission not verified; map-version note: re-check A-wrap landmarks and smoke coverage before treating the lineup as current; replacement trigger: replace when verified A-wrap landmarks or a permitted source changes.
 
+## Visual research - Premier rollout (2026-07-13)
+
+### Ancient and Cache
+
+- **Ancient overview and positioning:** CSGold Ancient map page (`https://www.csgold.net/en/maps/ancient`), checked 2026-07-13. The local SVG is a hand-authored route schematic based on the verified callout overview and existing playbooks; no source pixels were copied.
+- **Ancient utility cards:** `T smoke Top Mid` and `T smoke Donut from Mid` use GameRiv's *Counter-Strike 2 Essential Smoke Lineups for Ancient* (`https://gameriv.com/counter-strike-2-essential-smoke-lineups-for-ancient/`); `T smoke Temple from A Main` uses GameNoter's *CS2 Ancient A Site Entry Utility Guide* (`https://gamenoter.com/blog/CS2_Ancient_A_Site_Entry_Utility_Guide`). Checked 2026-07-13; remote sources - not stored locally; reuse permission not verified.
+- **Cache overview and positioning:** Hotspawn's 2026 Cache callout guide (`https://www.hotspawn.com/counter-strike/guide/cs2-cache-callouts`) and Valve's return note (`https://www.counter-strike.net/newsentry/508486359454843045`), checked 2026-07-13. The local SVG records the verified three-lane Mid/Highway/Vent/Connector route order; no source pixels were copied.
+- **Cache utility cards:** `T molly Forklift` uses CSNADES.gg (`https://csnades.gg/cache/molotovs/forklift-from-a-main`); `T smoke Heaven for B` and `CT smoke B Main on retake` use Profilerr's *Best Cache Smokes in CS2* (`https://profilerr.net/cache-smokes-in-cs2/`). Checked 2026-07-13; remote sources - not stored locally; reuse permission not verified. Older incompatible Cache guides were not used.
+
 ## Editorial synthesis
 
 The guide turns stable Counter-Strike principles into beginner-sized playbooks. Claims such as “control mid” or “smoke CT” are not presented as magic buttons: every recommendation includes the reason for the action, the teammate follow-up, and a fallback if the round changes.

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 760" role="img" aria-labelledby="title desc">
+  <title id="title">Cache positioning route teaching diagram</title>
+  <desc id="desc">A schematic Cache route diagram showing Mid branches through Highway and Vent, direct A Main and B Main pressure, CT anchors and Connector support, yellow decision zones, and white trade and rotation arrows. Route order is verified against the cited 2026 overview; shapes are not to scale.</desc>
+  <defs>
+    <style>.bg{fill:#0f172a}.panel{fill:#111827;stroke:#334155;stroke-width:2}.route{fill:#374151;stroke:#cbd5e1;stroke-width:2.5}.site{fill:#4b5563;stroke:#e5e7eb;stroke-width:3}.label{fill:#f8fafc;font:700 17px Arial,sans-serif}.small{fill:#cbd5e1;font:15px Arial,sans-serif}.head{fill:#f8fafc;font:700 22px Arial,sans-serif}.ct{fill:#3b82f6;stroke:#dbeafe;stroke-width:3}.t{fill:#ef4444;stroke:#fee2e2;stroke-width:3}.zone{fill:#facc15;fill-opacity:.28;stroke:#fde68a;stroke-width:3}.arrow{fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#a)}.link{fill:none;stroke:#64748b;stroke-width:12;stroke-linecap:round}.legend{fill:#f8fafc;font:16px Arial,sans-serif}</style>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10z" fill="#fff"/></marker>
+  </defs>
+  <rect class="bg" width="1180" height="760"/><rect class="panel" x="36" y="36" width="824" height="688" rx="18"/><rect class="panel" x="884" y="36" width="268" height="688" rx="18"/>
+  <text class="head" x="68" y="82">CACHE · ROUTE SCHEMATIC</text><text class="small" x="68" y="108">Released 2026 route order; teaching layout, not to scale</text>
+  <path class="link" d="M150 610 310 500 450 390 590 310 740 210"/><path class="link" d="M450 390 590 470 730 550"/><path class="link" d="M150 610 250 280 370 210 740 210"/><path class="link" d="M150 610 320 650 520 610 730 550"/><path class="link" d="M760 360 590 310 450 390"/><path class="link" d="M760 360 740 210M760 360 730 550"/>
+  <rect class="route" x="88" y="578" width="124" height="64" rx="10"/><text class="label" x="118" y="616">T Spawn</text>
+  <rect class="route" x="252" y="468" width="116" height="64" rx="10"/><text class="label" x="280" y="506">Garage</text>
+  <rect class="route" x="394" y="358" width="112" height="64" rx="10"/><text class="label" x="428" y="396">Mid</text>
+  <rect class="route" x="532" y="278" width="118" height="64" rx="10"/><text class="label" x="553" y="316">Highway</text>
+  <rect class="route" x="532" y="438" width="118" height="64" rx="10"/><text class="label" x="570" y="476">Vent</text>
+  <rect class="site" x="686" y="174" width="110" height="72" rx="12"/><text class="label" x="698" y="196">A SITE</text>
+  <rect class="site" x="676" y="514" width="110" height="72" rx="12"/><text class="label" x="688" y="536">B SITE</text>
+  <rect class="route" x="194" y="248" width="116" height="64" rx="10"/><text class="label" x="220" y="286">A Main</text>
+  <rect class="route" x="260" y="618" width="116" height="64" rx="10"/><text class="label" x="285" y="656">B Main</text>
+  <rect class="route" x="690" y="328" width="140" height="64" rx="10"/><text class="label" x="704" y="366">Connector</text>
+  <rect class="route" x="704" y="96" width="112" height="64" rx="10"/><text class="label" x="724" y="134">CT Halls</text>
+  <ellipse class="zone" cx="450" cy="390" rx="88" ry="58"/><ellipse class="zone" cx="590" cy="470" rx="70" ry="48"/>
+  <path class="arrow" d="M180 590 C270 540 350 470 430 410"/><path class="arrow" d="M470 372 C516 348 550 326 574 314"/><path class="arrow" d="M470 408 C516 432 552 454 574 466"/><path class="arrow" d="M184 572 C208 490 228 386 250 300"/><path class="arrow" d="M190 626 C330 680 520 650 700 564"/>
+  <circle class="t" cx="480" cy="410" r="14"/><circle class="t" cx="292" cy="300" r="14"/><circle class="t" cx="520" cy="610" r="14"/>
+  <circle class="ct" cx="764" cy="217" r="14"/><circle class="ct" cx="754" cy="557" r="14"/><circle class="ct" cx="812" cy="360" r="14"/>
+  <text class="label" x="698" y="196">A SITE</text><text class="label" x="688" y="536">B SITE</text>
+  <text class="head" x="912" y="84">Teaching read</text><text class="small" x="912" y="118">Mid branches to Highway</text><text class="small" x="912" y="142">for A or Vent/Checkers</text><text class="small" x="912" y="166">for B. Main pressure keeps</text><text class="small" x="912" y="190">both anchors occupied.</text>
+  <text class="head" x="912" y="264">Legend</text><circle class="ct" cx="930" cy="306" r="12"/><text class="legend" x="958" y="312">CT hold / support</text><circle class="t" cx="930" cy="350" r="12"/><text class="legend" x="958" y="356">T pressure point</text><rect class="zone" x="916" y="386" width="28" height="22" rx="6"/><text class="legend" x="958" y="403">Decision zone</text><line class="arrow" x1="916" y1="446" x2="948" y2="446"/><text class="legend" x="958" y="452">Trade / rotation</text>
+  <text class="head" x="912" y="526">Round rule</text><text class="small" x="912" y="560">Win Mid with support or</text><text class="small" x="912" y="584">concede it cleanly.</text><text class="small" x="912" y="620">Keep Main pairs close</text><text class="small" x="912" y="644">enough to trade.</text>
+</svg>

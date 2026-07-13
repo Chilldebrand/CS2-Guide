@@ -8,11 +8,22 @@
 
 [Visual/source note](assets/map-overview-source.md)
 
+## Positioning visual
+
+![Cache route teaching diagram showing Mid pressure into Highway or Vent, A Main and B Main spacing, CT anchors, and Connector rotations](assets/positioning-overview.svg)
+
+[Positioning source note](assets/map-overview-source.md) · [Visual utility cards](utility.md#visual-lineups)
+
+1. Starting roles: Ts open with A Main and B Main presence, two Mid/Garage players, and a flexible bomb carrier; CTs keep site anchors while the Mid player preserves a Connector retreat.
+2. Information trigger: won Mid space opens Highway toward A or Vent toward Checkers/B; if Mid is denied, the Main players hold tradeable spacing instead of entering alone.
+3. Rotation/trade path: the route arrows show the Mid branches through Highway and Vent, plus the direct A Main and B Main entries; CT support moves through Connector or CT Halls after the site call is reliable.
+
 ## How to use this folder
 
 - [Offense plan](offense.md)
 - [Defense plan](defense.md)
 - [Utility priorities](utility.md)
+- [Visual utility cards](utility.md#visual-lineups)
 
 ## Win condition
 
