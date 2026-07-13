@@ -70,6 +70,13 @@
 - **Overpass overview and positioning:** CSGold Overpass map page (`https://www.csgold.net/en/maps/overpass`), checked 2026-07-13. The local SVG keeps Bathrooms/Long and Monster/Water as separate site approaches and marks Connector as information/rotation; no source pixels were copied.
 - **Overpass utility cards:** `T smoke Heaven/Bank for A` uses CSGold's Bank-from-Bathrooms entry (`https://www.csgold.net/en/maps/overpass`); `T smoke CT/Heaven for B` uses CSNADES.gg's `Heaven from Water` (`https://csnades.gg/overpass/smokes/heaven-from-water`); `CT molly Monster` is purpose-only and source-linked to the verified Monster choke because no current fixed molotov lineup was verified. Checked 2026-07-13; remote sources - not stored locally; no smoke mechanics were repurposed as molotov instructions.
 
+### Boulder and Fachwerk
+
+- **Boulder geometry decision:** The creator's Steam Workshop page (`https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989`) was checked 2026-07-13 and reports a 5v5 defusal build updated 2026-07-12. It does not publish a reliable callout overview or route graph. The positioning diagram and exact lineup visuals remain pending; no local SVG or screenshot was created.
+- **Boulder pending cards:** `T central smoke`, `T site-entry flash`, and `T molly close site cover` preserve the canonical table timing, purpose, and fallback but explicitly claim no fixed start, aim, throw type, landing, or grenade behavior.
+- **Fachwerk geometry decision:** The creator's Steam Workshop page (`https://steamcommunity.com/sharedfiles/filedetails/?id=3442040035`) reports a build updated 2026-07-13. BO3.gg's callout guide (`https://bo3.gg/articles/cs2-fachwerk-callouts-complete-map-guide`) was published 2026-07-11 and predates that build. The positioning diagram and exact lineup visuals remain pending; no local SVG or screenshot was created.
+- **Fachwerk pending cards:** `T transition smoke`, `T indoor flash`, and `T molly common recess` preserve the canonical table timing, purpose, and fallback but explicitly claim no fixed start, aim, throw type, landing, or grenade behavior.
+
 ## Editorial synthesis
 
 The guide turns stable Counter-Strike principles into beginner-sized playbooks. Claims such as “control mid” or “smoke CT” are not presented as magic buttons: every recommendation includes the reason for the action, the teammate follow-up, and a fallback if the round changes.

@@ -33,6 +33,14 @@
 - All six source notes record source URLs, checked dates, map-version notes, local/remote status, attribution or permission basis, and replacement triggers. Older incompatible Cache material was excluded, and Anubis cards whose media predates the January 2026 layout change explicitly require practice verification.
 - Baseline checks still find 15 complete map folders, ten essential principles, and no bomb-plant/post-plant regression in the Office, Italy, or Shelter offense/defense plans.
 
+## Competitive-only community-map visual QA
+
+- Boulder and Fachwerk now have source-linked positioning status sections and three canonical utility-purpose cards each.
+- Both positioning diagrams remain intentionally pending. Boulder lacks a current published callout topology; Fachwerk's available callout article predates the creator build updated 2026-07-13.
+- No `positioning-overview.svg`, utility screenshot, or guessed route graph was created for either map.
+- All six pending cards preserve exact target names, timing, purpose, and fallback values from their existing utility tables and explicitly avoid fixed start, aim, throw type, landing, or grenade-behavior claims.
+- Both source notes record current source URLs, checked dates, map-version/update context, pending status, attribution/permission basis, and replacement triggers.
+
 ## Known follow-up
 
 The first pass uses remote overview images where reliable sources were available. The next visual pass should download or recreate locally annotated diagrams, especially for Boulder, Fachwerk, and Shelter, and then verify every image against the installed map version.
