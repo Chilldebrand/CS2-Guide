@@ -15,12 +15,43 @@
 
 ## Utility screenshot sources
 
-- **Source page:** https://www.csgold.net/en/maps/inferno
-- **Direct asset URL:** Not identified; retain the source page URL until a direct image URL is verified.
-- **Checked:** 2026-07-13
-- **Map-version note:** CS2 Inferno geometry, callouts, and utility interactions checked for the guide scope on 2026-07-13; re-check before presenting a sourced screenshot as current.
-- **Replacement trigger:** Replace this source entry and any linked utility screenshot when verified map geometry, callouts, or grenade interactions change, or when a better permitted source becomes available.
-- **Status:** Remote source pending; no utility screenshot is stored locally in Task 1.
-- **Attribution/license or permission basis:** No locally stored image exists in Task 1, so no image has been copied without a verified attribution and permission basis.
+- **Target:** `CT molly Banana`
+  - **Source page title:** Inferno Guide - CS2 Map Callouts & Strategies
+  - **Source page URL:** https://www.csgold.net/en/maps/inferno
+  - **Referenced tutorial block:** `CT: Banana Control After the Update`
+  - **Direct asset URL:** Not identified; retain the source page URL until a direct image URL is verified.
+  - **Screenshot availability:** Remote tutorial preview and page imagery are visible on the source page; no local screenshot is stored.
+  - **Checked:** 2026-07-13
+  - **Map-version note:** CS2 Inferno geometry, callouts, and utility interactions checked for the guide scope on 2026-07-13; re-check before presenting this opening Banana denial setup as current.
+  - **Local reuse permitted:** Not verified.
+  - **Status:** Remote source - not stored locally.
+  - **Attribution/license or permission basis:** No local copy was made because explicit reuse permission for the source screenshots was not verified.
+  - **Replacement trigger:** Replace this source entry and linked remote reference when verified Banana-control utility timing, geometry, or permitted source availability changes.
+
+- **Target:** `T smoke CT/Coffins`
+  - **Source page title:** Every smoke you need to know on Inferno in Counter-Strike 2
+  - **Source page URL:** https://blast.tv/article/cs2-inferno-smokes
+  - **Referenced sections:** `CT smoke on Inferno in CS2`; `Best B smokes on Inferno in CS2` / Coffins smoke
+  - **Direct asset URL:** Not identified; retain the source page URL until a direct image URL is verified.
+  - **Screenshot availability:** Stage screenshots are embedded on the source page for both CT and Coffins smoke lineups; no local screenshots are stored.
+  - **Checked:** 2026-07-13
+  - **Map-version note:** CS2 Inferno geometry, callouts, and utility interactions checked against the published source page on 2026-07-13; re-check before presenting this B-execute pair as current.
+  - **Local reuse permitted:** Not verified.
+  - **Status:** Remote source - not stored locally.
+  - **Attribution/license or permission basis:** No local copy was made because explicit reuse permission for the source screenshots was not verified.
+  - **Replacement trigger:** Replace this source entry and linked remote reference when verified B-site execute geometry, lineup landmarks, or permitted source availability changes.
+
+- **Target:** `T smoke Arch or Library`
+  - **Source page title:** Every smoke you need to know on Inferno in Counter-Strike 2
+  - **Source page URL:** https://blast.tv/article/cs2-inferno-smokes
+  - **Referenced section:** `A wrap smokes on Inferno in CS2`
+  - **Direct asset URL:** Not identified; retain the source page URL until a direct image URL is verified.
+  - **Screenshot availability:** Stage screenshots are embedded on the source page for the Arch and Library smoke lineups; no local screenshots are stored.
+  - **Checked:** 2026-07-13
+  - **Map-version note:** CS2 Inferno geometry, callouts, and utility interactions checked against the published source page on 2026-07-13; re-check before presenting this A-split smoke as current.
+  - **Local reuse permitted:** Not verified.
+  - **Status:** Remote source - not stored locally.
+  - **Attribution/license or permission basis:** No local copy was made because explicit reuse permission for the source screenshots was not verified.
+  - **Replacement trigger:** Replace this source entry and linked remote reference when verified A-wrap landmarks, lineup landmarks, or permitted source availability changes.
 
 The positioning diagram and any future utility screenshots must record their own source page, direct asset URL when different, checked date, map-version note, status, replacement trigger, and attribution/license or permission basis.
