@@ -5,6 +5,7 @@ Lineup asset names use `<map>-<side>-<grenade>-<target>-<stage>`, where `<stage>
 Each lineup card must identify:
 
 - the exact target from `maps/inferno/utility.md`;
+- purpose and timing copied from the exact target row in `maps/inferno/utility.md`;
 - start position, aim reference, and throw type;
 - landing/coverage result;
 - teammate action enabled;
