@@ -8,11 +8,22 @@
 
 [Visual/source note](assets/map-overview-source.md)
 
+## Positioning visual
+
+![Office hostage-rescue teaching diagram showing attacker main and side approaches, defender room isolation, the hostage room, and the protected safe-exit route back to rescue](assets/positioning-overview.svg)
+
+[Positioning source note](assets/map-overview-source.md) · [Visual utility cards](utility.md#visual-lineups)
+
+1. Starting roles: attackers keep a main-hall trade pair, a side-route pair, and a flexible escort; defenders isolate the hostage room with two tradeable angles and one rescue-route helper.
+2. Information trigger: confirmed room access starts the rescue decision; if the return hall is not clear, the carrier waits while the escort checks the safe exit.
+3. Rescue/trade path: main and side approaches converge only at the room, then the protected escort route returns through cleared halls to the rescue zone while defenders delay from a second angle instead of chasing.
+
 ## How to use this folder
 
 - [Attacker plan](offense.md)
 - [Defender plan](defense.md)
 - [Utility priorities](utility.md)
+- [Visual utility cards](utility.md#visual-lineups)
 
 ## Win condition
 

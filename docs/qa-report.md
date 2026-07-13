@@ -7,7 +7,7 @@
 - 15 map folders found: Ancient, Cache, Dust II, Inferno, Mirage, Nuke, Anubis, Train, Vertigo, Overpass, Office, Italy, Boulder, Fachwerk, Shelter.
 - Every map has `README.md`, `offense.md`, `defense.md`, `utility.md`, and `assets/map-overview-source.md`.
 - Ten essential principles found in `general/01-essential-principles.md`.
-- The repository-wide Markdown link checker resolved 141 local references successfully after the Premier rollout (reproduced 2026-07-13; no broken-link error).
+- The repository-wide Markdown link checker resolved 171 local references successfully after the Competitive-only rollout (reproduced 2026-07-13; no broken-link error).
 
 ## Content checks
 
@@ -41,6 +41,15 @@
 - All six pending cards preserve exact target names, timing, purpose, and fallback values from their existing utility tables and explicitly avoid fixed start, aim, throw type, landing, or grenade-behavior claims.
 - Both source notes record current source URLs, checked dates, map-version/update context, pending status, attribution/permission basis, and replacement triggers.
 
+## Hostage-map visual QA
+
+- Office, Italy, and Shelter each have a local hand-authored `assets/positioning-overview.svg`, an `assets/utility/README.md` contract, a positioning entry point in the map README, and three canonical purpose-first utility cards.
+- The diagrams use attacker/defender labels and show hostage-room access, room isolation, rescue routes, and safe exits. Shelter keeps the sourced Cat Adoptions/Breezeway/Courtyard/Exterior Kennels/Dock route to Playroom distinct from the Yard/Bark Barn route to Pool.
+- Italy's selected defender HE card carries the table's explicit anti-rush timing. Office and Shelter include return-route smoke cards that break escort cover without introducing unsupported fixed throws.
+- All nine cards preserve exact target names, timing, purpose, and fallback values from their existing utility tables. Callout-only sources are not treated as proof of start positions, pixel aims, throw inputs, bounces, timing, coverage, or damage.
+- All three source notes record current source URLs, checked dates, map-version context, local/remote status, attribution/permission basis, and replacement triggers.
+- The prescribed hostage terminology guard is run before the hostage-map commit and again in the final baseline pass.
+
 ## Known follow-up
 
-The first pass uses remote overview images where reliable sources were available. The next visual pass should download or recreate locally annotated diagrams, especially for Boulder, Fachwerk, and Shelter, and then verify every image against the installed map version.
+Remote overview images remain in use where local reuse permission was not verified. Boulder and Fachwerk positioning diagrams remain intentionally pending until current geometry sources support them; all local and future remote visuals should be rechecked against the installed map version after relevant map updates.

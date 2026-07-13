@@ -77,6 +77,15 @@
 - **Fachwerk geometry decision:** The creator's Steam Workshop page (`https://steamcommunity.com/sharedfiles/filedetails/?id=3442040035`) reports a build updated 2026-07-13. BO3.gg's callout guide (`https://bo3.gg/articles/cs2-fachwerk-callouts-complete-map-guide`) was published 2026-07-11 and predates that build. The positioning diagram and exact lineup visuals remain pending; no local SVG or screenshot was created.
 - **Fachwerk pending cards:** `T transition smoke`, `T indoor flash`, and `T molly common recess` preserve the canonical table timing, purpose, and fallback but explicitly claim no fixed start, aim, throw type, landing, or grenade behavior.
 
+### Office, Italy, and Shelter
+
+- **Office overview and positioning:** CSGold Office (`https://www.csgold.net/en/maps/office`) and CSNADES.gg Office Callouts (`https://csnades.gg/office/callouts`), checked 2026-07-13. The local SVG uses attacker/defender roles, separate Main Hall/Side Hall access, hostage-room isolation, and a safe-exit route to rescue; no source pixels were copied.
+- **Office utility cards:** `Attacker smoke main hallway`, `Attacker flash hostage doorway`, and `Defender smoke rescue hallway` preserve the canonical table values. The callout source proves route context only, so the cards claim no fixed start, pixel aim, throw type, bounce, timing, or coverage.
+- **Italy overview and positioning:** CSGold Italy (`https://www.csgold.net/en/maps/italy`) and CSNADES.gg Italy Callouts (`https://csnades.gg/italy/callouts`), checked 2026-07-13. The local SVG uses attacker/defender roles, separate Long Alley and Upper/Balcony access, hostage-room isolation, and a protected return lane; no source pixels were copied.
+- **Italy utility cards:** `Attacker smoke long alley`, `Attacker flash upper route`, and `Defender HE balcony/alcove` preserve the canonical table values and cover room access plus anti-rush intent. The cards claim no fixed start, pixel aim, throw type, bounce, timing, coverage, or damage value.
+- **Shelter overview and positioning:** The creator page (`https://steamcommunity.com/sharedfiles/filedetails/?id=3737179295`) and current BO3.gg callout guide (`https://bo3.gg/articles/cs2-shelter-callouts-complete-map-guide`), checked 2026-07-13. The local SVG records Cat Adoptions/Breezeway/Courtyard/Exterior Kennels/Dock-to-Playroom and Yard/Bark Barn-to-Pool access plus safe-exit decisions; no source pixels were copied.
+- **Shelter utility cards:** `Attacker smoke approach corridor`, `Attacker flash hostage doorway`, and `Defender smoke return corridor` preserve the canonical table values. The sources prove room and corridor context only, so the cards claim no fixed grenade mechanics.
+
 ## Editorial synthesis
 
 The guide turns stable Counter-Strike principles into beginner-sized playbooks. Claims such as “control mid” or “smoke CT” are not presented as magic buttons: every recommendation includes the reason for the action, the teammate follow-up, and a fallback if the round changes.
