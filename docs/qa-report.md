@@ -5,59 +5,63 @@
 ## Structural checks
 
 - 15 map folders found: Ancient, Cache, Dust II, Inferno, Mirage, Nuke, Anubis, Train, Vertigo, Overpass, Office, Italy, Boulder, Fachwerk, Shelter.
-- Every map has `README.md`, `offense.md`, `defense.md`, `utility.md`, and `assets/map-overview-source.md`.
+- Every map has `README.md`, `offense.md`, `defense.md`, `utility.md`, `assets/map-overview-source.md`, and `assets/utility/README.md`.
+- 13 local `positioning-overview.svg` files are present: Inferno, Ancient, Cache, Dust II, Mirage, Nuke, Anubis, Train, Vertigo, Overpass, Office, Italy, and Shelter.
+- Boulder and Fachwerk intentionally remain without `positioning-overview.svg` because current source material still does not justify a reliable local route diagram.
 - Ten essential principles found in `general/01-essential-principles.md`.
-- The repository-wide Markdown link checker resolved 171 local references successfully after the Competitive-only rollout (reproduced 2026-07-13; no broken-link error).
+- The repository-wide Markdown/image audit resolved 171 local targets successfully (158 local links plus 13 local image targets; no broken local references).
 
 ## Content checks
 
-- Office, Italy, and Shelter were checked for misleading bombsite, plant, and post-plant instructions; none were found.
-- Every map source note includes a URL and the date checked.
-- Twelve map READMEs embed remote overview/callout images; Boulder, Fachwerk, and Shelter are intentionally marked as visual-source pending because their current community-map diagrams need a separate verification pass.
-- Every map utility table has five entries and each entry states timing, thrower, purpose, and follow-up/fallback.
+- All 15 maps now expose visual lineups: 45 purpose-first cards total, three per map.
+- Every visual card heading matches a utility-table target, and every card contains Start, Aim, Result, Fallback, and Source labels.
+- Every map source note includes current URL coverage, checked date, map-version note, status, attribution/license or permission basis, and replacement trigger.
+- Office, Italy, and Shelter were rechecked for misleading bombsite, plant, and post-plant instructions; none were found.
+- Remote utility screenshots remain source-linked where local reuse permission was not verified; no third-party screenshot pixels were copied into the local SVGs.
+
+## Visual coverage summary
+
+- 13 local Markdown image targets point to local positioning SVGs and resolve correctly.
+- 12 Markdown image targets remain remote overview/callout references and are explicitly treated as remote in their source notes.
+- Inferno, the six Premier rollout maps, Train, Vertigo, Overpass, Office, Italy, and Shelter all have local positioning SVG coverage.
+- Boulder and Fachwerk retain source-linked pending diagrams and purpose-level lineup cards only.
 
 ## Inferno pilot visual QA
 
-- Pilot files verified: `maps/inferno/README.md`, `maps/inferno/utility.md`, `maps/inferno/assets/map-overview-source.md`, `maps/inferno/assets/positioning-overview.svg`, and `maps/inferno/assets/utility/README.md`.
-- `maps/inferno/assets/positioning-overview.svg` is local and complete for the pilot; the map callout overview in `maps/inferno/README.md` remains remote and is recorded in the source note with its source URL, checked date, map-version note, status, attribution basis, and replacement trigger.
-- The three utility cards in `maps/inferno/utility.md` are remote-source cards and are not stored locally: `CT molly Banana` (`bo3.gg`), `T smoke CT/Coffins` (`BLAST.tv`), and `T smoke Arch or Library` (`BLAST.tv`). Each source note records the source page, checked date, map-version note, remote status, attribution basis, and replacement trigger.
-- Local image targets under `maps/inferno/` resolve; the remote overview target is explicitly recorded as remote in `maps/inferno/assets/map-overview-source.md`.
-- Intentionally pending screenshots: no local utility screenshots are stored because reuse permission was not verified; the three cards retain their remote source-page links until permitted, verified assets become available.
+- `maps/inferno/README.md`, `maps/inferno/utility.md`, `maps/inferno/assets/map-overview-source.md`, `maps/inferno/assets/positioning-overview.svg`, and `maps/inferno/assets/utility/README.md` remain present and internally consistent.
+- The map overview in `maps/inferno/README.md` remains remote and is recorded in the source note with its source URL, checked date, map-version note, status, attribution basis, and replacement trigger.
+- The three Inferno utility cards remain remote-source cards and are not stored locally: `CT molly Banana` (`bo3.gg`), `T smoke CT/Coffins` (`BLAST.tv`), and `T smoke Arch or Library` (`BLAST.tv`).
+- No local utility screenshots are stored for Inferno because reuse permission was not verified; the cards correctly retain remote source-page links.
 
 ## Premier rollout visual QA
 
-- Rollout files verified for Ancient, Cache, Dust II, Mirage, Nuke, and Anubis: each map has its existing `README.md`, `utility.md`, and `assets/map-overview-source.md` plus a local `assets/positioning-overview.svg` and `assets/utility/README.md`.
-- Six local positioning SVGs were rendered and inspected. Each is explicitly a route-teaching schematic rather than a pixel-perfect radar; Nuke separates surface/upper and lower layers and marks the Secret, Ramp, and Vent transitions.
-- Eighteen utility cards preserve exact target names from their existing utility tables. Every card states Start, Aim, Result, Fallback, and Source, and carries the table's timing and purpose.
-- All eighteen cards retain remote source-page links because local screenshot reuse permission was not verified. No remote screenshot pixels were copied into the hand-authored SVGs.
-- All six source notes record source URLs, checked dates, map-version notes, local/remote status, attribution or permission basis, and replacement triggers. Older incompatible Cache material was excluded, and Anubis cards whose media predates the January 2026 layout change explicitly require practice verification.
-- Baseline checks still find 15 complete map folders, ten essential principles, and no bomb-plant/post-plant regression in the Office, Italy, or Shelter offense/defense plans.
+- Ancient, Cache, Dust II, Mirage, Nuke, and Anubis each retain a local `assets/positioning-overview.svg` plus `assets/utility/README.md`.
+- The 18 Premier cards preserve exact target names from the existing utility tables and retain matching timing, purpose, and fallback values.
+- All six Premier source notes record source URLs, checked dates, map-version notes, local/remote status, attribution or permission basis, and replacement triggers.
+- Older incompatible Cache material remains excluded, and Anubis cards whose media predates the January 2026 layout change still explicitly require practice verification.
 
 ## Competitive-only community-map visual QA
 
-- Boulder and Fachwerk now have source-linked positioning status sections and three canonical utility-purpose cards each.
-- Both positioning diagrams remain intentionally pending. Boulder lacks a current published callout topology; Fachwerk's available callout article predates the creator build updated 2026-07-13.
-- No `positioning-overview.svg`, utility screenshot, or guessed route graph was created for either map.
-- All six pending cards preserve exact target names, timing, purpose, and fallback values from their existing utility tables and explicitly avoid fixed start, aim, throw type, landing, or grenade-behavior claims.
-- Both source notes record current source URLs, checked dates, map-version/update context, pending status, attribution/permission basis, and replacement triggers.
+- Train, Vertigo, and Overpass retain local positioning SVGs, utility asset contracts, and three canonical visual cards each.
+- Boulder and Fachwerk retain three source-linked pending cards each and now also have explicit utility asset README contracts to document how future local visual assets must be handled.
+- Boulder still lacks a current published callout topology, and Fachwerk's available callout article still predates the creator build updated 2026-07-13.
+- No guessed route graph, local screenshot, or unsupported lineup mechanics were added for Boulder or Fachwerk.
 
 ## Hostage-map visual QA
 
-- Office, Italy, and Shelter each have a local hand-authored `assets/positioning-overview.svg`, an `assets/utility/README.md` contract, a positioning entry point in the map README, and three canonical purpose-first utility cards.
-- The diagrams use attacker/defender labels and show hostage-room access, room isolation, rescue routes, and safe exits. Shelter keeps the sourced Cat Adoptions/Breezeway/Courtyard/Exterior Kennels/Dock route to Playroom distinct from the Yard/Bark Barn route to Pool.
-- Italy's selected defender HE card carries the table's explicit anti-rush timing. Office and Shelter include return-route smoke cards that break escort cover without introducing unsupported fixed throws.
-- All nine cards preserve exact target names, timing, purpose, and fallback values from their existing utility tables. Callout-only sources are not treated as proof of start positions, pixel aims, throw inputs, bounces, timing, coverage, or damage.
-- All three source notes record current source URLs, checked dates, map-version context, local/remote status, attribution/permission basis, and replacement triggers.
-- The prescribed hostage terminology guard is run before the hostage-map commit and again in the final baseline pass.
+- Office, Italy, and Shelter each retain a local `assets/positioning-overview.svg`, an `assets/utility/README.md` contract, a positioning entry point in the map README, and three canonical purpose-first utility cards.
+- The diagrams use attacker/defender labels and show hostage-room access, room isolation, rescue routes, and safe exits.
+- Shelter continues to keep the sourced Cat Adoptions/Breezeway/Courtyard/Exterior Kennels/Dock route to Playroom distinct from the Yard/Bark Barn route to Pool.
+- Hostage terminology remained clean in the final audit.
 
-## Task 6 Markdown-size rendered visual QA
+## Representative Markdown-size render QA
 
-- Train, Vertigo, Overpass, Office, Italy, and Shelter were served from a temporary Node `http` server at `http://127.0.0.1:8126/`, embedded inline in a local HTML preview, and rendered in the in-app browser at `900 x 580` inside a `1020 x 700` viewport. Temporary PNG captures were written outside the repository under `%TEMP%` as `task-6-<map>-900x580.png`.
-- The first render exposed role-marker collisions with labels on all six maps plus an arrow crossing Train's Yard label. The affected markers and the Yard label were repositioned without changing route geometry or tactical meaning.
-- The final browser-side bounding-box check found zero label/role-marker intersections and no clipped text across all six `900 x 580` renders. Every render retained its title, description, legend, full diagram boundary, and right-side teaching hierarchy.
-- Visual inspection confirmed readable labels, clear arrow direction, complete legends, consistent contrast, and a useful hierarchy between the map schematic, role markers, route arrows, teaching read, legend, and round rule.
-- Inspected files: `maps/train/assets/positioning-overview.svg`, `maps/vertigo/assets/positioning-overview.svg`, `maps/overpass/assets/positioning-overview.svg`, `maps/office/assets/positioning-overview.svg`, `maps/italy/assets/positioning-overview.svg`, and `maps/shelter/assets/positioning-overview.svg`.
+- Representative local SVGs were rendered at `900 x 580` inside a `1020 x 700` browser viewport through a temporary localhost preview: `maps/inferno/assets/positioning-overview.svg`, `maps/ancient/assets/positioning-overview.svg`, `maps/train/assets/positioning-overview.svg`, and `maps/office/assets/positioning-overview.svg`.
+- The first Task 7 render pass exposed label/role-marker collisions on Inferno (`Banana`, `Arch`, `Car`) and Ancient (`Mid`, `A Main`, `B Ramp`).
+- Corrections were limited to label-position nudges in `maps/inferno/assets/positioning-overview.svg` and `maps/ancient/assets/positioning-overview.svg`. No route geometry, callout relationships, utility claims, or tactical meaning changed.
+- The final browser-side bounding-box check found zero text-circle overlaps and zero clipped text across all four representative `900 x 580` renders.
+- Visual inspection confirmed readable labels, consistent contrast, unclipped SVG content, intact legends, and useful hierarchy between the schematic, markers, arrows, teaching read, legend, and round rule.
 
 ## Known follow-up
 
-Remote overview images remain in use where local reuse permission was not verified. Boulder and Fachwerk positioning diagrams remain intentionally pending until current geometry sources support them; all local and future remote visuals should be rechecked against the installed map version after relevant map updates.
+Remote overview images remain in use where local reuse permission was not verified. Boulder and Fachwerk positioning diagrams remain intentionally pending until reliable current geometry sources support them. All local and remote visuals should be rechecked after map-pool, map-geometry, callout, or verified utility-behavior changes.

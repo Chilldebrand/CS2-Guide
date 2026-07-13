@@ -52,15 +52,15 @@
     <text class="map-label" x="284" y="560">2nd Mid</text>
     <text class="map-label" x="336" y="612">Apts</text>
     <text class="map-label" x="446" y="398">Mid</text>
-    <text class="map-label" x="392" y="286" transform="rotate(-58 392 286)">Banana</text>
+    <text class="map-label" x="376" y="296" transform="rotate(-58 376 296)">Banana</text>
     <text class="map-label" x="468" y="132">B</text>
     <text class="map-label" x="630" y="172">CT</text>
-    <text class="map-label" x="626" y="294">Arch</text>
+    <text class="map-label" x="626" y="310">Arch</text>
     <text class="map-label" x="628" y="368">A Long</text>
     <text class="map-label" x="606" y="470">A Short</text>
     <text class="map-label" x="760" y="470">A</text>
     <text class="map-label" x="772" y="616">Pit</text>
-    <text class="map-label small" x="432" y="248">Car</text>
+    <text class="map-label small" x="448" y="240">Car</text>
 
     <ellipse class="zone" cx="446" cy="286" rx="86" ry="48" transform="rotate(-24 446 286)"/>
     <ellipse class="zone" cx="700" cy="420" rx="94" ry="56" transform="rotate(-12 700 420)"/>
