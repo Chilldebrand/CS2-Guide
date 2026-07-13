@@ -9,6 +9,7 @@
 - **Positioning diagram filename:** `positioning-overview.svg`
 - **Positioning diagram base overview source:** https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Finferno-callouts.webp&w=3840
 - **Positioning diagram checked:** 2026-07-13
+- **Positioning diagram attribution/license or permission basis:** Hand-authored by this repository from the cited remote overview as a teaching overlay; no source pixels were copied into the local SVG.
 - **Status:** Keep the remote overview as the source reference and replace the local positioning diagram if the verified geometry or callouts change.
 - **Replacement trigger:** Replace the source note and `positioning-overview.svg` when verified map geometry, callouts, or grenade interactions change, or when a better permitted source becomes available.
 
@@ -22,4 +23,4 @@
 - **Status:** Remote source pending; no utility screenshot is stored locally in Task 1.
 - **Attribution/license or permission basis:** No locally stored image exists in Task 1, so no image has been copied without a verified attribution and permission basis.
 
-The future positioning diagram and utility screenshots must record their own source page, direct asset URL when different, checked date, map-version note, status, replacement trigger, and attribution/license or permission basis.
+The positioning diagram and any future utility screenshots must record their own source page, direct asset URL when different, checked date, map-version note, status, replacement trigger, and attribution/license or permission basis.
