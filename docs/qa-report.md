@@ -66,3 +66,26 @@
 ## Known follow-up
 
 Remote overview images remain in use where local reuse permission was not verified. Boulder and Fachwerk positioning diagrams remain intentionally pending until reliable current geometry sources support them. All local and remote visuals should be rechecked after map-pool, map-geometry, callout, or verified utility-behavior changes.
+
+## Web companion QA
+
+**Checked:** 2026-07-14. The Inferno companion is the only generated web map in this pass; Markdown remains the tactical source of truth.
+
+### Local build and preview
+
+- From `web/`, `npm ci` was blocked before execution because this PowerShell session prohibits loading `C:\Program Files\nodejs\npm.ps1`. The equivalent Windows command shim completed successfully: `npm.cmd ci` (one package added), `npm.cmd test` (9 passed, 0 failed), and `npm.cmd run build` (exit 0).
+- The build produced `web/dist/index.html` (10,472 bytes), `web/dist/styles.css` (3,485 bytes), `web/dist/app.js` (1,396 bytes), and `web/dist/assets/positioning-overview.svg` (8,535 bytes).
+- `python -m http.server 4173 --directory dist` could not start because neither `python` nor the `py` launcher is installed in this environment. A temporary Node standard-library static server served the built `dist/` directory at `http://localhost:4173/` for the browser checks; it returned the page and all required assets, and the browser recorded no console errors.
+
+### Browser checks
+
+- Desktop (`1280 x 720`): the page was one continuous scrollable document. Each unique section link landed at its target: `#round-plan`, `#offense`, `#defense`, and `#utility-priorities` (target top within 0.5 px of the viewport top).
+- The default checked `Map follows scroll` control applied `position: sticky`. Unchecking it removed the sticky class and returned the panel to `position: static` while its map body remained visible. Refreshing preserved the disabled preference (`followChecked: false`, static panel).
+- Collapse changed the label to `Show map`, set `aria-expanded="false"`, and hid the map body. Activating it again restored `Collapse map`, `aria-expanded="true"`, and the body.
+- Mobile (`375 x 667`): the layout resolved to one 340 px grid column; the map panel was static, visible, and below the guide content, so it did not obscure the article.
+- Keyboard-only input could not be independently exercised in the available in-app browser runtime: locator key simulation did not dispatch native control activation, and repeated native `Tab` input left focus on `BODY`. The rendered controls are nonetheless uniquely exposed as a checkbox, button, section links, and source links; the automated template/accessibility-contract test passed.
+- The browser runtime does not expose reduced-motion emulation. Static verification confirmed the `@media (prefers-reduced-motion: reduce)` rule sets `html { scroll-behavior: auto; }` and removes transition duration; the automated responsive/reduced-motion test passed. Its current browser preference was not reduced motion (`scroll-behavior: smooth`), so runtime reduced-motion behavior remains a follow-up for a browser environment with media emulation.
+
+### Publishing status
+
+- GitHub Pages is configured for `https://chilldebrand.github.io/CS2-Guide/`. The site is not claimed as deployed in this QA pass: it will publish after the reviewed branch is merged and pushed to `main`.
