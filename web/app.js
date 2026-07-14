@@ -17,6 +17,10 @@ function writePreference(key, value) {
 const follow = document.querySelector('[data-map-follow]');
 const collapse = document.querySelector('[data-map-collapse]');
 const panel = document.querySelector('[data-map-panel]');
+const size = document.querySelector('[data-map-size]');
+const overlay = document.querySelector('[data-map-overlay]');
+const overlayClose = document.querySelector('[data-map-overlay-close]');
+const layout = document.querySelector('.guide-layout');
 
 if (follow && collapse && panel) {
   function applyFollowScroll(enabled) {
@@ -38,5 +42,46 @@ if (follow && collapse && panel) {
   follow.addEventListener('change', () => applyFollowScroll(follow.checked));
   collapse.addEventListener('click', () => {
     applyCollapsed(!panel.classList.contains('is-collapsed'));
+  });
+}
+
+if (size && overlay && overlayClose && layout) {
+  const storedSize = readPreference('cs2-guide-map-size', '1');
+  let savedInlineSize = ['1', '2', '3'].includes(storedSize) ? storedSize : '1';
+
+  function applyMapSize(value) {
+    const selected = ['1', '2', '3', '4'].includes(value) ? value : '1';
+
+    if (selected === '4') {
+      if (typeof overlay.showModal === 'function') {
+        overlay.showModal();
+        return;
+      }
+
+      size.value = savedInlineSize;
+      applyMapSize(savedInlineSize);
+      return;
+    }
+
+    layout.classList.remove('map-size-1', 'map-size-2', 'map-size-3');
+    layout.classList.add('map-size-' + selected);
+    size.value = selected;
+    savedInlineSize = selected;
+    writePreference('cs2-guide-map-size', selected);
+  }
+
+  applyMapSize(savedInlineSize);
+
+  size.addEventListener('change', () => applyMapSize(size.value));
+  overlayClose.addEventListener('click', () => overlay.close());
+  overlay.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      overlay.close();
+    }
+  });
+  overlay.addEventListener('close', () => {
+    size.value = savedInlineSize;
+    size.focus();
   });
 }

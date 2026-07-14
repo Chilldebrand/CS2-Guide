@@ -32,6 +32,14 @@ test('styles and script expose responsive and reduced-motion behavior', async ()
   assert.match(css, /prefers-reduced-motion/);
   assert.match(css, /position:\s*sticky/);
   assert.doesNotMatch(css, /order:\s*-1/);
+  assert.match(css, /\.guide-layout\.map-size-2\s*\{/);
+  assert.match(css, /\.guide-layout\.map-size-3\s*\{/);
+  assert.match(css, /\[data-map-overlay\]::backdrop/);
   assert.match(js, /aria-expanded/);
   assert.match(js, /localStorage/);
+  assert.match(js, /cs2-guide-map-size/);
+  assert.match(js, /showModal\(\)/);
+  assert.match(js, /addEventListener\('keydown'/);
+  assert.match(js, /overlay\.close\(\)/);
+  assert.match(js, /size\.focus\(\)/);
 });
