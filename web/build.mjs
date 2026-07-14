@@ -10,6 +10,17 @@ export const REQUIRED_INPUTS = [
   'maps/inferno/assets/positioning-overview.svg'
 ];
 
+const LOCAL_MARKDOWN_LINKS = new Map([
+  ['assets/map-overview-source.md', '#positioning-overview'],
+  ['offense.md', '#offense'],
+  ['defense.md', '#defense'],
+  ['utility.md', '#utility']
+]);
+
+const HEADING_ID_OVERRIDES = new Map([
+  ['Positioning visual', 'positioning-overview']
+]);
+
 export function slugifyHeading(text) {
   return text.toLowerCase().trim()
     .replace(/[^a-z0-9]+/g, '-')
@@ -19,7 +30,7 @@ export function slugifyHeading(text) {
 function addHeadingIds(html, usedIds) {
   return html.replace(/<h2>([\s\S]*?)<\/h2>/g, (heading, contents) => {
     const text = contents.replace(/<[^>]+>/g, '');
-    const baseId = slugifyHeading(text);
+    const baseId = HEADING_ID_OVERRIDES.get(text) ?? slugifyHeading(text);
     const occurrence = usedIds.get(baseId) ?? 0;
     usedIds.set(baseId, occurrence + 1);
     const id = occurrence === 0 ? baseId : `${baseId}-${occurrence + 1}`;
@@ -28,11 +39,19 @@ function addHeadingIds(html, usedIds) {
   });
 }
 
-function renderSection(id, label, markdown, usedIds) {
+function rewriteLocalMarkdownLinks(html) {
+  return html.replace(/href="([^"]+)"/g, (link, href) => {
+    const anchor = LOCAL_MARKDOWN_LINKS.get(href);
+    return anchor ? `href="${anchor}"` : link;
+  });
+}
+
+function renderSection(id, label, markdown, usedIds, aliases = []) {
   return [
     `<section id="${id}">`,
+    ...aliases.map((alias) => `<span id="${alias}" aria-hidden="true"></span>`),
     `<h2>${label}</h2>`,
-    addHeadingIds(marked.parse(markdown), usedIds),
+    addHeadingIds(rewriteLocalMarkdownLinks(marked.parse(markdown)), usedIds),
     '</section>'
   ].join('\n');
 }
@@ -61,7 +80,7 @@ export async function buildSite({ rootDir, outputDir }) {
     renderSection('round-plan', 'Round plan', readme, usedIds),
     renderSection('offense', 'Offense', offense, usedIds),
     renderSection('defense', 'Defense', defense, usedIds),
-    renderSection('utility-priorities', 'Utility priorities', utility, usedIds)
+    renderSection('utility-priorities', 'Utility priorities', utility, usedIds, ['utility'])
   ].join('\n');
   const html = template.replace('{{CONTENT}}', content);
   const outputAssetsDir = path.join(outputDir, 'assets');

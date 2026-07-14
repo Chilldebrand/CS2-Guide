@@ -16,13 +16,31 @@ test('Pages workflow builds web/dist on main and manual dispatch', async () => {
     path.join(repoRoot, '.github', 'workflows', 'deploy-web-guide.yml'),
     'utf8'
   );
-  assert.match(workflow, /push:/);
-  assert.match(workflow, /main/);
-  assert.match(workflow, /workflow_dispatch/);
-  assert.match(workflow, /npm ci/);
-  assert.match(workflow, /npm run build/);
-  assert.match(workflow, /web\/dist/);
-  assert.match(workflow, /deploy-pages/);
+  const buildJob = workflow.match(/^  build:\n([\s\S]*?)(?=^  deploy:)/m)?.[1];
+  const deployJob = workflow.match(/^  deploy:\n([\s\S]*)$/m)?.[1];
+
+  assert.match(workflow, /^on:\n  push:\n    branches: \[main\]\n  workflow_dispatch:$/m);
+  assert.match(
+    workflow,
+    /^permissions:\n  contents: read\n  pages: write\n  id-token: write$/m
+  );
+  assert.ok(buildJob, 'workflow must define a build job before deploy');
+  assert.match(buildJob, /^    runs-on: ubuntu-latest$/m);
+  assert.match(buildJob, /^      - uses: actions\/checkout@v4$/m);
+  assert.match(
+    buildJob,
+    /^      - uses: actions\/setup-node@v4\n        with:\n          node-version: 22\n          cache: npm\n          cache-dependency-path: web\/package-lock\.json$/m
+  );
+  assert.match(buildJob, /^      - working-directory: web\n        run: npm ci$/m);
+  assert.match(buildJob, /^      - working-directory: web\n        run: npm run build$/m);
+  assert.match(
+    buildJob,
+    /^      - uses: actions\/upload-pages-artifact@v3\n        with:\n          path: web\/dist$/m
+  );
+  assert.ok(deployJob, 'workflow must define a deploy job');
+  assert.match(deployJob, /^    needs: build$/m);
+  assert.match(deployJob, /^    runs-on: ubuntu-latest$/m);
+  assert.match(deployJob, /^      - uses: actions\/deploy-pages@v4$/m);
 });
 
 test('generated web output and local dependencies stay ignored', async () => {

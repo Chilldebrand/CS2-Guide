@@ -64,3 +64,18 @@ test('generated document preserves guide order and stable heading IDs', async ()
   assert.match(html, /href="#offense"/);
   assert.match(html, /href="#defense"/);
 });
+
+test('generated document rewrites local Markdown cross-links to in-page anchors', async () => {
+  const outputDir = await mkdtemp(path.join(os.tmpdir(), 'cs2-guide-links-'));
+  await buildSite({ rootDir: repoRoot, outputDir });
+  const html = await readFile(path.join(outputDir, 'index.html'), 'utf8');
+
+  assert.match(html, /href="#positioning-overview">Visual\/source note<\/a>/);
+  assert.match(html, /href="#positioning-overview">Positioning source note<\/a>/);
+  assert.match(html, /href="#offense">Offense plan<\/a>/);
+  assert.match(html, /href="#defense">Defense plan<\/a>/);
+  assert.match(html, /href="#utility">Utility priorities<\/a>/);
+  assert.match(html, /id="positioning-overview"/);
+  assert.match(html, /id="utility"/);
+  assert.doesNotMatch(html, /href="(?!(?:https?:)?\/\/|#)[^"]*\.md(?:[?#][^"]*)?"/);
+});
