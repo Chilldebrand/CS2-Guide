@@ -7,7 +7,7 @@ import { buildSite } from '../build.mjs';
 
 const repoRoot = path.resolve(import.meta.dirname, '..', '..');
 
-test('buildSite emits one Inferno document and copies the positioning SVG', async () => {
+test('buildSite emits one Inferno document and copies its supporting assets', async () => {
   const outputDir = await mkdtemp(path.join(os.tmpdir(), 'cs2-guide-web-'));
   await buildSite({ rootDir: repoRoot, outputDir });
 
@@ -19,6 +19,8 @@ test('buildSite emits one Inferno document and copies the positioning SVG', asyn
   assert.match(html, /id="utility-priorities"/);
   assert.match(html, /assets\/positioning-overview\.svg/);
   assert.match(html, /Markdown source/);
+  await access(path.join(outputDir, 'styles.css'));
+  await access(path.join(outputDir, 'app.js'));
   await access(path.join(outputDir, 'assets', 'positioning-overview.svg'));
 });
 

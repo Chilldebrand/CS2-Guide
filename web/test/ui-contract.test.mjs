@@ -19,6 +19,7 @@ test('styles and script expose responsive and reduced-motion behavior', async ()
   assert.match(css, /@media\s*\(max-width:/);
   assert.match(css, /prefers-reduced-motion/);
   assert.match(css, /position:\s*sticky/);
+  assert.doesNotMatch(css, /order:\s*-1/);
   assert.match(js, /aria-expanded/);
   assert.match(js, /localStorage/);
 });

@@ -211,10 +211,6 @@ input:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .map-panel {
-    order: -1;
-  }
-
   .map-panel.is-sticky {
     position: static;
   }
