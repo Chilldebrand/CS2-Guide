@@ -1,0 +1,13 @@
+{
+  "name": "cs2-guide-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test",
+    "preview": "python -m http.server 4173 --directory dist"
+  },
+  "dependencies": {
+    "marked": "latest"
+  }
+}
