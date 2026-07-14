@@ -5,7 +5,7 @@
 - Repository: `https://github.com/Chilldebrand/CS2-Guide.git`
 - Local checkout: `C:\Users\hilde\OneDrive\Documents\CS2 Guide\CS2-Guide`
 - Branch: `main`
-- Most recent pre-handoff code commit: `7cc2c1f fix: verify Competitive-only SVG rendering`
+- Most recent code commit: `117e1cc docs: finalize utility visuals fix pass`
 - Final QA status and durable verification evidence are recorded in `docs/qa-report.md`.
 
 ## What is already built
@@ -55,9 +55,31 @@ Maintenance priorities:
 - Prioritize Boulder and Fachwerk for local diagram work only when reliable current geometry sources support them.
 - Preserve hostage terminology rules and do not invent geometry or fixed lineup mechanics from callout-only material.
 
+## Recommended next chat: optional web companion with scroll-following maps
+
+The next product question is whether the guide should remain GitHub-Markdown-first or gain an optional web experience. GitHub's rendered Markdown cannot provide a reliable sticky/following map panel with a user toggle, so do not try to implement that behavior inside ordinary README pages.
+
+Preferred direction to evaluate:
+
+- Keep the Markdown guide fully usable on GitHub.
+- Add a separate web companion, ideally published through GitHub Pages or the project's approved hosting path.
+- On each map page, show the guide content beside the map/positioning visual.
+- Add a visible `Map follows scroll` toggle. When enabled, the map panel uses sticky positioning and the page can highlight or swap the relevant map visual as the reader moves through offense, defense, utility, and positioning sections. When disabled, the map remains in its normal document position.
+- Start with one map, preferably Inferno, as a proof of concept before generating pages for all 15 maps.
+- Reuse the existing local SVG positioning diagrams, remote-source disclosures, Markdown content, and source metadata. Do not create a second tactical truth that can drift from the Markdown guide.
+
+Design questions for the next chat:
+
+1. Should the web companion be a lightweight static site generated from the existing Markdown, or a small hand-authored map viewer that links back to Markdown sections?
+2. Should the map-follow behavior only keep one map panel sticky, or should it switch between positioning/utility diagrams as the reader reaches related sections?
+3. Should the companion be hosted with GitHub Pages, or remain a local/static preview until the layout is approved?
+
+First implementation target: an Inferno page with a desktop two-column layout, a stacked mobile layout, accessible toggle control, reduced-motion support, and a clear link back to the GitHub Markdown source.
+
 ## Important workflow notes
 
 - The repository is nested under the workspace folder; work inside `CS2-Guide`, not the outer workspace root.
 - `.superpowers/` is ignored scratch state used by the planning workflow.
 - Do not use destructive Git commands such as reset/checkout unless explicitly requested.
 - After any future visual maintenance triggered by map-pool, geometry/callout, or remote-source changes, re-run the structural checks in `docs/qa-report.md`, update the QA report and source notes, commit, and then push to `origin/main`.
+- For the web companion, keep generated/build output separate from the Markdown source and verify local SVG paths, mobile layout, keyboard access, reduced-motion behavior, and the disabled-toggle mode before publishing.
