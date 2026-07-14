@@ -2,6 +2,8 @@
 
 This is a practical guide for new Counter-Strike 2 players who want to climb. It focuses on repeatable decisions—good spacing, useful communication, synchronized buys, purposeful utility, and simple round plans—rather than highlight plays or giant lineup lists.
 
+**[Open the web version](https://chilldebrand.github.io/CS2-Guide/)** — one scrollable Inferno guide with an optional map panel.
+
 **Map pool checked:** July 13, 2026. Valve rotates the pool, so verify the dated sources before treating a map as current.
 
 ## Recommended reading order
