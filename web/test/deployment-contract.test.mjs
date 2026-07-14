@@ -12,10 +12,12 @@ test('README exposes the public web guide', async () => {
 });
 
 test('Pages workflow builds web/dist on main and manual dispatch', async () => {
-  const workflow = await readFile(
-    path.join(repoRoot, '.github', 'workflows', 'deploy-web-guide.yml'),
-    'utf8'
-  );
+  const workflow = (
+    await readFile(
+      path.join(repoRoot, '.github', 'workflows', 'deploy-web-guide.yml'),
+      'utf8'
+    )
+  ).replace(/\r\n?/g, '\n');
   const buildJob = workflow.match(/^  build:\n([\s\S]*?)(?=^  deploy:)/m)?.[1];
   const deployJob = workflow.match(/^  deploy:\n([\s\S]*)$/m)?.[1];
 
