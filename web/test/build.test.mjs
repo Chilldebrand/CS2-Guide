@@ -49,3 +49,16 @@ test('buildSite identifies a missing positioning SVG after finding all Inferno M
     /maps\/inferno\/assets\/positioning-overview\.svg/
   );
 });
+
+test('generated document preserves guide order and stable heading IDs', async () => {
+  const outputDir = await mkdtemp(path.join(os.tmpdir(), 'cs2-guide-order-'));
+  await buildSite({ rootDir: repoRoot, outputDir });
+  const html = await readFile(path.join(outputDir, 'index.html'), 'utf8');
+
+  assert.ok(html.indexOf('Round plan') < html.indexOf('Offense'));
+  assert.ok(html.indexOf('Offense') < html.indexOf('Defense'));
+  assert.ok(html.indexOf('Defense') < html.indexOf('Utility priorities'));
+  assert.match(html, /href="#round-plan"/);
+  assert.match(html, /href="#offense"/);
+  assert.match(html, /href="#defense"/);
+});
