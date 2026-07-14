@@ -13,6 +13,18 @@ test('template exposes accessible map controls', async () => {
   assert.match(template, /alt="Inferno positioning teaching diagram/);
 });
 
+test('template exposes map sizing and modal controls', async () => {
+  const template = await readFile(path.join(webRoot, 'template.html'), 'utf8');
+
+  assert.match(template, /<label[^>]*for="map-size"[^>]*>Map size<\/label>/);
+  assert.match(template, /<select[^>]*id="map-size"[^>]*data-map-size/);
+  assert.match(template, /<option value="1">1×<\/option>/);
+  assert.match(template, /<option value="4">4×<\/option>/);
+  assert.match(template, /<dialog[^>]*id="map-overlay"[^>]*data-map-overlay/);
+  assert.match(template, /data-map-overlay-close/);
+  assert.match(template, /aria-label="Expanded Inferno map"/);
+});
+
 test('styles and script expose responsive and reduced-motion behavior', async () => {
   const css = await readFile(path.join(webRoot, 'styles.css'), 'utf8');
   const js = await readFile(path.join(webRoot, 'app.js'), 'utf8');

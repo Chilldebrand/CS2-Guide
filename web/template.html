@@ -25,6 +25,13 @@
           <label><input type="checkbox" id="map-follow" data-map-follow checked> Map follows scroll</label>
           <button type="button" id="map-collapse" data-map-collapse
                   aria-controls="map-body" aria-expanded="true">Collapse map</button>
+          <label for="map-size">Map size</label>
+          <select id="map-size" data-map-size>
+            <option value="1">1×</option>
+            <option value="2">2×</option>
+            <option value="3">3×</option>
+            <option value="4">4×</option>
+          </select>
         </div>
         <div id="map-body" data-map-body>
           <img src="assets/positioning-overview.svg"
@@ -35,5 +42,10 @@
         </div>
       </aside>
     </main>
+    <dialog id="map-overlay" data-map-overlay aria-label="Expanded Inferno map">
+      <button type="button" data-map-overlay-close>Close expanded map</button>
+      <img src="assets/positioning-overview.svg"
+           alt="Inferno positioning teaching diagram showing CT Banana anchor and support, A anchor, mid rotator, T pressure, danger zones, and rotation paths">
+    </dialog>
   </body>
 </html>
