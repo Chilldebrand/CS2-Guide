@@ -69,6 +69,8 @@ export async function buildSite({ rootDir, outputDir }) {
   await mkdir(outputAssetsDir, { recursive: true });
   await Promise.all([
     writeFile(path.join(outputDir, 'index.html'), html),
+    copyFile(path.join(import.meta.dirname, 'styles.css'), path.join(outputDir, 'styles.css')),
+    copyFile(path.join(import.meta.dirname, 'app.js'), path.join(outputDir, 'app.js')),
     copyFile(
       path.join(infernoDir, 'assets', 'positioning-overview.svg'),
       path.join(outputAssetsDir, 'positioning-overview.svg')
