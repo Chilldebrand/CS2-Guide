@@ -47,13 +47,15 @@ if (follow && collapse && panel) {
 
 if (size && overlay && overlayClose && layout) {
   const storedSize = readPreference('cs2-guide-map-size', '1');
+  const supportsDialog =
+    typeof overlay.showModal === 'function' && typeof overlay.close === 'function';
   let savedInlineSize = ['1', '2', '3'].includes(storedSize) ? storedSize : '1';
 
   function applyMapSize(value) {
     const selected = ['1', '2', '3', '4'].includes(value) ? value : '1';
 
     if (selected === '4') {
-      if (typeof overlay.showModal === 'function') {
+      if (supportsDialog) {
         overlay.showModal();
         return;
       }
@@ -73,9 +75,13 @@ if (size && overlay && overlayClose && layout) {
   applyMapSize(savedInlineSize);
 
   size.addEventListener('change', () => applyMapSize(size.value));
-  overlayClose.addEventListener('click', () => overlay.close());
+  overlayClose.addEventListener('click', () => {
+    if (supportsDialog) {
+      overlay.close();
+    }
+  });
   overlay.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
+    if (event.key === 'Escape' && supportsDialog) {
       event.preventDefault();
       overlay.close();
     }

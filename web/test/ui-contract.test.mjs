@@ -2,8 +2,141 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import test from 'node:test';
+import vm from 'node:vm';
 
 const webRoot = path.resolve(import.meta.dirname, '..');
+const appScript = await readFile(path.join(webRoot, 'app.js'), 'utf8');
+
+class MockClassList {
+  #classes = new Set();
+
+  add(...names) {
+    names.forEach((name) => this.#classes.add(name));
+  }
+
+  remove(...names) {
+    names.forEach((name) => this.#classes.delete(name));
+  }
+
+  toggle(name, force) {
+    const enabled = force ?? !this.#classes.has(name);
+    enabled ? this.#classes.add(name) : this.#classes.delete(name);
+    return enabled;
+  }
+
+  contains(name) {
+    return this.#classes.has(name);
+  }
+}
+
+class MockElement {
+  #listeners = new Map();
+  #attributes = new Map();
+
+  constructor() {
+    this.checked = false;
+    this.classList = new MockClassList();
+    this.focusCalls = 0;
+    this.textContent = '';
+    this.value = '';
+  }
+
+  addEventListener(type, listener) {
+    const listeners = this.#listeners.get(type) ?? [];
+    listeners.push(listener);
+    this.#listeners.set(type, listeners);
+  }
+
+  dispatch(type, properties = {}) {
+    const event = {
+      defaultPrevented: false,
+      preventDefault() {
+        this.defaultPrevented = true;
+      },
+      target: this,
+      type,
+      ...properties,
+    };
+
+    for (const listener of this.#listeners.get(type) ?? []) {
+      listener(event);
+    }
+
+    return event;
+  }
+
+  focus() {
+    this.focusCalls += 1;
+  }
+
+  getAttribute(name) {
+    return this.#attributes.get(name) ?? null;
+  }
+
+  setAttribute(name, value) {
+    this.#attributes.set(name, String(value));
+  }
+}
+
+function runApp({ dialog = 'full', preferences = {} } = {}) {
+  const storedPreferences = new Map(Object.entries(preferences));
+  const elements = {
+    collapse: new MockElement(),
+    follow: new MockElement(),
+    layout: new MockElement(),
+    overlay: new MockElement(),
+    overlayClose: new MockElement(),
+    panel: new MockElement(),
+    size: new MockElement(),
+  };
+  const selectors = new Map([
+    ['[data-map-follow]', elements.follow],
+    ['[data-map-collapse]', elements.collapse],
+    ['[data-map-panel]', elements.panel],
+    ['[data-map-size]', elements.size],
+    ['[data-map-overlay]', elements.overlay],
+    ['[data-map-overlay-close]', elements.overlayClose],
+    ['.guide-layout', elements.layout],
+  ]);
+
+  elements.overlay.closeCalls = 0;
+  elements.overlay.showModalCalls = 0;
+
+  if (dialog === 'full' || dialog === 'showModalOnly') {
+    elements.overlay.showModal = () => {
+      elements.overlay.showModalCalls += 1;
+      elements.overlay.open = true;
+    };
+  }
+
+  if (dialog === 'full') {
+    elements.overlay.close = () => {
+      elements.overlay.closeCalls += 1;
+      elements.overlay.open = false;
+      elements.overlay.dispatch('close');
+    };
+  }
+
+  const localStorage = {
+    getItem(key) {
+      return storedPreferences.get(key) ?? null;
+    },
+    setItem(key, value) {
+      storedPreferences.set(key, String(value));
+    },
+  };
+
+  vm.runInNewContext(appScript, {
+    document: {
+      querySelector(selector) {
+        return selectors.get(selector) ?? null;
+      },
+    },
+    window: { localStorage },
+  });
+
+  return { elements, storedPreferences };
+}
 
 test('template exposes accessible map controls', async () => {
   const template = await readFile(path.join(webRoot, 'template.html'), 'utf8');
@@ -34,6 +167,7 @@ test('styles and script expose responsive and reduced-motion behavior', async ()
   assert.doesNotMatch(css, /order:\s*-1/);
   assert.match(css, /\.guide-layout\.map-size-2\s*\{/);
   assert.match(css, /\.guide-layout\.map-size-3\s*\{/);
+  assert.match(css, /\[data-map-overlay\]:not\(\[open\]\)\s*\{\s*display:\s*none;/);
   assert.match(css, /\[data-map-overlay\]::backdrop/);
   assert.match(js, /aria-expanded/);
   assert.match(js, /localStorage/);
@@ -42,4 +176,105 @@ test('styles and script expose responsive and reduced-motion behavior', async ()
   assert.match(js, /addEventListener\('keydown'/);
   assert.match(js, /overlay\.close\(\)/);
   assert.match(js, /size\.focus\(\)/);
+});
+
+test('1x through 3x update only the active layout class and saved size', () => {
+  const { elements, storedPreferences } = runApp({
+    preferences: { 'cs2-guide-map-size': '2' },
+  });
+
+  for (const selected of ['1', '2', '3']) {
+    elements.size.value = selected;
+    elements.size.dispatch('change');
+
+    for (const candidate of ['1', '2', '3']) {
+      assert.equal(
+        elements.layout.classList.contains(`map-size-${candidate}`),
+        candidate === selected,
+      );
+    }
+    assert.equal(elements.size.value, selected);
+    assert.equal(storedPreferences.get('cs2-guide-map-size'), selected);
+  }
+});
+
+test('4x is temporary and closing restores the saved inline size', () => {
+  const { elements, storedPreferences } = runApp({
+    preferences: { 'cs2-guide-map-size': '2' },
+  });
+
+  elements.size.value = '4';
+  elements.size.dispatch('change');
+
+  assert.equal(elements.overlay.showModalCalls, 1);
+  assert.equal(elements.layout.classList.contains('map-size-2'), true);
+  assert.equal(storedPreferences.get('cs2-guide-map-size'), '2');
+
+  elements.overlayClose.dispatch('click');
+  assert.equal(elements.overlay.closeCalls, 1);
+  assert.equal(elements.size.value, '2');
+  assert.equal(elements.size.focusCalls, 1);
+});
+
+test('missing either dialog method falls back to and reapplies the saved inline size', () => {
+  for (const dialog of ['none', 'showModalOnly']) {
+    const { elements, storedPreferences } = runApp({
+      dialog,
+      preferences: { 'cs2-guide-map-size': '3' },
+    });
+
+    elements.layout.classList.remove('map-size-3');
+    elements.size.value = '4';
+    elements.size.dispatch('change');
+
+    assert.equal(elements.overlay.showModalCalls, 0);
+    assert.equal(elements.size.value, '3');
+    assert.equal(elements.layout.classList.contains('map-size-3'), true);
+    assert.equal(storedPreferences.get('cs2-guide-map-size'), '3');
+  }
+});
+
+test('Close and Escape are safe and restore focus according to dialog support', () => {
+  const supported = runApp({ preferences: { 'cs2-guide-map-size': '2' } });
+
+  supported.elements.size.value = '4';
+  supported.elements.size.dispatch('change');
+  supported.elements.overlayClose.dispatch('click');
+
+  supported.elements.size.value = '4';
+  supported.elements.size.dispatch('change');
+  const escape = supported.elements.overlay.dispatch('keydown', { key: 'Escape' });
+
+  assert.equal(escape.defaultPrevented, true);
+  assert.equal(supported.elements.overlay.closeCalls, 2);
+  assert.equal(supported.elements.size.value, '2');
+  assert.equal(supported.elements.size.focusCalls, 2);
+
+  const unsupported = runApp({ dialog: 'none' });
+  assert.doesNotThrow(() => unsupported.elements.overlayClose.dispatch('click'));
+  assert.doesNotThrow(() => unsupported.elements.overlay.dispatch('keydown', { key: 'Escape' }));
+});
+
+test('follow and collapse controls remain independent', () => {
+  const { elements, storedPreferences } = runApp();
+
+  assert.equal(elements.panel.classList.contains('is-sticky'), true);
+  assert.equal(elements.panel.classList.contains('is-collapsed'), false);
+
+  elements.follow.checked = false;
+  elements.follow.dispatch('change');
+  assert.equal(elements.panel.classList.contains('is-sticky'), false);
+  assert.equal(elements.panel.classList.contains('is-collapsed'), false);
+
+  elements.collapse.dispatch('click');
+  assert.equal(elements.panel.classList.contains('is-sticky'), false);
+  assert.equal(elements.panel.classList.contains('is-collapsed'), true);
+  assert.equal(elements.collapse.getAttribute('aria-expanded'), 'false');
+
+  elements.follow.checked = true;
+  elements.follow.dispatch('change');
+  assert.equal(elements.panel.classList.contains('is-sticky'), true);
+  assert.equal(elements.panel.classList.contains('is-collapsed'), true);
+  assert.equal(storedPreferences.get('cs2-guide-map-follow'), 'true');
+  assert.equal(storedPreferences.get('cs2-guide-map-collapsed'), 'true');
 });
