@@ -533,5 +533,3 @@ Expected: all tests PASS, no whitespace errors, and only the intended QA and han
 
     git add docs/qa-report.md HANDOFF.md
     git commit -m "docs: verify Inferno web companion"
-
-

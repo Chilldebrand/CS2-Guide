@@ -138,4 +138,3 @@ The implementation is complete only when all of the following pass:
 ## Scope boundaries and future rollout
 
 This proof of concept does not generate pages for the other fourteen maps, switch between multiple visuals, or edit Markdown content from the website. Once the Inferno page is validated, later maps can use the same build contract and page template while continuing to reuse each map folder's Markdown, SVG, and source metadata.
-
