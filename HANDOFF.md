@@ -1,77 +1,53 @@
-# CS2 Guide - next-chat handoff
+# CS2 Guide — next-chat handoff
 
 ## Current state
 
 - Repository: `https://github.com/Chilldebrand/CS2-Guide.git`
 - Local checkout: `C:\Users\hilde\OneDrive\Documents\CS2 Guide\CS2-Guide`
-- Branch: `feat/map-enlargement` (local worktree)
-- Most recent code commit: `4eae7c6 fix: support map overlay without dialog APIs`
-- The feature branch is not yet merged or pushed. GitHub Pages must not be described as publicly deployed with these controls.
-- Final QA status and durable verification evidence are recorded in `docs/qa-report.md`.
+- Branch: `main`
+- Latest published commit: `41d5ce5 fix: constrain enlarged map layouts`
+- Live guide: `https://chilldebrand.github.io/CS2-Guide/`
 
-## What is already built
+## Completed web companion
 
-The repository contains a folder-based Markdown guide for new players focused on climbing Competitive/Premier:
+The published Inferno guide is generated from the authoritative Markdown source. It provides one scrollable guide, section navigation, sticky/followable and collapsible map controls, persistent 1x–3x inline map sizes, and a temporary accessible 4x overlay with Close, Escape, focus restoration, reduced-motion compatibility, mobile stacking, and a no-dialog fallback.
 
-- Root navigation in `README.md`.
-- General fundamentals in `general/`: ten essential principles, aim/movement, economy, communication, round flow, and practice/demo review.
-- Shared utility curriculum in `utility/`.
-- Fifteen map folders in `maps/`: Ancient, Cache, Dust II, Inferno, Mirage, Nuke, Anubis, Train, Vertigo, Overpass, Office, Italy, Boulder, Fachwerk, and Shelter.
-- Every map has `README.md`, `offense.md`, `defense.md`, `utility.md`, `assets/map-overview-source.md`, and `assets/utility/README.md`.
-- Office, Italy, and Shelter are written as hostage-mode guides and avoid bombsite/post-plant instructions.
-- Sources and dated map-pool notes are in `sources/`.
-- Design and QA documents are in `docs/superpowers/specs/` and `docs/qa-report.md`.
-- The completed visual rollout now includes 45 purpose-first utility cards across all 15 maps, 13 local positioning SVGs, and utility asset README contracts for every map.
-- Boulder and Fachwerk intentionally remain source-linked for positioning diagrams until reliable current geometry sources become available.
+Verification already completed:
 
-## Verification already completed
+- 18 automated web tests pass.
+- Production build passes.
+- Task-level and whole-branch reviews are clean.
+- GitHub Pages deployment completed successfully.
 
-- 15 map folders and all required files present, including `assets/utility/README.md` for every map.
-- Exactly 10 essential principles.
-- 171 local Markdown/image targets resolved with no broken local references.
-- 15 dated map visual/source notes with required source metadata.
-- 45 visual cards checked against their utility-table targets; every card contains Start, Aim, Result, Fallback, and Source labels.
-- `docs/qa-report.md` carries the durable `900 x 580` render evidence for Train, Vertigo, Overpass, Office, Italy, and Shelter, along with the intentionally pending Boulder/Fachwerk note.
-- Hostage terminology check passed.
-- Every map utility table has five purpose-first entries with timing, thrower, purpose, and follow-up/fallback.
+## Guide content already present
 
-## Research scope
+- Fifteen map folders have `README.md`, `offense.md`, `defense.md`, `utility.md`, source notes, and map assets.
+- Active Duty maps are Ancient, Cache, Dust II, Inferno, Mirage, Nuke, and Anubis.
+- Markdown remains the source of truth. Web output must not invent tactics, utility, callouts, geometry, or sources.
 
-The map pool was checked July 13, 2026. The seven Premier/Active Duty maps are Ancient, Cache, Dust II, Inferno, Mirage, Nuke, and Anubis. Competitive-only maps are Train, Vertigo, Overpass, Office, Italy, Boulder, Fachwerk, and Shelter.
+## Recommended next task: seven Active Duty five-player setup diagrams
 
-Primary references are recorded in `sources/map-pool.md` and `sources/research-log.md`, including Valve's July 8, 2026 Season 5 update and the current map-pool table.
+The user requested original tactical visuals for Ancient, Cache, Dust II, Inferno, Mirage, Nuke, and Anubis.
 
-## Recommended next task: visual maintenance after map updates
+Target outcome for each map:
 
-The rollout is complete. The next maintenance pass should only happen when one of these changes:
+1. One T-side default with all five players placed.
+2. One CT-side default with all five players placed.
+3. Numbered player markers, role labels, pressure/rotation arrows, essential early-utility markers, and a concise round-plan caption.
+4. Original SVG diagrams based on researched tactical concepts; never copy third-party artwork or invent exact geometry/lineups without sources.
+5. Diagrams embedded in each map’s Markdown and a generated web page linked from the top of each of those map guides.
 
-1. The Premier/Competitive pool changes.
-2. Verified map geometry or callouts change.
-3. A cited remote lineup source changes, disappears, or gains verified local reuse permission.
+## Research notes
 
-Maintenance priorities:
+Popular CS2 sites generally explain five-player setups in text but rarely publish reusable, consistent full-team diagrams. Useful research sources include CS2.eu, CS2Hype, CS2Flow, GetReplay, and reputable map-specific guides. Validate every setup against sources, then update the map source note and `sources/research-log.md`.
 
-- Re-check all local positioning SVGs against the installed map version after geometry/callout changes.
-- Re-check remote overview and lineup sources against their recorded replacement triggers.
-- Prioritize Boulder and Fachwerk for local diagram work only when reliable current geometry sources support them.
-- Preserve hostage terminology rules and do not invent geometry or fixed lineup mechanics from callout-only material.
+## Next-chat workflow
 
-## Web companion status and next work
+Resume brainstorming before implementation. First settle the standard diagram style and information density, then write and approve a design spec and implementation plan. The visual-companion server could not start in the previous environment, so use text-only design discussion unless it becomes available.
 
-- The pending-publish Inferno web companion in `web/` generates one Inferno document from the Markdown guide. It supports persistent 1×–3× inline map sizing and a temporary 4× overlay, alongside desktop sticky-map and disabled-map modes, a reversible collapse control, a stacked mobile layout, reduced-motion CSS, and links back to the Markdown source.
-- Markdown remains authoritative. The web companion is a generated reading layer and must not become a second source for tactics, utility, callouts, or source metadata.
-- GitHub Pages publishing is configured for `https://chilldebrand.github.io/CS2-Guide/`. It can publish after this reviewed branch is merged and pushed to `main`; do not describe the site as already deployed before then.
+## Working rules
 
-Optional next work:
-
-1. Before publishing, validate the local Inferno layout in a browser environment that can exercise desktop 1×–3× resizing, 4× Close/Escape/focus, mobile stacking, follow/collapse independence, native keyboard navigation, and reduced-motion media emulation.
-2. Reuse the proven template for another map only after that layout review, while retaining Markdown-derived content and each map's source disclosures.
-3. Maintain the generator, Pages workflow, dependencies, local SVG paths, source links, and browser QA evidence when Markdown, map geometry, or browser support changes.
-
-## Important workflow notes
-
-- The repository is nested under the workspace folder; work inside `CS2-Guide`, not the outer workspace root.
-- `.superpowers/` is ignored scratch state used by the planning workflow.
-- Do not use destructive Git commands such as reset/checkout unless explicitly requested.
-- After any future visual maintenance triggered by map-pool, geometry/callout, or remote-source changes, re-run the structural checks in `docs/qa-report.md`, update the QA report and source notes, commit, and then push to `origin/main`.
-- For the web companion, keep generated/build output separate from the Markdown source and verify local SVG paths, mobile layout, keyboard access, reduced-motion behavior, and the disabled-toggle mode before publishing.
+- Work inside the nested `CS2-Guide` repository.
+- `.superpowers/` is ignored planning scratch state.
+- Do not use destructive Git commands unless explicitly requested.
+- Before publishing future changes, run the web test suite, production build, whitespace check, independent review, merge to `main`, push, and confirm the Pages deployment.
