@@ -89,3 +89,17 @@
 ## Editorial synthesis
 
 The guide turns stable Counter-Strike principles into beginner-sized playbooks. Claims such as “control mid” or “smoke CT” are not presented as magic buttons: every recommendation includes the reason for the action, the teammate follow-up, and a fallback if the round changes.
+
+## Visual research - five-player default overlays (2026-07-15)
+
+The fourteen overlays are editorial teaching layers over the remote overview images recorded in each map's source note. They do not copy source pixels, replace the map, or claim exact spawn coordinates.
+
+- **Ancient:** CSGold Ancient (https://www.csgold.net/en/maps/ancient), checked 2026-07-15, supports T Spawn/A Main/Donut/Mid/B Ramp relationships and the published T default and CT Mid-control context. The local overlay synthesizes the existing Ancient offense/defense plan into Mid/Donut pressure, A Main pressure, B Ramp coverage, and a supported Mid contest. Re-check after Ancient route or callout changes.
+- **Cache:** CSGold Cache (https://www.csgold.net/en/maps/cache) and Hotspawn Cache callouts (https://www.hotspawn.com/counter-strike/guide/cs2-cache-callouts), checked 2026-07-15, support T Spawn/Garage/Mid/A Main/B Main/Highway/Vent/Connector relationships and CT A/Mid/B setup language. The local overlay synthesizes the existing Cache offense/defense plan into three-lane T pressure and a supported Mid/rotation hinge. Re-check against the returned Cache layout after geometry or callout changes.
+- **Dust II:** CSGold Dust II (https://www.csgold.net/en/maps/dust2), checked 2026-07-15, supports Long, Mid/Xbox/Cat, Tunnels, A, and B route relationships. The local overlay synthesizes the existing plan into a two-player Long take, Mid/Cat pressure, B Tunnel fallback, and a CT Long/Mid/B hold structure.
+- **Inferno:** CSGold Inferno (https://www.csgold.net/en/maps/inferno), checked 2026-07-15, supports Banana, A-side, Arch/Library, and CT rotation vocabulary. The local overlay synthesizes the existing plan into layered Banana pressure/holds, A-side pressure, an A anchor, and a disciplined Mid rotator.
+- **Mirage:** CSGold Mirage (https://www.csgold.net/en/maps/mirage), checked 2026-07-15, supports Top Mid/Window/Connector/Cat, A Ramp/Palace, B Apartments, Jungle, and Market route relationships. The local overlay synthesizes the existing plan into a Mid split, independent A/B pressure, and a CT Mid/A/B hold structure.
+- **Nuke:** CSGold Nuke (https://www.csgold.net/en/maps/nuke), checked 2026-07-15, supports the map's upper/lower route vocabulary and Outside/Ramp/Secret/Lobby/Hut/Decon relationships. The local overlay explicitly labels upper/lower responsibilities and synthesizes the existing plan into Outside pressure, Secret/Ramp threat, and CT vertical rotation discipline.
+- **Anubis:** CSGold Anubis (https://www.csgold.net/en/maps/anubis) plus the official pool/layout context already recorded above, checked 2026-07-15, support Mid/Connector/Water/Canal and A Main/B Main route relationships. The local overlay synthesizes the existing plan into Mid/Connector pressure, live A/B lanes, Water/Canal defense, and a delayed opposite-lane pivot.
+
+For each map, the exact player role labels, route descriptions, hold-angle descriptions, and fallback captions remain in the corresponding README and SVG metadata. Replace the records if current geometry or source availability changes.

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Anubis t default sourced-map overlay</title>
+  <desc id="desc">Anubis t default teaching overlay. Mid/Connector threatens both sites while A Main and B Main stay live; keep the bomb safe until the first read. Five players: Mid entry: Mid Doors → Connector; Mid support: hold the second lane; A Main: A Main → site; B Main: B Main → Water; Bomb / flex: late opposite-lane split. The sourced overview remains the map layer; annotations are editorial and not pixel-perfect.</desc>
+  <defs>
+    <style>
+      .backdrop{fill:#09111f;fill-opacity:.26}.header,.legend{fill:#0b1220;fill-opacity:.9;stroke:#cbd5e1;stroke-opacity:.5;stroke-width:2}.header-title{fill:#fff;font:700 27px Arial,sans-serif;letter-spacing:.8px}.header-rule{fill:#e2e8f0;font:16px Arial,sans-serif}.marker{stroke:#fff;stroke-width:3}.t-marker{fill:#dc2626}.ct-marker{fill:#2563eb}.marker-number{fill:#fff;font:700 17px Arial,sans-serif;text-anchor:middle}.route{fill:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#arrow)}.t-route{stroke:#fecaca}.hold{fill:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}.ct-hold{stroke:#bfdbfe;stroke-dasharray:12 8}.leader{stroke:#f8fafc;stroke-width:2;stroke-opacity:.9}.label-box{fill:#0b1220;fill-opacity:.92;stroke:#f8fafc;stroke-opacity:.7;stroke-width:1.5}.player-role{fill:#fff;font:700 15px Arial,sans-serif}.player-action{fill:#cbd5e1;font:14px Arial,sans-serif}.zone{fill:#facc15;fill-opacity:.28;stroke:#fde68a;stroke-width:3;stroke-dasharray:8 6}.zone-label{fill:#fef3c7;font:700 15px Arial,sans-serif;paint-order:stroke;stroke:#111827;stroke-width:5px;stroke-linejoin:round}.legend-text{fill:#e2e8f0;font:14px Arial,sans-serif}.legend-head{fill:#fff;font:700 15px Arial,sans-serif}.source{fill:#94a3b8;font:13px Arial,sans-serif}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.4" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#fecaca"/></marker>
+  </defs>
+  <image href="https://www.csgold.net/_next/image?q=75&amp;url=%2Fmaps%2Fanubis-callouts.webp&amp;w=3840" x="0" y="0" width="1200" height="760" preserveAspectRatio="xMidYMid slice" opacity=".82"/>
+  <rect class="backdrop" x="0" y="0" width="1200" height="760"/>
+  <rect class="header" x="24" y="24" width="1152" height="78" rx="14"/>
+  <text class="header-title" x="48" y="56">Anubis · T DEFAULT</text>
+  <text class="header-rule" x="48" y="83">Mid/Connector threatens both sites while A Main and B Main stay live; keep the bomb safe until the first read.</text>
+  <ellipse class="zone" cx="520" cy="360" rx="96" ry="52"/><text class="zone-label" x="410" y="270">Mid / Connector</text><ellipse class="zone" cx="790" cy="535" rx="86" ry="48"/><text class="zone-label" x="690" y="625">B Water pressure</text>
+  <path class="route t-route" d="M 180 410 C 350 388, 350 382, 520 360"/><path class="route t-route" d="M 240 480 C 425 458, 425 382, 610 360"/><path class="route t-route" d="M 180 190 C 485 168, 485 232, 790 210"/><path class="route t-route" d="M 180 610 C 485 588, 485 562, 790 540"/><path class="route t-route" d="M 120 700 C 385 678, 385 462, 650 440"/>
+  <g data-side="t" data-player="1" data-role="Mid entry" data-action="Mid Doors → Connector" aria-label="Player 1, Mid entry">
+    <circle class="marker t-marker" cx="180" cy="410" r="18"/>
+    <text class="marker-number" x="180" y="416">1</text>
+    <line class="leader" x1="180" y1="410" x2="55" y2="353"/>
+    <rect class="label-box" x="55" y="335" width="190" height="54" rx="8"/>
+    <text class="player-role" x="67" y="356">1 · Mid entry</text>
+    <text class="player-action" x="67" y="376">Mid Doors → Connector</text>
+  </g><g data-side="t" data-player="2" data-role="Mid support" data-action="hold the second lane" aria-label="Player 2, Mid support">
+    <circle class="marker t-marker" cx="240" cy="480" r="18"/>
+    <text class="marker-number" x="240" y="486">2</text>
+    <line class="leader" x1="240" y1="480" x2="215" y2="548"/>
+    <rect class="label-box" x="215" y="530" width="190" height="54" rx="8"/>
+    <text class="player-role" x="227" y="551">2 · Mid support</text>
+    <text class="player-action" x="227" y="571">hold the second lane</text>
+  </g><g data-side="t" data-player="3" data-role="A Main" data-action="A Main → site" aria-label="Player 3, A Main">
+    <circle class="marker t-marker" cx="180" cy="190" r="18"/>
+    <text class="marker-number" x="180" y="196">3</text>
+    <line class="leader" x1="180" y1="190" x2="55" y2="153"/>
+    <rect class="label-box" x="55" y="135" width="190" height="54" rx="8"/>
+    <text class="player-role" x="67" y="156">3 · A Main</text>
+    <text class="player-action" x="67" y="176">A Main → site</text>
+  </g><g data-side="t" data-player="4" data-role="B Main" data-action="B Main → Water" aria-label="Player 4, B Main">
+    <circle class="marker t-marker" cx="180" cy="610" r="18"/>
+    <text class="marker-number" x="180" y="616">4</text>
+    <line class="leader" x1="180" y1="610" x2="55" y2="658"/>
+    <rect class="label-box" x="55" y="640" width="190" height="54" rx="8"/>
+    <text class="player-role" x="67" y="661">4 · B Main</text>
+    <text class="player-action" x="67" y="681">B Main → Water</text>
+  </g><g data-side="t" data-player="5" data-role="Bomb / flex" data-action="late opposite-lane split" aria-label="Player 5, Bomb / flex">
+    <circle class="marker t-marker" cx="120" cy="600" r="18"/>
+    <text class="marker-number" x="120" y="606">5</text>
+    <line class="leader" x1="120" y1="600" x2="35" y2="593"/>
+    <rect class="label-box" x="35" y="575" width="190" height="54" rx="8"/>
+    <text class="player-role" x="47" y="596">5 · Bomb / flex</text>
+    <text class="player-action" x="47" y="616">late opposite-lane split</text>
+  </g>
+  <g aria-label="legend">
+    <rect class="legend" x="24" y="650" width="1152" height="86" rx="14"/>
+    <text class="legend-head" x="48" y="678">Legend</text>
+    <circle class="t-marker marker" cx="122" cy="675" r="11"/><text class="legend-text" x="143" y="680">T player / route start</text>
+    <line class="route t-route" x1="370" y1="675" x2="422" y2="675"/><text class="legend-text" x="440" y="680">route to first pressure</text>
+    <ellipse class="zone" cx="760" cy="675" rx="22" ry="12"/><text class="legend-text" x="794" y="680">first decision area</text>
+    <text class="source" x="48" y="716">Sourced overview: https://www.csgold.net/en/maps/anubis · local annotations are a teaching overlay, not a replacement radar.</text>
+  </g>
+</svg>

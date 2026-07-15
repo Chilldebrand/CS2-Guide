@@ -1,4 +1,14 @@
 # Mirage - visual source note
+## Five-player default overlay sources
+
+- **T overlay:** default-t.svg uses the remote positioning background URL below and local annotations for five roles, spawn-based routes, and initial pressure.
+- **CT overlay:** default-ct.svg uses the same remote positioning background and local annotations for five roles, hold angles, and the first rotation trigger.
+- **Positioning diagram background URL:** https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Fmirage-callouts.webp&w=3840
+- **Source page:** https://www.csgold.net/en/maps/mirage
+- **Checked:** 2026-07-15
+- **Attribution/license or permission basis:** Remote overview remains a linked reference; no source pixels are stored locally. The two SVGs are hand-authored editorial overlays.
+- **Map-version note:** Re-check the background callouts and route relationships if the installed map geometry changes.
+- **Replacement trigger:** Replace both overlays and this record when the verified map geometry, callouts, source URL, or tactical role relationships change.
 
 - **Map source:** https://www.csgold.net/en/maps/mirage
 - **Direct overview URL:** https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Fmirage-callouts.webp&w=3840

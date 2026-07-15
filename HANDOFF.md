@@ -1,49 +1,50 @@
-# CS2 Guide — next-chat handoff
+# CS2 Guide - next-chat handoff
 
 ## Current state
 
 - Repository: `https://github.com/Chilldebrand/CS2-Guide.git`
-- Local checkout: `C:\Users\hilde\OneDrive\Documents\CS2 Guide\CS2-Guide`
-- Branch: `main`
-- Latest published commit: `41d5ce5 fix: constrain enlarged map layouts`
+- Main checkout: `C:\Users\hilde\OneDrive\Documents\CS2 Guide\CS2-Guide`
+- Published branch: `main`
+- Latest published commit before this work: `41d5ce5 fix: constrain enlarged map layouts`
+- Current local `main` commit: `1558aee feat: add active duty five-player defaults`
 - Live guide: `https://chilldebrand.github.io/CS2-Guide/`
+- The feature branch was tested in `C:\Users\hilde\OneDrive\Documents\CS2 Guide\CS2-Guide\.worktrees\active-duty-defaults`, then fast-forward merged into `main` and cleaned up.
+- The changes are merged locally but have not been pushed or published yet.
 
 ## Completed web companion
 
-The published Inferno guide is generated from the authoritative Markdown source. It provides one scrollable guide, section navigation, sticky/followable and collapsible map controls, persistent 1x–3x inline map sizes, and a temporary accessible 4x overlay with Close, Escape, focus restoration, reduced-motion compatibility, mobile stacking, and a no-dialog fallback.
+The guide is generated from the authoritative Markdown source. The tested branch extends the companion to a landing page plus one generated page for each Active Duty map. It preserves section navigation, sticky/followable and collapsible map controls, persistent 1x-3x inline map sizes, and the temporary accessible 4x overlay with Close, Escape, focus restoration, reduced-motion compatibility, mobile stacking, and a no-dialog fallback.
 
-Verification already completed:
+Verification on the tested branch:
 
-- 18 automated web tests pass.
+- 39 automated web tests pass.
 - Production build passes.
-- Task-level and whole-branch reviews are clean.
-- GitHub Pages deployment completed successfully.
+- SVG overlay contract checks pass for all 14 overlays.
+- Whitespace and canvas-bound checks pass.
 
-## Guide content already present
+## Guide content
 
 - Fifteen map folders have `README.md`, `offense.md`, `defense.md`, `utility.md`, source notes, and map assets.
 - Active Duty maps are Ancient, Cache, Dust II, Inferno, Mirage, Nuke, and Anubis.
 - Markdown remains the source of truth. Web output must not invent tactics, utility, callouts, geometry, or sources.
 
-## Recommended next task: seven Active Duty five-player setup diagrams
+## Completed task: seven Active Duty five-player setup diagrams
 
-The user requested original tactical visuals for Ancient, Cache, Dust II, Inferno, Mirage, Nuke, and Anubis.
-
-Target outcome for each map:
+Delivered for each Active Duty map:
 
 1. One T-side default with all five players placed.
 2. One CT-side default with all five players placed.
-3. Numbered player markers, role labels, pressure/rotation arrows, essential early-utility markers, and a concise round-plan caption.
-4. Original SVG diagrams based on researched tactical concepts; never copy third-party artwork or invent exact geometry/lineups without sources.
-5. Diagrams embedded in each map’s Markdown and a generated web page linked from the top of each of those map guides.
+3. T-side route/initial-pressure arrows and CT-side hold-angle/first-rotation rays.
+4. Hand-authored SVG annotations over remote sourced map backgrounds; source pixels are not copied into the repository.
+5. Diagrams embedded in each map's Markdown and linked from the generated web page and map source notes.
 
 ## Research notes
 
-Popular CS2 sites generally explain five-player setups in text but rarely publish reusable, consistent full-team diagrams. Useful research sources include CS2.eu, CS2Hype, CS2Flow, GetReplay, and reputable map-specific guides. Validate every setup against sources, then update the map source note and `sources/research-log.md`.
+Popular CS2 sites generally explain five-player setups in text but rarely publish reusable, consistent full-team diagrams. The tested branch records the positioning-map references in each Active Duty source note and in `sources/research-log.md`. The player assignments and routes are synthesized teaching defaults, not claims of universal timings, fixed grenade lineups, or pixel-perfect spawn geometry.
 
 ## Next-chat workflow
 
-Resume brainstorming before implementation. First settle the standard diagram style and information density, then write and approve a design spec and implementation plan. The visual-companion server could not start in the previous environment, so use text-only design discussion unless it becomes available.
+Push `main` when ready to publish. If map sources or geometry change, re-check the seven source notes and rebuild the web output. Remote source image rendering was blocked by the browser client during QA, so perform a browser pass after deployment.
 
 ## Working rules
 

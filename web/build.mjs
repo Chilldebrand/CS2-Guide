@@ -1,24 +1,10 @@
 import { access, copyFile, mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { marked } from 'marked';
-
-export const REQUIRED_INPUTS = [
-  'maps/inferno/README.md',
-  'maps/inferno/offense.md',
-  'maps/inferno/defense.md',
-  'maps/inferno/utility.md',
-  'maps/inferno/assets/positioning-overview.svg'
-];
-
-const LOCAL_MARKDOWN_LINKS = new Map([
-  ['assets/map-overview-source.md', '#positioning-overview'],
-  ['offense.md', '#offense'],
-  ['defense.md', '#defense'],
-  ['utility.md', '#utility']
-]);
+import { ACTIVE_DUTY_MAPS, getRequiredInputs } from './maps.mjs';
 
 const HEADING_ID_OVERRIDES = new Map([
-  ['Positioning visual', 'positioning-overview']
+  ['Positioning visual', 'positioning-overview'],
 ]);
 
 export function slugifyHeading(text) {
@@ -26,7 +12,6 @@ export function slugifyHeading(text) {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '');
 }
-
 function addHeadingIds(html, usedIds) {
   return html.replace(/<h2>([\s\S]*?)<\/h2>/g, (heading, contents) => {
     const text = contents.replace(/<[^>]+>/g, '');
@@ -39,61 +24,117 @@ function addHeadingIds(html, usedIds) {
   });
 }
 
-function rewriteLocalMarkdownLinks(html) {
+function rewriteLocalMarkdownLinks(html, map) {
+  const sourceNoteUrl = `https://github.com/Chilldebrand/CS2-Guide/blob/main/${map.sourceDir}/${map.assets.sourceNote}`;
+  const localLinks = new Map([
+    [map.assets.sourceNote, sourceNoteUrl],
+    ['offense.md', '#offense'],
+    ['defense.md', '#defense'],
+    ['utility.md', '#utility'],
+  ]);
+
   return html.replace(/href="([^"]+)"/g, (link, href) => {
-    const anchor = LOCAL_MARKDOWN_LINKS.get(href);
-    return anchor ? `href="${anchor}"` : link;
+    const replacement = localLinks.get(href);
+    return replacement ? `href="${replacement}"` : link;
   });
 }
 
-function renderSection(id, label, markdown, usedIds, aliases = []) {
+function renderSection(id, label, markdown, map, usedIds, aliases = []) {
   return [
     `<section id="${id}">`,
     ...aliases.map((alias) => `<span id="${alias}" aria-hidden="true"></span>`),
     `<h2>${label}</h2>`,
-    addHeadingIds(rewriteLocalMarkdownLinks(marked.parse(markdown)), usedIds),
-    '</section>'
+    addHeadingIds(rewriteLocalMarkdownLinks(marked.parse(markdown), map), usedIds),
+    '</section>',
   ].join('\n');
 }
 
-async function validateRequiredInputs(rootDir) {
-  for (const relativePath of REQUIRED_INPUTS) {
+async function validateRequiredInputs(rootDir, map) {
+  for (const relativePath of getRequiredInputs(map)) {
     try {
       await access(path.join(rootDir, relativePath));
     } catch {
-      throw new Error('Missing required Inferno source file: ' + relativePath);
+      throw new Error(`Missing required ${map.title} source file: ${relativePath}`);
     }
   }
 }
 
-export async function buildSite({ rootDir, outputDir }) {
-  await validateRequiredInputs(rootDir);
+function renderMapTemplate({ template, map, content }) {
+  return template
+    .replaceAll('{{TITLE}}', map.pageTitle)
+    .replaceAll('{{MAP_TITLE}}', map.title)
+    .replaceAll('{{MAP_SLUG}}', map.slug)
+    .replaceAll('{{CONTENT}}', content)
+    .replaceAll('{{ASSET_BASE}}', '../../')
+    .replaceAll('{{MAP_ASSET_BASE}}', 'assets/');
+}
 
-  const infernoDir = path.join(rootDir, 'maps', 'inferno');
-  const readme = await readFile(path.join(infernoDir, 'README.md'), 'utf8');
-  const offense = await readFile(path.join(infernoDir, 'offense.md'), 'utf8');
-  const defense = await readFile(path.join(infernoDir, 'defense.md'), 'utf8');
-  const utility = await readFile(path.join(infernoDir, 'utility.md'), 'utf8');
-  const template = await readFile(path.join(import.meta.dirname, 'template.html'), 'utf8');
+function renderLandingPage() {
+  const links = ACTIVE_DUTY_MAPS.map(
+    (map) => `<li><a href="maps/${map.slug}/index.html">${map.title}</a> <span>${map.poolLabel}</span></li>`,
+  ).join('\n');
+
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2 Guide | Active Duty maps</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="landing">
+      <p class="eyebrow">CS2 Guide</p>
+      <h1>Active Duty map guides</h1>
+      <p>Choose a map for its round plan, offense, defense, utility priorities, and five-player defaults.</p>
+      <ul class="map-index">${links}</ul>
+    </main>
+  </body>
+</html>`;
+}
+
+export async function buildMapPage({ rootDir, outputDir, map, template }) {
+  await validateRequiredInputs(rootDir, map);
+
+  const mapDir = path.join(rootDir, map.sourceDir);
+  const [readme, offense, defense, utility] = await Promise.all([
+    readFile(path.join(mapDir, map.markdown.readme), 'utf8'),
+    readFile(path.join(mapDir, map.markdown.offense), 'utf8'),
+    readFile(path.join(mapDir, map.markdown.defense), 'utf8'),
+    readFile(path.join(mapDir, map.markdown.utility), 'utf8'),
+  ]);
   const usedIds = new Map();
   const content = [
-    renderSection('round-plan', 'Round plan', readme, usedIds),
-    renderSection('offense', 'Offense', offense, usedIds),
-    renderSection('defense', 'Defense', defense, usedIds),
-    renderSection('utility-priorities', 'Utility priorities', utility, usedIds, ['utility'])
+    renderSection('round-plan', 'Round plan', readme, map, usedIds),
+    renderSection('offense', 'Offense', offense, map, usedIds),
+    renderSection('defense', 'Defense', defense, map, usedIds),
+    renderSection('utility-priorities', 'Utility priorities', utility, map, usedIds, ['utility']),
   ].join('\n');
-  const html = template.replace('{{CONTENT}}', content);
-  const outputAssetsDir = path.join(outputDir, 'assets');
+  const html = renderMapTemplate({ template, map, content });
+  const pageDir = path.join(outputDir, 'maps', map.slug);
+  const outputAssetsDir = path.join(pageDir, 'assets');
 
   await mkdir(outputAssetsDir, { recursive: true });
   await Promise.all([
-    writeFile(path.join(outputDir, 'index.html'), html),
+    writeFile(path.join(pageDir, 'index.html'), html),
+    copyFile(path.join(rootDir, map.sourceDir, map.assets.context), path.join(outputAssetsDir, 'positioning-overview.svg')),
+    copyFile(path.join(rootDir, map.sourceDir, map.assets.defaultT), path.join(outputAssetsDir, 'default-t.svg')),
+    copyFile(path.join(rootDir, map.sourceDir, map.assets.defaultCt), path.join(outputAssetsDir, 'default-ct.svg')),
+  ]);
+}
+
+export async function buildSite({ rootDir, outputDir }) {
+  for (const map of ACTIVE_DUTY_MAPS) {
+    await validateRequiredInputs(rootDir, map);
+  }
+
+  const template = await readFile(path.join(import.meta.dirname, 'template.html'), 'utf8');
+  await mkdir(outputDir, { recursive: true });
+  await Promise.all([
+    writeFile(path.join(outputDir, 'index.html'), renderLandingPage()),
     copyFile(path.join(import.meta.dirname, 'styles.css'), path.join(outputDir, 'styles.css')),
     copyFile(path.join(import.meta.dirname, 'app.js'), path.join(outputDir, 'app.js')),
-    copyFile(
-      path.join(infernoDir, 'assets', 'positioning-overview.svg'),
-      path.join(outputAssetsDir, 'positioning-overview.svg')
-    )
+    ...ACTIVE_DUTY_MAPS.map((map) => buildMapPage({ rootDir, outputDir, map, template })),
   ]);
 }
 

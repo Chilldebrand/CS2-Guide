@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Dust II t default sourced-map overlay</title>
+  <desc id="desc">Dust II t default teaching overlay. Two players make Long expensive while two take Mid/Short; the fifth keeps B Tunnel alive for the split or fallback. Five players: Long entry: Long → Cross; Long support: flash / trade Long; Mid pressure: Mid → Xbox; Cat split: Xbox → Short; B Tunnel lurk: Tunnel → B or late split. The sourced overview remains the map layer; annotations are editorial and not pixel-perfect.</desc>
+  <defs>
+    <style>
+      .backdrop{fill:#09111f;fill-opacity:.26}.header,.legend{fill:#0b1220;fill-opacity:.9;stroke:#cbd5e1;stroke-opacity:.5;stroke-width:2}.header-title{fill:#fff;font:700 27px Arial,sans-serif;letter-spacing:.8px}.header-rule{fill:#e2e8f0;font:16px Arial,sans-serif}.marker{stroke:#fff;stroke-width:3}.t-marker{fill:#dc2626}.ct-marker{fill:#2563eb}.marker-number{fill:#fff;font:700 17px Arial,sans-serif;text-anchor:middle}.route{fill:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#arrow)}.t-route{stroke:#fecaca}.hold{fill:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}.ct-hold{stroke:#bfdbfe;stroke-dasharray:12 8}.leader{stroke:#f8fafc;stroke-width:2;stroke-opacity:.9}.label-box{fill:#0b1220;fill-opacity:.92;stroke:#f8fafc;stroke-opacity:.7;stroke-width:1.5}.player-role{fill:#fff;font:700 15px Arial,sans-serif}.player-action{fill:#cbd5e1;font:14px Arial,sans-serif}.zone{fill:#facc15;fill-opacity:.28;stroke:#fde68a;stroke-width:3;stroke-dasharray:8 6}.zone-label{fill:#fef3c7;font:700 15px Arial,sans-serif;paint-order:stroke;stroke:#111827;stroke-width:5px;stroke-linejoin:round}.legend-text{fill:#e2e8f0;font:14px Arial,sans-serif}.legend-head{fill:#fff;font:700 15px Arial,sans-serif}.source{fill:#94a3b8;font:13px Arial,sans-serif}
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.4" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#fecaca"/></marker>
+  </defs>
+  <image href="https://www.csgold.net/_next/image?q=75&amp;url=%2Fmaps%2Fdust2-callouts.webp&amp;w=3840" x="0" y="0" width="1200" height="760" preserveAspectRatio="xMidYMid slice" opacity=".82"/>
+  <rect class="backdrop" x="0" y="0" width="1200" height="760"/>
+  <rect class="header" x="24" y="24" width="1152" height="78" rx="14"/>
+  <text class="header-title" x="48" y="56">Dust II · T DEFAULT</text>
+  <text class="header-rule" x="48" y="83">Two players make Long expensive while two take Mid/Short; the fifth keeps B Tunnel alive for the split or fallback.</text>
+  <ellipse class="zone" cx="390" cy="235" rx="100" ry="50"/><text class="zone-label" x="280" y="150">Long take</text><ellipse class="zone" cx="555" cy="420" rx="90" ry="50"/><text class="zone-label" x="470" y="505">Mid / Cat split</text>
+  <path class="route t-route" d="M 150 210 C 285 188, 285 252, 420 230"/><path class="route t-route" d="M 210 275 C 315 253, 315 252, 420 230"/><path class="route t-route" d="M 180 430 C 350 408, 350 412, 520 390"/><path class="route t-route" d="M 260 500 C 455 478, 455 452, 650 430"/><path class="route t-route" d="M 150 650 C 400 628, 400 582, 650 560"/>
+  <g data-side="t" data-player="1" data-role="Long entry" data-action="Long → Cross" aria-label="Player 1, Long entry">
+    <circle class="marker t-marker" cx="150" cy="210" r="18"/>
+    <text class="marker-number" x="150" y="216">1</text>
+    <line class="leader" x1="150" y1="210" x2="55" y2="173"/>
+    <rect class="label-box" x="55" y="155" width="190" height="54" rx="8"/>
+    <text class="player-role" x="67" y="176">1 · Long entry</text>
+    <text class="player-action" x="67" y="196">Long → Cross</text>
+  </g><g data-side="t" data-player="2" data-role="Long support" data-action="flash / trade Long" aria-label="Player 2, Long support">
+    <circle class="marker t-marker" cx="210" cy="275" r="18"/>
+    <text class="marker-number" x="210" y="281">2</text>
+    <line class="leader" x1="210" y1="275" x2="230" y2="198"/>
+    <rect class="label-box" x="230" y="180" width="190" height="54" rx="8"/>
+    <text class="player-role" x="242" y="201">2 · Long support</text>
+    <text class="player-action" x="242" y="221">flash / trade Long</text>
+  </g><g data-side="t" data-player="3" data-role="Mid pressure" data-action="Mid → Xbox" aria-label="Player 3, Mid pressure">
+    <circle class="marker t-marker" cx="180" cy="430" r="18"/>
+    <text class="marker-number" x="180" y="436">3</text>
+    <line class="leader" x1="180" y1="430" x2="60" y2="438"/>
+    <rect class="label-box" x="60" y="420" width="190" height="54" rx="8"/>
+    <text class="player-role" x="72" y="441">3 · Mid pressure</text>
+    <text class="player-action" x="72" y="461">Mid → Xbox</text>
+  </g><g data-side="t" data-player="4" data-role="Cat split" data-action="Xbox → Short" aria-label="Player 4, Cat split">
+    <circle class="marker t-marker" cx="260" cy="500" r="18"/>
+    <text class="marker-number" x="260" y="506">4</text>
+    <line class="leader" x1="260" y1="500" x2="250" y2="543"/>
+    <rect class="label-box" x="250" y="525" width="190" height="54" rx="8"/>
+    <text class="player-role" x="262" y="546">4 · Cat split</text>
+    <text class="player-action" x="262" y="566">Xbox → Short</text>
+  </g><g data-side="t" data-player="5" data-role="B Tunnel lurk" data-action="Tunnel → B or late split" aria-label="Player 5, B Tunnel lurk">
+    <circle class="marker t-marker" cx="150" cy="650" r="18"/>
+    <text class="marker-number" x="150" y="656">5</text>
+    <line class="leader" x1="150" y1="650" x2="40" y2="668"/>
+    <rect class="label-box" x="40" y="650" width="190" height="54" rx="8"/>
+    <text class="player-role" x="52" y="671">5 · B Tunnel lurk</text>
+    <text class="player-action" x="52" y="691">Tunnel → B or late split</text>
+  </g>
+  <g aria-label="legend">
+    <rect class="legend" x="24" y="650" width="1152" height="86" rx="14"/>
+    <text class="legend-head" x="48" y="678">Legend</text>
+    <circle class="t-marker marker" cx="122" cy="675" r="11"/><text class="legend-text" x="143" y="680">T player / route start</text>
+    <line class="route t-route" x1="370" y1="675" x2="422" y2="675"/><text class="legend-text" x="440" y="680">route to first pressure</text>
+    <ellipse class="zone" cx="760" cy="675" rx="22" ry="12"/><text class="legend-text" x="794" y="680">first decision area</text>
+    <text class="source" x="48" y="716">Sourced overview: https://www.csgold.net/en/maps/dust2 · local annotations are a teaching overlay, not a replacement radar.</text>
+  </g>
+</svg>
