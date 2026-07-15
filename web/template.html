@@ -3,24 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Inferno | CS2 Guide</title>
-    <link rel="stylesheet" href="styles.css">
-    <script type="module" src="app.js"></script>
+    <title>{{TITLE}}</title>
+    <link rel="stylesheet" href="{{ASSET_BASE}}styles.css">
+    <script type="module" src="{{ASSET_BASE}}app.js"></script>
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="https://github.com/Chilldebrand/CS2-Guide">CS2 Guide</a>
-      <nav aria-label="Inferno sections">
+      <a class="brand" href="{{ASSET_BASE}}index.html">CS2 Guide</a>
+      <nav aria-label="{{MAP_TITLE}} sections">
         <a href="#round-plan">Round plan</a>
         <a href="#offense">Offense</a>
         <a href="#defense">Defense</a>
         <a href="#utility-priorities">Utility</a>
       </nav>
-      <a href="https://github.com/Chilldebrand/CS2-Guide/blob/main/maps/inferno/README.md">Markdown source →</a>
+      <a href="https://github.com/Chilldebrand/CS2-Guide/blob/main/maps/{{MAP_SLUG}}/README.md">Markdown source →</a>
     </header>
     <main class="guide-layout">
       <article id="guide-content">{{CONTENT}}</article>
-      <aside class="map-panel" id="inferno-map" data-map-panel>
+      <aside class="map-panel" id="{{MAP_SLUG}}-map" data-map-panel>
         <div class="map-controls">
           <label><input type="checkbox" id="map-follow" data-map-follow checked> Map follows scroll</label>
           <button type="button" id="map-collapse" data-map-collapse
@@ -34,18 +34,30 @@
           </select>
         </div>
         <div id="map-body" data-map-body>
-          <img src="assets/positioning-overview.svg"
-               alt="Inferno positioning teaching diagram showing CT Banana anchor and support, A anchor, mid rotator, T pressure, danger zones, and rotation paths">
-          <p>Teaching diagram, not a pixel-perfect radar replacement.
-            <a href="https://github.com/Chilldebrand/CS2-Guide/blob/main/maps/inferno/assets/map-overview-source.md">View source note</a>.
+          <img src="{{MAP_ASSET_BASE}}positioning-overview.svg"
+               alt="{{MAP_TITLE}} positioning context diagram">
+          <p>Context visual, not a pixel-perfect radar replacement.
+            <a href="https://github.com/Chilldebrand/CS2-Guide/blob/main/maps/{{MAP_SLUG}}/assets/map-overview-source.md">View source note</a>.
           </p>
+          <div class="default-grid" aria-label="{{MAP_TITLE}} five-player defaults">
+            <figure class="default-card">
+              <figcaption><strong>T default</strong> — routes and initial pressure</figcaption>
+              <img data-map-side="t" src="{{MAP_ASSET_BASE}}default-t.svg"
+                   alt="{{MAP_TITLE}} T-side five-player default showing roles, routes, and initial pressure">
+            </figure>
+            <figure class="default-card">
+              <figcaption><strong>CT default</strong> — hold angles and first rotation</figcaption>
+              <img data-map-side="ct" src="{{MAP_ASSET_BASE}}default-ct.svg"
+                   alt="{{MAP_TITLE}} CT-side five-player default showing roles, hold angles, and rotation trigger">
+            </figure>
+          </div>
         </div>
       </aside>
     </main>
-    <dialog id="map-overlay" data-map-overlay aria-label="Expanded Inferno map">
+    <dialog id="map-overlay" data-map-overlay aria-label="Expanded {{MAP_TITLE}} map">
       <button type="button" data-map-overlay-close>Close expanded map</button>
-      <img src="assets/positioning-overview.svg"
-           alt="Inferno positioning teaching diagram showing CT Banana anchor and support, A anchor, mid rotator, T pressure, danger zones, and rotation paths">
+      <img src="{{MAP_ASSET_BASE}}positioning-overview.svg"
+           alt="{{MAP_TITLE}} positioning context diagram">
     </dialog>
   </body>
 </html>
