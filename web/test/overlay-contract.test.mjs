@@ -63,6 +63,11 @@ for (const map of activeDutyMaps) {
       assert.match(svg, /<image\b[^>]+href="data:image\/(?:png|webp|jpeg);base64,[A-Za-z0-9+/=]+"/);
       assert.doesNotMatch(svg, /href="https?:\/\//);
       assert.doesNotMatch(svg, new RegExp(`href="${sourceMaps[map]}"`));
+      if (map === 'ancient') {
+        assert.match(svg, /viewBox="0 0 1013 1013"/);
+        assert.match(svg, /width="1013" height="1013" preserveAspectRatio="xMidYMid meet"/);
+        assert.doesNotMatch(svg, /preserveAspectRatio="xMidYMid slice"/);
+      }
       assert.equal(
         [...svg.matchAll(new RegExp(`data-side="${side}"`, 'g'))].length,
         5,
