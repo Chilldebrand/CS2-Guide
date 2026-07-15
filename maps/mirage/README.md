@@ -7,7 +7,7 @@
 **Mode:** Defusal  
 **Key lesson:** Mid information, Connector pressure, and site splits
 
-![Map callout overview](https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Fmirage-callouts.webp&w=3840)
+![Map callout overview](assets/mirage-callouts.webp)
 
 [Visual/source note](assets/map-overview-source.md)
 

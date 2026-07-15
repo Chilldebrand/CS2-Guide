@@ -5,6 +5,15 @@ import test from 'node:test';
 
 const repoRoot = path.resolve(import.meta.dirname, '..', '..');
 const activeDutyMaps = ['ancient', 'cache', 'dust2', 'inferno', 'mirage', 'nuke', 'anubis'];
+const sourceMaps = {
+  ancient: 'ancient-callouts.png',
+  cache: 'cache-callouts.webp',
+  dust2: 'dust2-callouts.webp',
+  inferno: 'inferno-callouts.webp',
+  mirage: 'mirage-callouts.webp',
+  nuke: 'nuke-callouts.jpg',
+  anubis: 'anubis-callouts.png',
+};
 
 function assertWellFormedSvg(svg, file) {
   const stack = [];
@@ -34,6 +43,7 @@ for (const map of activeDutyMaps) {
     );
 
     assert.match(note, /Positioning diagram background URL:\*\*?\s*https?:\/\//);
+    assert.match(note, new RegExp(`assets/${sourceMaps[map]}`));
     assert.match(note, /default-t\.svg/);
     assert.match(note, /default-ct\.svg/);
   });
@@ -50,7 +60,9 @@ for (const map of activeDutyMaps) {
       assert.match(svg, /<title[^>]*>[^<]+<\/title>/);
       assert.match(svg, /<desc[^>]*>[^<]+<\/desc>/);
       assert.match(svg, /aria-label="legend"|>Legend</i);
-      assert.match(svg, /<image\b[^>]+href="https?:\/\//);
+      assert.match(svg, /<image\b[^>]+href="data:image\/(?:png|webp|jpeg);base64,[A-Za-z0-9+/=]+"/);
+      assert.doesNotMatch(svg, /href="https?:\/\//);
+      assert.doesNotMatch(svg, new RegExp(`href="${sourceMaps[map]}"`));
       assert.equal(
         [...svg.matchAll(new RegExp(`data-side="${side}"`, 'g'))].length,
         5,

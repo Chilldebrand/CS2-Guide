@@ -7,7 +7,7 @@
 **Mode:** Defusal  
 **Key lesson:** Mid, vents, and timing-based site pressure
 
-![Map callout overview](https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Fcache-callouts.webp&w=3840)
+![Map callout overview](assets/cache-callouts.webp)
 
 [Visual/source note](assets/map-overview-source.md)
 

@@ -113,13 +113,20 @@ export async function buildMapPage({ rootDir, outputDir, map, template }) {
   const html = renderMapTemplate({ template, map, content });
   const pageDir = path.join(outputDir, 'maps', map.slug);
   const outputAssetsDir = path.join(pageDir, 'assets');
-
   await mkdir(outputAssetsDir, { recursive: true });
+  const assetCopies = [
+    ['context', 'positioning-overview.svg'],
+    ['defaultT', 'default-t.svg'],
+    ['defaultCt', 'default-ct.svg'],
+    ['sourceMap', path.basename(map.assets.sourceMap)],
+  ].map(([key, filename]) => copyFile(
+    path.join(rootDir, map.sourceDir, map.assets[key]),
+    path.join(outputAssetsDir, filename),
+  ));
+
   await Promise.all([
     writeFile(path.join(pageDir, 'index.html'), html),
-    copyFile(path.join(rootDir, map.sourceDir, map.assets.context), path.join(outputAssetsDir, 'positioning-overview.svg')),
-    copyFile(path.join(rootDir, map.sourceDir, map.assets.defaultT), path.join(outputAssetsDir, 'default-t.svg')),
-    copyFile(path.join(rootDir, map.sourceDir, map.assets.defaultCt), path.join(outputAssetsDir, 'default-ct.svg')),
+    ...assetCopies,
   ]);
 }
 

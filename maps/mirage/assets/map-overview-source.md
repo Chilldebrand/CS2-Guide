@@ -1,27 +1,28 @@
 # Mirage - visual source note
 ## Five-player default overlay sources
 
-- **T overlay:** default-t.svg uses the remote positioning background URL below and local annotations for five roles, spawn-based routes, and initial pressure.
-- **CT overlay:** default-ct.svg uses the same remote positioning background and local annotations for five roles, hold angles, and the first rotation trigger.
-- **Positioning diagram background URL:** https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Fmirage-callouts.webp&w=3840
+- **T overlay:** default-t.svg embeds assets/mirage-callouts.webp as the sourced map-photo layer and adds local annotations for five roles, spawn-based routes, and initial pressure.
+- **CT overlay:** default-ct.svg embeds the same sourced map-photo layer and adds local annotations for five roles, hold angles, and the first rotation trigger.
+- **Local map-photo layer:** assets/mirage-callouts.webp (copied into each built map page so the article and GitHub file preview retain the photo behind the overlay).
+- **Positioning diagram background URL:** https://www.csgold.net/maps/mirage-callouts.webp
 - **Source page:** https://www.csgold.net/en/maps/mirage
 - **Checked:** 2026-07-15
-- **Attribution/license or permission basis:** Remote overview remains a linked reference; no source pixels are stored locally. The two SVGs are hand-authored editorial overlays.
+- **Attribution/license or permission basis:** Source map remains attributed to CSGold; this local copy is included for the review build at the user's direction. The annotations are hand-authored editorial overlays.
 - **Map-version note:** Re-check the background callouts and route relationships if the installed map geometry changes.
 - **Replacement trigger:** Replace both overlays and this record when the verified map geometry, callouts, source URL, or tactical role relationships change.
 
 - **Map source:** https://www.csgold.net/en/maps/mirage
-- **Direct overview URL:** https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Fmirage-callouts.webp&w=3840
+- **Direct overview URL:** https://www.csgold.net/maps/mirage-callouts.webp
 - **Checked:** 2026-07-13
 - **Map-version note:** CS2 Mirage callouts, route order, and utility interactions checked for the guide scope on 2026-07-13.
-- **Asset type:** Remote annotated callout overview plus local hand-authored route teaching diagram.
-- **Attribution/license or permission basis:** CSGold remains a remote reference; no source pixels were copied because local-storage permission was not verified.
+- **Asset type:** Local sourced callout photo plus local hand-authored route teaching diagram.
+- **Attribution/license or permission basis:** CSGold remains attributed as the source; this review build stores the callout photo locally at the user's direction.
 - **Local annotated asset status:** Complete for `positioning-overview.svg`; the SVG is a route schematic, not a pixel-perfect radar replacement.
 - **Positioning diagram filename:** `positioning-overview.svg`
 - **Positioning diagram base overview source:** https://www.csgold.net/en/maps/mirage
 - **Positioning diagram checked:** 2026-07-13
-- **Positioning diagram attribution/license or permission basis:** Hand-authored by this repository from the cited callout overview and the existing offense/defense plans; no source pixels were copied.
-- **Status:** Keep the overview remote and the route diagram local.
+- **Positioning diagram attribution/license or permission basis:** Route annotations are hand-authored by this repository; the sourced photo is separately stored as the map layer.
+- **Status:** Keep the sourced map photo and hand-authored route diagram local for this review build.
 - **Replacement trigger:** Replace the source note and SVG when verified Mirage geometry, callouts, route connections, or utility interactions change.
 
 ## Utility screenshot sources

@@ -7,7 +7,7 @@
 **Mode:** Defusal  
 **Key lesson:** Banana control, Brackets pressure, and rotation discipline
 
-![Map callout overview](https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Finferno-callouts.webp&w=3840)
+![Map callout overview](assets/inferno-callouts.webp)
 
 [Visual/source note](assets/map-overview-source.md)
 

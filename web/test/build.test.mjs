@@ -6,6 +6,15 @@ import test from 'node:test';
 import { buildSite } from '../build.mjs';
 
 const repoRoot = path.resolve(import.meta.dirname, '..', '..');
+const sourceMaps = {
+  ancient: 'ancient-callouts.png',
+  cache: 'cache-callouts.webp',
+  dust2: 'dust2-callouts.webp',
+  inferno: 'inferno-callouts.webp',
+  mirage: 'mirage-callouts.webp',
+  nuke: 'nuke-callouts.jpg',
+  anubis: 'anubis-callouts.png',
+};
 
 test('buildSite emits a landing page and one document per Active Duty map', async () => {
   const outputDir = await mkdtemp(path.join(os.tmpdir(), 'cs2-guide-web-'));
@@ -26,12 +35,19 @@ test('buildSite emits a landing page and one document per Active Duty map', asyn
     assert.match(html, /assets\/positioning-overview\.svg/);
     assert.match(html, /assets\/default-t\.svg/);
     assert.match(html, /assets\/default-ct\.svg/);
+    assert.match(html, new RegExp(`assets/${sourceMaps[map]}`));
     await access(path.join(outputDir, 'maps', map, 'assets', 'default-t.svg'));
     await access(path.join(outputDir, 'maps', map, 'assets', 'default-ct.svg'));
+    await access(path.join(outputDir, 'maps', map, 'assets', sourceMaps[map]));
   }
 
   await access(path.join(outputDir, 'styles.css'));
   await access(path.join(outputDir, 'app.js'));
+});
+
+test('guide content keeps article diagrams full width while map panels stay responsive', async () => {
+  const styles = await readFile(path.join(repoRoot, 'web', 'styles.css'), 'utf8');
+  assert.match(styles, /#guide-content\s+img\s*\{[\s\S]*?max-width:\s*100%;[\s\S]*?height:\s*auto;/);
 });
 
 test('buildSite fails when a required source file is missing', async () => {

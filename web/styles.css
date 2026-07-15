@@ -121,6 +121,12 @@ input:focus-visible {
   min-width: 0;
 }
 
+#guide-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 #guide-content section + section {
   margin-top: 3rem;
 }

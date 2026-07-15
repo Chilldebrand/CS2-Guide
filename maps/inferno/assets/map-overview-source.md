@@ -1,26 +1,27 @@
 # Inferno — visual source note
 ## Five-player default overlay sources
 
-- **T overlay:** default-t.svg uses the remote positioning background URL below and local annotations for five roles, spawn-based routes, and initial pressure.
-- **CT overlay:** default-ct.svg uses the same remote positioning background and local annotations for five roles, hold angles, and the first rotation trigger.
-- **Positioning diagram background URL:** https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Finferno-callouts.webp&w=3840
+- **T overlay:** default-t.svg embeds assets/inferno-callouts.webp as the sourced map-photo layer and adds local annotations for five roles, spawn-based routes, and initial pressure.
+- **CT overlay:** default-ct.svg embeds the same sourced map-photo layer and adds local annotations for five roles, hold angles, and the first rotation trigger.
+- **Local map-photo layer:** assets/inferno-callouts.webp (copied into each built map page so the article and GitHub file preview retain the photo behind the overlay).
+- **Positioning diagram background URL:** https://www.csgold.net/maps/inferno-callouts.webp
 - **Source page:** https://www.csgold.net/en/maps/inferno
 - **Checked:** 2026-07-15
-- **Attribution/license or permission basis:** Remote overview remains a linked reference; no source pixels are stored locally. The two SVGs are hand-authored editorial overlays.
+- **Attribution/license or permission basis:** Source map remains attributed to CSGold; this local copy is included for the review build at the user's direction. The annotations are hand-authored editorial overlays.
 - **Map-version note:** Re-check the background callouts and route relationships if the installed map geometry changes.
 - **Replacement trigger:** Replace both overlays and this record when the verified map geometry, callouts, source URL, or tactical role relationships change.
 
 - **Map source:** https://www.csgold.net/en/maps/inferno
 - **Checked:** 2026-07-13
 - **Map-version note:** CS2 Inferno geometry, callouts, and utility interactions checked for the guide scope on 2026-07-13.
-- **Asset type:** remote annotated callout overview
-- **Attribution/license or permission basis:** CSGold is retained as a remote reference; no local copy of the overview was made because a local-storage permission basis was not verified.
-- **Local annotated asset status:** Complete for `positioning-overview.svg`; the guide now stores a local hand-authored teaching diagram derived from the verified overview source while the original overview remains remote.
+- **Asset type:** Local sourced callout photo plus local hand-authored route teaching diagram.
+- **Attribution/license or permission basis:** CSGold remains attributed as the source; this review build stores the callout photo locally at the user's direction.
+- **Local annotated asset status:** Complete for `positioning-overview.svg`; the guide now stores a local hand-authored teaching diagram derived from the verified overview source while the sourced callout photo is retained as the map layer.
 - **Positioning diagram filename:** `positioning-overview.svg`
-- **Positioning diagram base overview source:** https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Finferno-callouts.webp&w=3840
+- **Positioning diagram base overview source:** https://www.csgold.net/maps/inferno-callouts.webp
 - **Positioning diagram checked:** 2026-07-13
-- **Positioning diagram attribution/license or permission basis:** Hand-authored by this repository from the cited remote overview as a teaching overlay; no source pixels were copied into the local SVG.
-- **Status:** Keep the remote overview as the source reference and replace the local positioning diagram if the verified geometry or callouts change.
+- **Positioning diagram attribution/license or permission basis:** Route annotations are hand-authored by this repository; the sourced photo is separately stored as the map layer.
+- **Status:** Keep the sourced map photo and hand-authored route diagram local for this review build.
 - **Replacement trigger:** Replace the source note and `positioning-overview.svg` when verified map geometry, callouts, or grenade interactions change, or when a better permitted source becomes available.
 
 ## Utility screenshot sources

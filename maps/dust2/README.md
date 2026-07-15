@@ -7,7 +7,7 @@
 **Mode:** Defusal  
 **Key lesson:** Long/Mid control, Cat timing, and tradeable fights
 
-![Map callout overview](https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Fdust2-callouts.webp&w=3840)
+![Map callout overview](assets/dust2-callouts.webp)
 
 [Visual/source note](assets/map-overview-source.md)
 

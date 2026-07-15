@@ -7,7 +7,7 @@
 **Mode:** Defusal  
 **Key lesson:** Mid/Connector access, Water/Canal pressure, and split timing
 
-![Map callout overview](https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Fanubis-callouts.webp&w=3840)
+![Map callout overview](assets/anubis-callouts.png)
 
 [Visual/source note](assets/map-overview-source.md)
 

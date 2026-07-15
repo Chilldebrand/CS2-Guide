@@ -7,7 +7,7 @@
 **Mode:** Defusal  
 **Key lesson:** Outside information, vertical rotations, and lower-site control
 
-![Map callout overview](https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Fnuke-callouts.webp&w=3840)
+![Map callout overview](assets/nuke-callouts.jpg)
 
 [Visual/source note](assets/map-overview-source.md)
 

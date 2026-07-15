@@ -13,17 +13,17 @@ const assetFiles = {
 };
 
 export const ACTIVE_DUTY_MAPS = [
-  { slug: 'ancient', title: 'Ancient', poolLabel: 'Premier / Active Duty', sourceDir: 'maps/ancient', pageTitle: 'Ancient | CS2 Guide' },
-  { slug: 'cache', title: 'Cache', poolLabel: 'Premier / Active Duty', sourceDir: 'maps/cache', pageTitle: 'Cache | CS2 Guide' },
-  { slug: 'dust2', title: 'Dust II', poolLabel: 'Premier / Active Duty', sourceDir: 'maps/dust2', pageTitle: 'Dust II | CS2 Guide' },
-  { slug: 'inferno', title: 'Inferno', poolLabel: 'Premier / Active Duty', sourceDir: 'maps/inferno', pageTitle: 'Inferno | CS2 Guide' },
-  { slug: 'mirage', title: 'Mirage', poolLabel: 'Premier / Active Duty', sourceDir: 'maps/mirage', pageTitle: 'Mirage | CS2 Guide' },
-  { slug: 'nuke', title: 'Nuke', poolLabel: 'Premier / Active Duty', sourceDir: 'maps/nuke', pageTitle: 'Nuke | CS2 Guide' },
-  { slug: 'anubis', title: 'Anubis', poolLabel: 'Premier / Active Duty', sourceDir: 'maps/anubis', pageTitle: 'Anubis | CS2 Guide' },
+  { slug: 'ancient', title: 'Ancient', poolLabel: 'Premier / Active Duty', sourceDir: 'maps/ancient', pageTitle: 'Ancient | CS2 Guide', sourceMap: 'assets/ancient-callouts.png' },
+  { slug: 'cache', title: 'Cache', poolLabel: 'Premier / Active Duty', sourceDir: 'maps/cache', pageTitle: 'Cache | CS2 Guide', sourceMap: 'assets/cache-callouts.webp' },
+  { slug: 'dust2', title: 'Dust II', poolLabel: 'Premier / Active Duty', sourceDir: 'maps/dust2', pageTitle: 'Dust II | CS2 Guide', sourceMap: 'assets/dust2-callouts.webp' },
+  { slug: 'inferno', title: 'Inferno', poolLabel: 'Premier / Active Duty', sourceDir: 'maps/inferno', pageTitle: 'Inferno | CS2 Guide', sourceMap: 'assets/inferno-callouts.webp' },
+  { slug: 'mirage', title: 'Mirage', poolLabel: 'Premier / Active Duty', sourceDir: 'maps/mirage', pageTitle: 'Mirage | CS2 Guide', sourceMap: 'assets/mirage-callouts.webp' },
+  { slug: 'nuke', title: 'Nuke', poolLabel: 'Premier / Active Duty', sourceDir: 'maps/nuke', pageTitle: 'Nuke | CS2 Guide', sourceMap: 'assets/nuke-callouts.jpg' },
+  { slug: 'anubis', title: 'Anubis', poolLabel: 'Premier / Active Duty', sourceDir: 'maps/anubis', pageTitle: 'Anubis | CS2 Guide', sourceMap: 'assets/anubis-callouts.png' },
 ].map((map) => ({
   ...map,
   markdown: markdownFiles,
-  assets: assetFiles,
+  assets: { ...assetFiles, sourceMap: map.sourceMap },
 }));
 
 export function getRequiredInputs(map) {
@@ -36,5 +36,6 @@ export function getRequiredInputs(map) {
     map.assets.context,
     map.assets.defaultT,
     map.assets.defaultCt,
+    map.assets.sourceMap,
   ].map((relativePath) => `${map.sourceDir}/${relativePath}`);
 }
