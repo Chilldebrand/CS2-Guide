@@ -1,23 +1,23 @@
 # Anubis - visual source note
 ## Five-player default overlay sources
 
-- **T overlay:** default-t.svg embeds assets/anubis-callouts.png as the sourced map-photo layer and adds local annotations for five roles, spawn-based routes, and initial pressure.
+- **T overlay:** default-t.svg embeds assets/anubis-callouts.webp as the sourced map-photo layer and adds local annotations for five roles, spawn-based routes, and initial pressure.
 - **CT overlay:** default-ct.svg embeds the same sourced map-photo layer and adds local annotations for five roles, hold angles, and the first rotation trigger.
-- **Local map-photo layer:** assets/anubis-callouts.png (copied into each built map page so the article and GitHub file preview retain the photo behind the overlay).
-- **Positioning diagram background URL:** https://www.csgold.net/maps/anubis-callouts.png
+- **Local map-photo layer:** assets/anubis-callouts.webp (copied into each built map page so the article and GitHub file preview retain the photo behind the overlay).
+- **Positioning diagram background URL:** https://pley.gg/app/uploads/2026/03/anubis-1024x1024.webp
 - **Source page:** https://www.csgold.net/en/maps/anubis
 - **Checked:** 2026-07-15
-- **Attribution/license or permission basis:** Source map remains attributed to CSGold; this local copy is included for the review build at the user's direction. The annotations are hand-authored editorial overlays.
+- **Attribution/license or permission basis:** Map geometry remains documented against CSGold; the replacement callout image is attributed to Pley.gg and stored locally at the user's direction. The annotations are hand-authored editorial overlays.
 - **Map-version note:** Re-check the background callouts and route relationships if the installed map geometry changes.
 - **Replacement trigger:** Replace both overlays and this record when the verified map geometry, callouts, source URL, or tactical role relationships change.
 
 - **Map source:** https://www.csgold.net/en/maps/anubis
-- **Direct overview URL:** https://www.csgold.net/maps/anubis-callouts.png
+- **Direct overview URL:** https://pley.gg/app/uploads/2026/03/anubis-1024x1024.webp
 - **Official pool/layout context:** https://store.steampowered.com/news/posts/?appids=730&enddate=1770057643&feed=steam_community_announcements
 - **Checked:** 2026-07-13
 - **Map-version note:** CS2 Anubis callouts and Mid/Connector/Water/Canal route order were checked for the post-January-2026 Active Duty layout and this guide scope on 2026-07-13.
 - **Asset type:** Local sourced callout photo plus local hand-authored route teaching diagram.
-- **Attribution/license or permission basis:** CSGold remains attributed as the source; this review build stores the callout photo locally at the user's direction.
+- **Attribution/license or permission basis:** Pley.gg is attributed as the source of this replacement callout photo; this review build stores the image locally at the user's direction. The annotations are hand-authored editorial overlays.
 - **Local annotated asset status:** Complete for `positioning-overview.svg`; the SVG is a route schematic, not a pixel-perfect radar replacement.
 - **Positioning diagram filename:** `positioning-overview.svg`
 - **Positioning diagram base overview source:** https://www.csgold.net/en/maps/anubis

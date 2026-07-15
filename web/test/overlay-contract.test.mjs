@@ -12,7 +12,16 @@ const sourceMaps = {
   inferno: 'inferno-callouts.webp',
   mirage: 'mirage-callouts.webp',
   nuke: 'nuke-callouts.jpg',
-  anubis: 'anubis-callouts.png',
+  anubis: 'anubis-callouts.webp',
+};
+const sourceGeometry = {
+  ancient: [1013, 1013],
+  cache: [1416, 1416],
+  dust2: [1920, 1080],
+  inferno: [1920, 1080],
+  mirage: [1920, 1080],
+  nuke: [675, 659],
+  anubis: [1024, 1024],
 };
 
 function assertWellFormedSvg(svg, file) {
@@ -63,11 +72,10 @@ for (const map of activeDutyMaps) {
       assert.match(svg, /<image\b[^>]+href="data:image\/(?:png|webp|jpeg);base64,[A-Za-z0-9+/=]+"/);
       assert.doesNotMatch(svg, /href="https?:\/\//);
       assert.doesNotMatch(svg, new RegExp(`href="${sourceMaps[map]}"`));
-      if (map === 'ancient') {
-        assert.match(svg, /viewBox="0 0 1013 1013"/);
-        assert.match(svg, /width="1013" height="1013" preserveAspectRatio="xMidYMid meet"/);
-        assert.doesNotMatch(svg, /preserveAspectRatio="xMidYMid slice"/);
-      }
+      const [width, height] = sourceGeometry[map];
+      assert.match(svg, new RegExp(`viewBox="0 0 ${width} ${height}"`));
+      assert.match(svg, new RegExp(`width="${width}" height="${height}" preserveAspectRatio="xMidYMid meet"`));
+      assert.doesNotMatch(svg, /preserveAspectRatio="xMidYMid slice"/);
       assert.equal(
         [...svg.matchAll(new RegExp(`data-side="${side}"`, 'g'))].length,
         5,
