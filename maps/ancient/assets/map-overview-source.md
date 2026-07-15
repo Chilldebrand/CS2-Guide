@@ -1,12 +1,14 @@
 # Ancient - visual source note
 ## Five-player default overlay sources
 
-- **T overlay:** default-t.svg uses the remote positioning background URL below and local annotations for five roles, spawn-based routes, and initial pressure.
-- **CT overlay:** default-ct.svg uses the same remote positioning background and local annotations for five roles, hold angles, and the first rotation trigger.
+- **T overlay:** default-t.svg uses the supplied local map photo below and local annotations for five roles, spawn-based routes, and initial pressure.
+- **CT overlay:** default-ct.svg uses the same supplied local map photo and local annotations for five roles, hold angles, and the first rotation trigger.
+- **Active local map layer:** `ancient-callouts.png`, a clean square crop of the user-provided Ancient callout map photo. T Spawn is bottom-center and CT Spawn is top-center.
+- **User-provided route reference:** `Cs2 Drawing.png` was supplied on 2026-07-15 as a hand-painted reference for the intended Mid Box, Catwalk, A Main, and B-side route flow. Its paint strokes are not baked into the active map layer.
 - **Positioning diagram background URL:** https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Fancient-callouts.webp&w=3840
 - **Source page:** https://www.csgold.net/en/maps/ancient
 - **Checked:** 2026-07-15
-- **Attribution/license or permission basis:** Remote overview remains a linked reference; no source pixels are stored locally. The two SVGs are hand-authored editorial overlays.
+- **Attribution/license or permission basis:** The supplied map photo is used directly for this review branch at the user's direction. The two SVGs are hand-authored editorial overlays; the older remote overview remains a linked reference.
 - **Map-version note:** Re-check the background callouts and route relationships if the installed map geometry changes.
 - **Replacement trigger:** Replace both overlays and this record when the verified map geometry, callouts, source URL, or tactical role relationships change.
 

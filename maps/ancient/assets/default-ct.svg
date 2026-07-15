@@ -1,61 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
-  <title id="title">Ancient ct default sourced-map overlay</title>
-  <desc id="desc">Ancient ct default teaching overlay. Contest Mid with help, keep B alive, and rotate only after Mid/Temple information is reliable. Five players: Mid contest: hold Top Mid / fall back; A anchor: hold A Main / Temple; Donut support: support Mid, watch split; B anchor: hold B Ramp / Cave; Rotator: CT path after clear info. The sourced overview remains the map layer; annotations are editorial and not pixel-perfect.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Ancient CT-side five-player default over the sourced callout map</title>
+  <desc id="desc">Five defenders hold A Main, Mid, Donut, B Ramp, and Catwalk angles. Blue dashed rays show the first lane to hold and the safe rotation trigger.</desc>
   <defs>
     <style>
-      .backdrop{fill:#09111f;fill-opacity:.26}.header,.legend{fill:#0b1220;fill-opacity:.9;stroke:#cbd5e1;stroke-opacity:.5;stroke-width:2}.header-title{fill:#fff;font:700 27px Arial,sans-serif;letter-spacing:.8px}.header-rule{fill:#e2e8f0;font:16px Arial,sans-serif}.marker{stroke:#fff;stroke-width:3}.t-marker{fill:#dc2626}.ct-marker{fill:#2563eb}.marker-number{fill:#fff;font:700 17px Arial,sans-serif;text-anchor:middle}.route{fill:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#arrow)}.t-route{stroke:#fecaca}.hold{fill:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}.ct-hold{stroke:#bfdbfe;stroke-dasharray:12 8}.leader{stroke:#f8fafc;stroke-width:2;stroke-opacity:.9}.label-box{fill:#0b1220;fill-opacity:.92;stroke:#f8fafc;stroke-opacity:.7;stroke-width:1.5}.player-role{fill:#fff;font:700 15px Arial,sans-serif}.player-action{fill:#cbd5e1;font:14px Arial,sans-serif}.zone{fill:#facc15;fill-opacity:.28;stroke:#fde68a;stroke-width:3;stroke-dasharray:8 6}.zone-label{fill:#fef3c7;font:700 15px Arial,sans-serif;paint-order:stroke;stroke:#111827;stroke-width:5px;stroke-linejoin:round}.legend-text{fill:#e2e8f0;font:14px Arial,sans-serif}.legend-head{fill:#fff;font:700 15px Arial,sans-serif}.source{fill:#94a3b8;font:13px Arial,sans-serif}
+      .wash{fill:#07111c;fill-opacity:.04}.panel{fill:#07111c;fill-opacity:.84;stroke:#e2e8f0;stroke-opacity:.64;stroke-width:2}.title{fill:#fff;font:700 22px Arial,sans-serif;letter-spacing:.5px}.rule{fill:#e2e8f0;font:13px Arial,sans-serif}.marker{fill:#2563eb;stroke:#fff;stroke-width:3}.number{fill:#fff;font:700 14px Arial,sans-serif;text-anchor:middle}.hold{fill:none;stroke:#bfdbfe;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:12 8}.rotate{fill:none;stroke:#93c5fd;stroke-width:4;stroke-linecap:round;stroke-dasharray:8 8;marker-end:url(#arrow)}.leader{stroke:#fff;stroke-width:2;stroke-opacity:.82}.label{fill:#07111c;fill-opacity:.88;stroke:#fff;stroke-opacity:.62;stroke-width:1.5}.role{fill:#fff;font:700 14px Arial,sans-serif}.action{fill:#cbd5e1;font:12px Arial,sans-serif}.zone{fill:#60a5fa;fill-opacity:.12;stroke:#bfdbfe;stroke-width:3;stroke-dasharray:9 7}.zone-text{fill:#dbeafe;font:700 13px Arial,sans-serif;paint-order:stroke;stroke:#111827;stroke-width:4px}.legend{fill:#07111c;fill-opacity:.76;stroke:#e2e8f0;stroke-opacity:.5;stroke-width:1.5}.legend-text{fill:#fff;font:12px Arial,sans-serif}
     </style>
-    <marker id="arrow" viewBox="0 0 10 10" refX="8.4" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#bfdbfe"/></marker>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.4" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10z" fill="#93c5fd"/></marker>
   </defs>
-  <image href="https://www.csgold.net/_next/image?q=75&amp;url=%2Fmaps%2Fancient-callouts.webp&amp;w=3840" x="0" y="0" width="1200" height="760" preserveAspectRatio="xMidYMid slice" opacity=".82"/>
-  <rect class="backdrop" x="0" y="0" width="1200" height="760"/>
-  <rect class="header" x="24" y="24" width="1152" height="78" rx="14"/>
-  <text class="header-title" x="48" y="56">Ancient · CT DEFAULT</text>
-  <text class="header-rule" x="48" y="83">Contest Mid with help, keep B alive, and rotate only after Mid/Temple information is reliable.</text>
-  <ellipse class="zone" cx="520" cy="340" rx="90" ry="52"/><text class="zone-label" x="430" y="250">Mid fight</text><ellipse class="zone" cx="820" cy="500" rx="84" ry="48"/><text class="zone-label" x="760" y="585">B hold</text>
-  <path class="hold ct-hold" d="M 510 340 C 470 318, 470 322, 430 300"/><path class="hold ct-hold" d="M 900 220 C 845 198, 845 262, 790 240"/><path class="hold ct-hold" d="M 700 330 C 660 308, 660 322, 620 300"/><path class="hold ct-hold" d="M 850 545 C 805 523, 805 562, 760 540"/><path class="hold ct-hold" d="M 650 610 C 665 588, 665 492, 680 470"/>
-  <g data-side="ct" data-player="1" data-role="Mid contest" data-action="hold Top Mid / fall back" aria-label="Player 1, Mid contest">
-    <circle class="marker ct-marker" cx="510" cy="340" r="18"/>
-    <text class="marker-number" x="510" y="346">1</text>
-    <line class="leader" x1="510" y1="340" x2="330" y2="268"/>
-    <rect class="label-box" x="330" y="250" width="190" height="54" rx="8"/>
-    <text class="player-role" x="342" y="271">1 · Mid contest</text>
-    <text class="player-action" x="342" y="291">hold Top Mid / fall back</text>
-  </g><g data-side="ct" data-player="2" data-role="A anchor" data-action="hold A Main / Temple" aria-label="Player 2, A anchor">
-    <circle class="marker ct-marker" cx="900" cy="220" r="18"/>
-    <text class="marker-number" x="900" y="226">2</text>
-    <line class="leader" x1="900" y1="220" x2="920" y2="178"/>
-    <rect class="label-box" x="920" y="160" width="190" height="54" rx="8"/>
-    <text class="player-role" x="932" y="181">2 · A anchor</text>
-    <text class="player-action" x="932" y="201">hold A Main / Temple</text>
-  </g><g data-side="ct" data-player="3" data-role="Donut support" data-action="support Mid, watch split" aria-label="Player 3, Donut support">
-    <circle class="marker ct-marker" cx="700" cy="330" r="18"/>
-    <text class="marker-number" x="700" y="336">3</text>
-    <line class="leader" x1="700" y1="330" x2="710" y2="268"/>
-    <rect class="label-box" x="710" y="250" width="190" height="54" rx="8"/>
-    <text class="player-role" x="722" y="271">3 · Donut support</text>
-    <text class="player-action" x="722" y="291">support Mid, watch split</text>
-  </g><g data-side="ct" data-player="4" data-role="B anchor" data-action="hold B Ramp / Cave" aria-label="Player 4, B anchor">
-    <circle class="marker ct-marker" cx="850" cy="545" r="18"/>
-    <text class="marker-number" x="850" y="551">4</text>
-    <line class="leader" x1="850" y1="545" x2="865" y2="608"/>
-    <rect class="label-box" x="865" y="590" width="190" height="54" rx="8"/>
-    <text class="player-role" x="877" y="611">4 · B anchor</text>
-    <text class="player-action" x="877" y="631">hold B Ramp / Cave</text>
-  </g><g data-side="ct" data-player="5" data-role="Rotator" data-action="CT path after clear info" aria-label="Player 5, Rotator">
-    <circle class="marker ct-marker" cx="650" cy="610" r="18"/>
-    <text class="marker-number" x="650" y="616">5</text>
-    <line class="leader" x1="650" y1="610" x2="520" y2="668"/>
-    <rect class="label-box" x="520" y="650" width="190" height="54" rx="8"/>
-    <text class="player-role" x="532" y="671">5 · Rotator</text>
-    <text class="player-action" x="532" y="691">CT path after clear info</text>
+  <image href="ancient-callouts.png" x="0" y="0" width="1000" height="1000" preserveAspectRatio="none"/>
+  <rect class="wash" x="0" y="0" width="1000" height="1000"/>
+
+  <rect class="panel" x="22" y="108" width="500" height="66" rx="12"/>
+  <text class="title" x="40" y="136">Ancient - CT DEFAULT</text>
+  <text class="rule" x="40" y="158">Hold your lane; rotate after confirmed information.</text>
+  <rect class="legend" x="680" y="20" width="296" height="66" rx="12"/>
+  <text class="legend-text" x="698" y="47">Blue dot = hold player</text>
+  <text class="legend-text" x="698" y="66">Dashed ray = angle / rotation lane</text>
+
+  <ellipse class="zone" cx="280" cy="280" rx="76" ry="48"/><text class="zone-text" x="232" y="222">A MAIN</text>
+  <ellipse class="zone" cx="500" cy="505" rx="68" ry="42"/><text class="zone-text" x="464" y="455">MID</text>
+  <ellipse class="zone" cx="815" cy="505" rx="72" ry="45"/><text class="zone-text" x="776" y="455">B RAMP</text>
+
+  <path class="rotate" d="M 500 130 C 430 190, 360 230, 280 280"/>
+  <path class="rotate" d="M 500 130 C 500 250, 500 375, 500 505"/>
+  <path class="rotate" d="M 500 130 C 610 220, 720 340, 815 505"/>
+  <path class="hold" d="M 280 280 C 250 325, 225 365, 205 410"/>
+  <path class="hold" d="M 500 505 C 500 470, 500 435, 500 405"/>
+  <path class="hold" d="M 315 440 C 360 470, 400 510, 440 545"/>
+  <path class="hold" d="M 815 505 C 825 545, 830 575, 830 615"/>
+  <path class="hold" d="M 625 590 C 680 600, 730 605, 770 600"/>
+
+  <g data-side="ct" data-player="1" data-role="A anchor" data-action="hold A Main / Temple" aria-label="Player 1, A anchor">
+    <circle class="marker" cx="280" cy="280" r="17"/><text class="number" x="280" y="285">1</text>
+    <line class="leader" x1="280" y1="280" x2="30" y2="280"/><rect class="label" x="22" y="238" width="218" height="54" rx="8"/>
+    <text class="role" x="34" y="260">1 - A anchor</text><text class="action" x="34" y="279">hold A Main / Temple</text>
   </g>
-  <g aria-label="legend">
-    <rect class="legend" x="24" y="650" width="1152" height="86" rx="14"/>
-    <text class="legend-head" x="48" y="678">Legend</text>
-    <circle class="ct-marker marker" cx="122" cy="675" r="11"/><text class="legend-text" x="143" y="680">CT player / hold point</text>
-    <line class="hold ct-hold" x1="370" y1="675" x2="422" y2="675"/><text class="legend-text" x="440" y="680">angle / lane to hold</text>
-    <ellipse class="zone" cx="760" cy="675" rx="22" ry="12"/><text class="legend-text" x="794" y="680">first decision area</text>
-    <text class="source" x="48" y="716">Sourced overview: https://www.csgold.net/en/maps/ancient · local annotations are a teaching overlay, not a replacement radar.</text>
+  <g data-side="ct" data-player="2" data-role="Mid info" data-action="hold Top Mid / fall back" aria-label="Player 2, Mid info">
+    <circle class="marker" cx="500" cy="505" r="17"/><text class="number" x="500" y="510">2</text>
+    <line class="leader" x1="500" y1="505" x2="355" y2="510"/><rect class="label" x="292" y="470" width="218" height="54" rx="8"/>
+    <text class="role" x="304" y="492">2 - Mid info</text><text class="action" x="304" y="511">hold Top Mid / fall back</text>
   </g>
+  <g data-side="ct" data-player="3" data-role="Donut rotator" data-action="watch the split" aria-label="Player 3, Donut rotator">
+    <circle class="marker" cx="315" cy="440" r="17"/><text class="number" x="315" y="445">3</text>
+    <line class="leader" x1="315" y1="440" x2="90" y2="530"/><rect class="label" x="22" y="510" width="218" height="54" rx="8"/>
+    <text class="role" x="34" y="532">3 - Donut rotator</text><text class="action" x="34" y="551">watch the split</text>
+  </g>
+  <g data-side="ct" data-player="4" data-role="B anchor" data-action="hold B Ramp / Cave" aria-label="Player 4, B anchor">
+    <circle class="marker" cx="815" cy="505" r="17"/><text class="number" x="815" y="510">4</text>
+    <line class="leader" x1="815" y1="505" x2="750" y2="665"/><rect class="label" x="700" y="650" width="218" height="54" rx="8"/>
+    <text class="role" x="712" y="672">4 - B anchor</text><text class="action" x="712" y="691">hold B Ramp / Cave</text>
+  </g>
+  <g data-side="ct" data-player="5" data-role="Support / flex" data-action="rotate after clear info" aria-label="Player 5, Support / flex">
+    <circle class="marker" cx="625" cy="590" r="17"/><text class="number" x="625" y="595">5</text>
+    <line class="leader" x1="625" y1="590" x2="650" y2="725"/><rect class="label" x="548" y="720" width="220" height="54" rx="8"/>
+    <text class="role" x="560" y="742">5 - Support / flex</text><text class="action" x="560" y="761">rotate after clear info</text>
+  </g>
+  <text class="legend-text" x="30" y="975">Rotation trigger: confirmed site contact, utility clearing a lane, or a teammate's reliable call.</text>
 </svg>

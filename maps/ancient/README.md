@@ -7,7 +7,7 @@
 **Mode:** Defusal  
 **Key lesson:** Mid control and lane isolation
 
-![Ancient callout overview](https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Fancient-callouts.webp&w=3840)
+![Ancient callout overview](assets/ancient-callouts.png)
 
 [Visual/source note](assets/map-overview-source.md)
 
@@ -40,7 +40,7 @@ Own enough Mid/Donut information to make A and B defenders choose which lane to 
 
 ## Five-player defaults
 
-These are opening-role overlays over the sourced map overview. Use the T diagram to assign routes and initial pressure; use the CT diagram to assign hold angles and the first rotation trigger. They are teaching overlays, not pixel-perfect radars.
+These are opening-role overlays over the supplied Ancient callout map photo. T Spawn is bottom-center: use the T diagram to assign routes and initial pressure; use the CT diagram to assign hold angles and the first rotation trigger. They are teaching overlays, not pixel-perfect radars.
 
 ### T-side default
 

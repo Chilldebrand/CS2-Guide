@@ -34,7 +34,11 @@ function rewriteLocalMarkdownLinks(html, map) {
   ]);
 
   return html.replace(/href="([^"]+)"/g, (link, href) => {
-    const replacement = localLinks.get(href);
+    const [pathName, fragment] = href.split('#', 2);
+    const replacement = localLinks.get(href) ?? localLinks.get(pathName);
+    if (replacement && fragment && pathName === 'utility.md') {
+      return `href="#${fragment}"`;
+    }
     return replacement ? `href="${replacement}"` : link;
   });
 }
@@ -115,11 +119,22 @@ export async function buildMapPage({ rootDir, outputDir, map, template }) {
   const outputAssetsDir = path.join(pageDir, 'assets');
 
   await mkdir(outputAssetsDir, { recursive: true });
-  await Promise.all([
-    writeFile(path.join(pageDir, 'index.html'), html),
+  const assetCopies = [
     copyFile(path.join(rootDir, map.sourceDir, map.assets.context), path.join(outputAssetsDir, 'positioning-overview.svg')),
     copyFile(path.join(rootDir, map.sourceDir, map.assets.defaultT), path.join(outputAssetsDir, 'default-t.svg')),
     copyFile(path.join(rootDir, map.sourceDir, map.assets.defaultCt), path.join(outputAssetsDir, 'default-ct.svg')),
+  ];
+  if (map.assets.sourceMap) {
+    assetCopies.push(
+      copyFile(
+        path.join(rootDir, map.sourceDir, map.assets.sourceMap),
+        path.join(outputAssetsDir, path.basename(map.assets.sourceMap)),
+      ),
+    );
+  }
+  await Promise.all([
+    writeFile(path.join(pageDir, 'index.html'), html),
+    ...assetCopies,
   ]);
 }
 

@@ -143,7 +143,7 @@ test('template exposes accessible map controls', async () => {
   assert.match(template, /id="map-follow"/);
   assert.match(template, /aria-controls="map-body"/);
   assert.match(template, /aria-expanded="true"/);
-  assert.match(template, /alt="Inferno positioning teaching diagram/);
+  assert.match(template, /alt="{{MAP_TITLE}} positioning context diagram/);
 });
 
 test('template exposes map sizing and modal controls', async () => {
@@ -155,7 +155,7 @@ test('template exposes map sizing and modal controls', async () => {
   assert.match(template, /<option value="4">4×<\/option>/);
   assert.match(template, /<dialog[^>]*id="map-overlay"[^>]*data-map-overlay/);
   assert.match(template, /data-map-overlay-close/);
-  assert.match(template, /aria-label="Expanded Inferno map"/);
+  assert.match(template, /aria-label="Expanded {{MAP_TITLE}} map"/);
 });
 
 test('styles and script expose responsive and reduced-motion behavior', async () => {

@@ -13,15 +13,22 @@ const assetFiles = {
 };
 
 export const ACTIVE_DUTY_MAPS = [
-  { slug: 'ancient', title: 'Ancient', poolLabel: 'Premier / Active Duty', sourceDir: 'maps/ancient', pageTitle: 'Ancient | CS2 Guide' },
+  {
+    slug: 'ancient',
+    title: 'Ancient',
+    poolLabel: 'Premier / Active Duty',
+    sourceDir: 'maps/ancient',
+    pageTitle: 'Ancient | CS2 Guide',
+    sourceMap: 'assets/ancient-callouts.png',
+  },
 ].map((map) => ({
   ...map,
   markdown: markdownFiles,
-  assets: assetFiles,
+  assets: { ...assetFiles, sourceMap: map.sourceMap },
 }));
 
 export function getRequiredInputs(map) {
-  return [
+  const required = [
     map.markdown.readme,
     map.markdown.offense,
     map.markdown.defense,
@@ -30,5 +37,7 @@ export function getRequiredInputs(map) {
     map.assets.context,
     map.assets.defaultT,
     map.assets.defaultCt,
-  ].map((relativePath) => `${map.sourceDir}/${relativePath}`);
+  ];
+  if (map.assets.sourceMap) required.push(map.assets.sourceMap);
+  return required.map((relativePath) => `${map.sourceDir}/${relativePath}`);
 }
