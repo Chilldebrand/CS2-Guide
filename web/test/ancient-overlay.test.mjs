@@ -16,7 +16,8 @@ test('Ancient defaults use the supplied local map photo as their overlay layer',
 
   for (const filename of ['default-t.svg', 'default-ct.svg']) {
     const svg = await readFile(path.join(assetsDir, filename), 'utf8');
-    assert.match(svg, /href="ancient-callouts\.png"/);
+    assert.match(svg, /href="data:image\/png;base64,[A-Za-z0-9+/=]+"/);
+    assert.doesNotMatch(svg, /href="ancient-callouts\.png"/);
     assert.doesNotMatch(svg, /csgold\.net/);
   }
 });
