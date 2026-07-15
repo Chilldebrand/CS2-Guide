@@ -89,3 +89,18 @@ Remote overview images remain in use where local reuse permission was not verifi
 ### Publishing status
 
 - GitHub Pages is configured for `https://chilldebrand.github.io/CS2-Guide/`. The site is not claimed as deployed in this QA pass: it will publish after the reviewed branch is merged and pushed to `main`.
+
+## Map enlargement QA
+
+**Checked:** 2026-07-14. These changes are present on the local `feat/map-enlargement` branch only; the branch has not been merged or pushed, and no public deployment is claimed.
+
+### Automated behavior and build checks
+
+- `npm.cmd test --prefix web` passed: 16 tests passed and 0 failed. The suite covers persistent 1×–3× inline size selection, temporary 4× overlay behavior, Close/Escape restoration and focus return, partial/absent dialog API fallback, and independence of the follow and collapse controls.
+- `npm.cmd run build --prefix web` completed with exit code 0.
+- The automated CSS/template contract checks include mobile stacking overrides and the reduced-motion rules. This is static/automated coverage; it is not a replacement for runtime browser validation.
+
+### Browser QA status
+
+- Interactive local-preview QA was blocked in this environment. The temporary local server was cleaned up when its launching command ended, both available browser surfaces then received `net::ERR_CONNECTION_REFUSED`, and direct `file:///` opening was prohibited by browser policy.
+- Accordingly, desktop 1×–3× visual resizing, runtime 4× Close/Escape/focus behavior, mobile stacking, follow/collapse regression behavior, and runtime reduced-motion behavior still need a local browser pass outside this sandbox. No product failure was observed or inferred from the blocked preview.

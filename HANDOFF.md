@@ -4,8 +4,9 @@
 
 - Repository: `https://github.com/Chilldebrand/CS2-Guide.git`
 - Local checkout: `C:\Users\hilde\OneDrive\Documents\CS2 Guide\CS2-Guide`
-- Branch: `main`
-- Most recent code commit: `117e1cc docs: finalize utility visuals fix pass`
+- Branch: `feat/map-enlargement` (local worktree)
+- Most recent code commit: `4eae7c6 fix: support map overlay without dialog APIs`
+- The feature branch is not yet merged or pushed. GitHub Pages must not be described as publicly deployed with these controls.
 - Final QA status and durable verification evidence are recorded in `docs/qa-report.md`.
 
 ## What is already built
@@ -57,13 +58,13 @@ Maintenance priorities:
 
 ## Web companion status and next work
 
-- The Inferno web companion proof of concept is implemented in `web/`: it generates one Inferno document from the Markdown guide, provides desktop sticky-map and disabled-map modes, a reversible collapse control, a stacked mobile layout, reduced-motion CSS, and links back to the Markdown source.
+- The pending-publish Inferno web companion in `web/` generates one Inferno document from the Markdown guide. It supports persistent 1×–3× inline map sizing and a temporary 4× overlay, alongside desktop sticky-map and disabled-map modes, a reversible collapse control, a stacked mobile layout, reduced-motion CSS, and links back to the Markdown source.
 - Markdown remains authoritative. The web companion is a generated reading layer and must not become a second source for tactics, utility, callouts, or source metadata.
-- GitHub Pages publishing is configured for `https://chilldebrand.github.io/CS2-Guide/`. It will publish after this reviewed branch is merged and pushed to `main`; do not describe the site as already deployed before then.
+- GitHub Pages publishing is configured for `https://chilldebrand.github.io/CS2-Guide/`. It can publish after this reviewed branch is merged and pushed to `main`; do not describe the site as already deployed before then.
 
 Optional next work:
 
-1. Validate the deployed Inferno layout in a browser environment that can exercise native keyboard navigation and reduced-motion media emulation.
+1. Before publishing, validate the local Inferno layout in a browser environment that can exercise desktop 1×–3× resizing, 4× Close/Escape/focus, mobile stacking, follow/collapse independence, native keyboard navigation, and reduced-motion media emulation.
 2. Reuse the proven template for another map only after that layout review, while retaining Markdown-derived content and each map's source disclosures.
 3. Maintain the generator, Pages workflow, dependencies, local SVG paths, source links, and browser QA evidence when Markdown, map geometry, or browser support changes.
 
