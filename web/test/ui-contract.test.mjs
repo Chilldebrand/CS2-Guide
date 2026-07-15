@@ -178,6 +178,32 @@ test('styles and script expose responsive and reduced-motion behavior', async ()
   assert.match(js, /size\.focus\(\)/);
 });
 
+test('4x dialog assigns a viewport-constrained width to the enlarged map', async () => {
+  const css = await readFile(path.join(webRoot, 'styles.css'), 'utf8');
+  const overlayRule = css.match(/\[data-map-overlay\]\s*\{([^}]*)\}/s)?.[1] ?? '';
+  const overlayImageRule = css.match(/\[data-map-overlay\]\s+img\s*\{([^}]*)\}/s)?.[1] ?? '';
+
+  assert.match(overlayRule, /^\s*width:\s*min\(96vw,\s*90rem\);/m);
+  assert.match(overlayImageRule, /^\s*width:\s*100%;/m);
+});
+
+test('size 3 stacks before mobile while roomy map sizes retain desktop columns', async () => {
+  const css = await readFile(path.join(webRoot, 'styles.css'), 'utf8');
+
+  assert.match(
+    css,
+    /\.guide-layout\.map-size-2\s*\{\s*grid-template-columns:\s*minmax\(0,\s*1fr\)\s+minmax\(24rem,\s*38rem\);\s*\}/,
+  );
+  assert.match(
+    css,
+    /\.guide-layout\.map-size-3\s*\{\s*grid-template-columns:\s*minmax\(0,\s*1fr\)\s+minmax\(30rem,\s*48rem\);\s*\}/,
+  );
+  assert.match(
+    css,
+    /@media\s*\(max-width:\s*64rem\)\s*\{[\s\S]*?\.guide-layout\.map-size-3\s*\{\s*grid-template-columns:\s*1fr;\s*\}/,
+  );
+});
+
 test('1x through 3x update only the active layout class and saved size', () => {
   const { elements, storedPreferences } = runApp({
     preferences: { 'cs2-guide-map-size': '2' },
