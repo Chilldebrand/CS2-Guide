@@ -21,6 +21,49 @@ const size = document.querySelector('[data-map-size]');
 const overlay = document.querySelector('[data-map-overlay]');
 const overlayClose = document.querySelector('[data-map-overlay-close]');
 const layout = document.querySelector('.guide-layout');
+const sideTabs = typeof document.querySelectorAll === 'function'
+  ? [...document.querySelectorAll('[data-map-side-tab]')]
+  : [];
+const sideViews = typeof document.querySelectorAll === 'function'
+  ? [...document.querySelectorAll('[data-map-default]')]
+  : [];
+
+if (sideTabs.length && sideViews.length) {
+  const validSides = new Set(['t', 'ct']);
+
+  function applyMapSide(side) {
+    const selected = validSides.has(side) ? side : 't';
+
+    sideTabs.forEach((tab) => {
+      const isSelected = tab.dataset.mapSideTab === selected;
+      tab.setAttribute('aria-selected', String(isSelected));
+      tab.tabIndex = isSelected ? 0 : -1;
+    });
+    sideViews.forEach((view) => {
+      view.hidden = view.dataset.mapDefault !== selected;
+    });
+    writePreference('cs2-guide-map-side', selected);
+  }
+
+  sideTabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => applyMapSide(tab.dataset.mapSideTab));
+    tab.addEventListener('keydown', (event) => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      const direction = event.key === 'ArrowLeft' ? -1 : 1;
+      const nextIndex = event.key === 'Home'
+        ? 0
+        : event.key === 'End'
+          ? sideTabs.length - 1
+          : (index + direction + sideTabs.length) % sideTabs.length;
+      const nextTab = sideTabs[nextIndex];
+      nextTab.focus();
+      applyMapSide(nextTab.dataset.mapSideTab);
+    });
+  });
+
+  applyMapSide(readPreference('cs2-guide-map-side', 't'));
+}
 
 if (follow && collapse && panel) {
   function applyFollowScroll(enabled) {

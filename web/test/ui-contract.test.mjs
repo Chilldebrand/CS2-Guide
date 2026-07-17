@@ -36,8 +36,11 @@ class MockElement {
   constructor() {
     this.checked = false;
     this.classList = new MockClassList();
+    this.dataset = {};
     this.focusCalls = 0;
+    this.hidden = false;
     this.textContent = '';
+    this.tabIndex = 0;
     this.value = '';
   }
 
@@ -88,7 +91,14 @@ function runApp({ dialog = 'full', preferences = {} } = {}) {
     overlayClose: new MockElement(),
     panel: new MockElement(),
     size: new MockElement(),
+    sideTabs: [new MockElement(), new MockElement()],
+    sideViews: [new MockElement(), new MockElement(), new MockElement(), new MockElement()],
   };
+  elements.sideTabs[0].dataset.mapSideTab = 't';
+  elements.sideTabs[1].dataset.mapSideTab = 'ct';
+  elements.sideViews.forEach((view, index) => {
+    view.dataset.mapDefault = index % 2 === 0 ? 't' : 'ct';
+  });
   const selectors = new Map([
     ['[data-map-follow]', elements.follow],
     ['[data-map-collapse]', elements.collapse],
@@ -97,6 +107,10 @@ function runApp({ dialog = 'full', preferences = {} } = {}) {
     ['[data-map-overlay]', elements.overlay],
     ['[data-map-overlay-close]', elements.overlayClose],
     ['.guide-layout', elements.layout],
+  ]);
+  const queryAll = new Map([
+    ['[data-map-side-tab]', elements.sideTabs],
+    ['[data-map-default]', elements.sideViews],
   ]);
 
   elements.overlay.closeCalls = 0;
@@ -131,6 +145,9 @@ function runApp({ dialog = 'full', preferences = {} } = {}) {
       querySelector(selector) {
         return selectors.get(selector) ?? null;
       },
+      querySelectorAll(selector) {
+        return queryAll.get(selector) ?? [];
+      },
     },
     window: { localStorage },
   });
@@ -145,6 +162,9 @@ test('template exposes accessible map controls', async () => {
   assert.match(template, /aria-expanded="true"/);
   assert.match(template, /data-map-side="t"/);
   assert.match(template, /data-map-side="ct"/);
+  assert.match(template, /role="tablist"/);
+  assert.match(template, /data-map-side-tab="t"/);
+  assert.match(template, /data-map-side-tab="ct"/);
   assert.doesNotMatch(template, /positioning-overview\.svg/);
 });
 
@@ -224,6 +244,27 @@ test('1x through 3x update only the active layout class and saved size', () => {
     assert.equal(elements.size.value, selected);
     assert.equal(storedPreferences.get('cs2-guide-map-size'), selected);
   }
+});
+
+test('side tabs switch between T and CT drawings and persist the choice', () => {
+  const { elements, storedPreferences } = runApp({
+    preferences: { 'cs2-guide-map-side': 't' },
+  });
+
+  assert.equal(elements.sideTabs[0].getAttribute('aria-selected'), 'true');
+  assert.equal(elements.sideTabs[1].getAttribute('aria-selected'), 'false');
+  assert.equal(elements.sideViews[0].hidden, false);
+  assert.equal(elements.sideViews[1].hidden, true);
+
+  elements.sideTabs[1].dispatch('click');
+
+  assert.equal(elements.sideTabs[0].getAttribute('aria-selected'), 'false');
+  assert.equal(elements.sideTabs[1].getAttribute('aria-selected'), 'true');
+  assert.equal(elements.sideViews[0].hidden, true);
+  assert.equal(elements.sideViews[1].hidden, false);
+  assert.equal(elements.sideViews[2].hidden, true);
+  assert.equal(elements.sideViews[3].hidden, false);
+  assert.equal(storedPreferences.get('cs2-guide-map-side'), 'ct');
 });
 
 test('4x is temporary and closing restores the saved inline size', () => {

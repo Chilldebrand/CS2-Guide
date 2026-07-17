@@ -245,6 +245,33 @@ input:focus-visible {
   margin-top: 1rem;
 }
 
+.map-side-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.map-side-tab {
+  padding: 0.45rem 0.9rem;
+  border: 1px solid #64748b;
+  border-radius: 999px;
+  background: #172033;
+  color: #cbd5e1;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.map-side-tab[aria-selected="true"] {
+  border-color: #7dd3fc;
+  background: #0c4a6e;
+  color: #fff;
+}
+
+.map-side-tab:focus-visible {
+  outline: 2px solid #facc15;
+  outline-offset: 2px;
+}
+
 [data-map-body] img {
   display: block;
   width: 100%;
@@ -259,6 +286,10 @@ input:focus-visible {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
   margin-top: 1rem;
+}
+
+.role-default-grid {
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .default-card {

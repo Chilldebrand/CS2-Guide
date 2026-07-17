@@ -34,13 +34,19 @@
           </select>
         </div>
         <div id="map-body" data-map-body>
-          <div class="default-grid" aria-label="{{MAP_TITLE}} five-player defaults">
-            <figure class="default-card">
+          <div class="map-side-tabs" role="tablist" aria-label="{{MAP_TITLE}} side view">
+            <button type="button" class="map-side-tab" role="tab" aria-selected="true"
+                    aria-controls="map-default-t" data-map-side-tab="t">T side</button>
+            <button type="button" class="map-side-tab" role="tab" aria-selected="false"
+                    aria-controls="map-default-ct" data-map-side-tab="ct">CT side</button>
+          </div>
+          <div class="default-grid role-default-grid" aria-label="{{MAP_TITLE}} five-player defaults">
+            <figure id="map-default-t" class="default-card" data-map-default="t">
               <figcaption><strong>T default</strong> — routes and initial pressure</figcaption>
               <img data-map-side="t" src="{{MAP_ASSET_BASE}}default-t.svg"
                    alt="{{MAP_TITLE}} T-side five-player default showing roles, routes, and initial pressure">
             </figure>
-            <figure class="default-card">
+            <figure id="map-default-ct" class="default-card" data-map-default="ct" hidden>
               <figcaption><strong>CT default</strong> — hold angles and first rotation</figcaption>
               <img data-map-side="ct" src="{{MAP_ASSET_BASE}}default-ct.svg"
                    alt="{{MAP_TITLE}} CT-side five-player default showing roles, hold angles, and rotation trigger">
@@ -51,10 +57,10 @@
     </main>
     <dialog id="map-overlay" data-map-overlay aria-label="Expanded {{MAP_TITLE}} map">
       <button type="button" data-map-overlay-close>Close expanded map</button>
-      <div class="default-grid" aria-label="Expanded {{MAP_TITLE}} five-player defaults">
-        <img src="{{MAP_ASSET_BASE}}default-t.svg"
+      <div class="default-grid role-default-grid" aria-label="Expanded {{MAP_TITLE}} five-player defaults">
+        <img data-map-default="t" src="{{MAP_ASSET_BASE}}default-t.svg"
              alt="Expanded {{MAP_TITLE}} T-side five-player default showing roles, routes, and initial pressure">
-        <img src="{{MAP_ASSET_BASE}}default-ct.svg"
+        <img data-map-default="ct" src="{{MAP_ASSET_BASE}}default-ct.svg" hidden
              alt="Expanded {{MAP_TITLE}} CT-side five-player default showing roles, hold angles, and rotation trigger">
       </div>
     </dialog>
