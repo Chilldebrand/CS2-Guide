@@ -5,15 +5,14 @@
 - **Checked:** 2026-07-13
 - **Map-version note:** CS2 Train Yard, A Main, Ivy, Popdog, Upper/Lower B, and Connector route relationships were checked for this guide scope on 2026-07-13.
 - **Asset type:** Remote annotated callout overview plus local hand-authored route teaching diagram.
-- **Positioning diagram background URL:** https://www.csgold.net/maps/train-callouts.webp
+- **Overlay background URL:** https://www.csgold.net/maps/train-callouts.webp
 - **Local map-photo layer:** `assets/train-callouts.webp`; native source geometry is 1416 × 1416.
 - **Overlay files:** `assets/default-t.svg` and `assets/default-ct.svg` embed the sourced photo and place five authored routes over its lanes.
 - **Attribution/license or permission basis:** CSGold and CSNADES.gg remain remote references; no source pixels were copied because local reuse permission was not verified.
-- **Local annotated asset status:** Complete for `positioning-overview.svg`; the SVG is a route schematic, not a pixel-perfect radar replacement.
-- **Positioning diagram filename:** `positioning-overview.svg`
-- **Positioning diagram base overview source:** https://www.csgold.net/en/maps/train
-- **Positioning diagram checked:** 2026-07-13
-- **Positioning diagram attribution/license or permission basis:** Hand-authored by this repository from the cited callout overview and existing offense/defense plans; no source pixels were copied.
+- **Local annotated asset status:** Complete for `default-t.svg` and `default-ct.svg`; these hand-authored overlays preserve the sourced map photo behind the routes.
+- **Overlay source page:** https://www.csgold.net/en/maps/train
+- **Overlay source checked:** 2026-07-13
+- **Overlay attribution/license or permission basis:** Hand-authored by this repository from the cited callout overview and existing offense/defense plans; no source pixels were copied.
 - **Status:** Keep the callout overview remote and the route diagram local.
 - **Replacement trigger:** Replace the source note and SVG when verified Train geometry, callouts, route connections, or utility interactions change.
 

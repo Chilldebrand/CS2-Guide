@@ -4,7 +4,7 @@
 - **T overlay:** default-t.svg embeds assets/inferno-callouts.webp as the sourced map-photo layer and adds local annotations for five roles, spawn-based routes, and initial pressure.
 - **CT overlay:** default-ct.svg embeds the same sourced map-photo layer and adds local annotations for five roles, hold angles, and the first rotation trigger.
 - **Local map-photo layer:** assets/inferno-callouts.webp (copied into each built map page so the article and GitHub file preview retain the photo behind the overlay).
-- **Positioning diagram background URL:** https://www.csgold.net/maps/inferno-callouts.webp
+- **Overlay background URL:** https://www.csgold.net/maps/inferno-callouts.webp
 - **Source page:** https://www.csgold.net/en/maps/inferno
 - **Checked:** 2026-07-15
 - **Attribution/license or permission basis:** Source map remains attributed to CSGold; this local copy is included for the review build at the user's direction. The annotations are hand-authored editorial overlays.
@@ -16,13 +16,12 @@
 - **Map-version note:** CS2 Inferno geometry, callouts, and utility interactions checked for the guide scope on 2026-07-13.
 - **Asset type:** Local sourced callout photo plus local hand-authored route teaching diagram.
 - **Attribution/license or permission basis:** CSGold remains attributed as the source; this review build stores the callout photo locally at the user's direction.
-- **Local annotated asset status:** Complete for `positioning-overview.svg`; the guide now stores a local hand-authored teaching diagram derived from the verified overview source while the sourced callout photo is retained as the map layer.
-- **Positioning diagram filename:** `positioning-overview.svg`
-- **Positioning diagram base overview source:** https://www.csgold.net/maps/inferno-callouts.webp
-- **Positioning diagram checked:** 2026-07-13
-- **Positioning diagram attribution/license or permission basis:** Route annotations are hand-authored by this repository; the sourced photo is separately stored as the map layer.
+- **Local annotated asset status:** Complete for `default-t.svg` and `default-ct.svg`; these hand-authored overlays preserve the sourced map photo behind the routes.
+- **Overlay source page:** https://www.csgold.net/maps/inferno-callouts.webp
+- **Overlay source checked:** 2026-07-13
+- **Overlay attribution/license or permission basis:** Route annotations are hand-authored by this repository; the sourced photo is separately stored as the map layer.
 - **Status:** Keep the sourced map photo and hand-authored route diagram local for this review build.
-- **Replacement trigger:** Replace the source note and `positioning-overview.svg` when verified map geometry, callouts, or grenade interactions change, or when a better permitted source becomes available.
+- **Replacement trigger:** Replace the source note and both default overlays when verified map geometry, callouts, or grenade interactions change, or when a better permitted source becomes available.
 
 ## Utility screenshot sources
 
@@ -65,4 +64,4 @@
   - **Attribution/license or permission basis:** No local copy was made because explicit reuse permission for the source screenshots was not verified.
   - **Replacement trigger:** Replace this source entry and linked remote reference when verified A-wrap landmarks, lineup landmarks, or permitted source availability changes.
 
-The positioning diagram and any future utility screenshots must record their own source page, direct asset URL when different, checked date, map-version note, status, replacement trigger, and attribution/license or permission basis.
+The default overlays and any future utility screenshots must record their own source page, direct asset URL when different, checked date, map-version note, status, replacement trigger, and attribution/license or permission basis.

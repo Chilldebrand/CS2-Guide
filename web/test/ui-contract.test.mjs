@@ -143,9 +143,9 @@ test('template exposes accessible map controls', async () => {
   assert.match(template, /id="map-follow"/);
   assert.match(template, /aria-controls="map-body"/);
   assert.match(template, /aria-expanded="true"/);
-  assert.match(template, /alt="\{\{MAP_TITLE\}\} positioning context diagram/);
   assert.match(template, /data-map-side="t"/);
   assert.match(template, /data-map-side="ct"/);
+  assert.doesNotMatch(template, /positioning-overview\.svg/);
 });
 
 test('template exposes map sizing and modal controls', async () => {

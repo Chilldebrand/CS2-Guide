@@ -8,16 +8,6 @@
 
 [Visual/source note](assets/map-overview-source.md)
 
-## Positioning visual status
-
-The sourced overhead supports the authored five-player route and hold overlays below. Use the creator's [Boulder Steam Workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=3663186989) for current build updates.
-
-[Geometry/source note](assets/map-overview-source.md) · [Pending visual utility cards](utility.md#visual-lineups)
-
-1. Starting roles: use Mid pressure, A Long, B Short, Tunnels, and a flex bomb carrier as the opening five-player default.
-2. Information trigger: use only confirmed central-route contact; no named connection or rotation is asserted by a local diagram.
-3. Rotation/trade path: keep A Long and B Short separate until Mid or Connector information makes the site call clear.
-
 ## How to use this folder
 
 - [Offense plan](offense.md)

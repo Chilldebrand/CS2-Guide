@@ -11,16 +11,6 @@
 
 [Visual/source note](assets/map-overview-source.md)
 
-## Positioning visual
-
-![Ancient route teaching diagram showing Mid and Donut pressure, A Main and B Lobby spacing, CT anchors, and the principal trade and rotation paths](assets/positioning-overview.svg)
-
-[Positioning source note](assets/map-overview-source.md) · [Visual utility cards](utility.md#visual-lineups)
-
-1. Starting roles: Ts keep two players near Mid, one at A Main, one at B Lobby, and one flexible support; CTs keep an A anchor, a B anchor, and a Mid helper without exposing every lane.
-2. Information trigger: confirmed Mid or Donut control can turn into an A split, while denied Mid pressure is the signal to preserve the bomb and regroup toward the opposite lane.
-3. Rotation/trade path: the route arrows show Mid into Donut/A, A Main into A, and B Lobby into B; CT help moves only after reliable Mid, Temple, or B information.
-
 ## How to use this folder
 
 - [Offense plan](offense.md)

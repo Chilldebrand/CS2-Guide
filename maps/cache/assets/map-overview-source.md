@@ -4,7 +4,7 @@
 - **T overlay:** default-t.svg embeds assets/cache-callouts.webp as the sourced map-photo layer and adds local annotations for five roles, spawn-based routes, and initial pressure.
 - **CT overlay:** default-ct.svg embeds the same sourced map-photo layer and adds local annotations for five roles, hold angles, and the first rotation trigger.
 - **Local map-photo layer:** assets/cache-callouts.webp (copied into each built map page so the article and GitHub file preview retain the photo behind the overlay).
-- **Positioning diagram background URL:** https://www.csgold.net/maps/cache-callouts.webp
+- **Overlay background URL:** https://www.csgold.net/maps/cache-callouts.webp
 - **Source page:** https://www.csgold.net/en/maps/cache
 - **Checked:** 2026-07-15
 - **Attribution/license or permission basis:** Source map remains attributed to CSGold; this local copy is included for the review build at the user's direction. The annotations are hand-authored editorial overlays.
@@ -17,11 +17,10 @@
 - **Map-version note:** The released 2026 CS2 Cache three-lane layout and callouts were checked against the current callout page and Valve's 2026 return note.
 - **Asset type:** Local sourced callout photo plus local hand-authored route teaching diagram.
 - **Attribution/license or permission basis:** CSGold remains attributed as the source; this review build stores the callout photo locally at the user's direction.
-- **Local annotated asset status:** Complete for `positioning-overview.svg`; the SVG is a route schematic, not a pixel-perfect radar replacement.
-- **Positioning diagram filename:** `positioning-overview.svg`
-- **Positioning diagram base overview source:** https://www.hotspawn.com/counter-strike/guide/cs2-cache-callouts
-- **Positioning diagram checked:** 2026-07-13
-- **Positioning diagram attribution/license or permission basis:** Route annotations are hand-authored by this repository; the sourced photo is separately stored as the map layer.
+- **Local annotated asset status:** Complete for `default-t.svg` and `default-ct.svg`; these hand-authored overlays preserve the sourced map photo behind the routes.
+- **Overlay source page:** https://www.hotspawn.com/counter-strike/guide/cs2-cache-callouts
+- **Overlay source checked:** 2026-07-13
+- **Overlay attribution/license or permission basis:** Route annotations are hand-authored by this repository; the sourced photo is separately stored as the map layer.
 - **Status:** Keep the sourced map photo and hand-authored route diagram local for this review build.
 - **Replacement trigger:** Replace the source note and SVG when verified Cache geometry, callouts, route connections, or utility interactions change.
 

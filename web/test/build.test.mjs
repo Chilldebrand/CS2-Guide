@@ -41,7 +41,7 @@ test('buildSite emits a landing page and one document per guide map', async () =
     assert.match(html, /id="offense"/);
     assert.match(html, /id="defense"/);
     assert.match(html, /id="utility-priorities"/);
-    assert.match(html, /assets\/positioning-overview\.svg/);
+    assert.doesNotMatch(html, /assets\/positioning-overview\.svg/);
     assert.match(html, /assets\/default-t\.svg/);
     assert.match(html, /assets\/default-ct\.svg/);
     assert.match(html, new RegExp(`assets/${sourceMaps[map]}`));
@@ -106,11 +106,10 @@ test('generated document rewrites local Markdown cross-links to in-page anchors'
   const html = await readFile(path.join(outputDir, 'maps', 'inferno', 'index.html'), 'utf8');
 
   assert.match(html, /href="https:\/\/github\.com\/Chilldebrand\/CS2-Guide\/blob\/main\/maps\/inferno\/assets\/map-overview-source\.md">Visual\/source note<\/a>/);
-  assert.match(html, /href="https:\/\/github\.com\/Chilldebrand\/CS2-Guide\/blob\/main\/maps\/inferno\/assets\/map-overview-source\.md">Positioning source note<\/a>/);
   assert.match(html, /href="#offense">Offense plan<\/a>/);
   assert.match(html, /href="#defense">Defense plan<\/a>/);
   assert.match(html, /href="#utility">Utility priorities<\/a>/);
-  assert.match(html, /id="positioning-overview"/);
+  assert.doesNotMatch(html, /id="positioning-overview"/);
   assert.match(html, /id="utility"/);
   assert.doesNotMatch(html, /href="(?!(?:https?:)?\/\/|#)[^"]*\.md(?:[?#][^"]*)?"/);
 });

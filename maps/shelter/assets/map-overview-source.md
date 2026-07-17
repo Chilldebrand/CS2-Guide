@@ -6,14 +6,13 @@
 - **Checked:** 2026-07-13
 - **Map-version note:** Shelter Playroom, Dock, Exterior Kennels, Pool, Bark Barn, Yard, Courtyard, Breezeway, Cat Adoptions, and rescue-zone route relationships were checked against the creator page and current callout guide on 2026-07-13.
 - **Asset type:** BO3 callout overview plus local hand-authored hostage-rescue teaching diagrams.
-- **Positioning diagram background URL:** https://files.bo3.gg/uploads/image/124523/image/webp-990f95fdacd53ce868f1737fe4292a66.webp
+- **Overlay background URL:** https://files.bo3.gg/uploads/image/124523/image/webp-990f95fdacd53ce868f1737fe4292a66.webp
 - **Local map-photo layer:** `assets/shelter-map.webp`; native source geometry is 1672 × 941.
 - **Attribution/license or permission basis:** Steam Workshop, BO3.gg, and Valve remain remote references; no source pixels were copied because local reuse permission was not verified.
-- **Local annotated asset status:** Complete for `positioning-overview.svg`, `default-t.svg`, and `default-ct.svg`; each preserves the sourced photo behind authored hostage/rescue lanes.
-- **Positioning diagram filename:** `positioning-overview.svg`
-- **Positioning diagram base sources:** https://steamcommunity.com/sharedfiles/filedetails/?id=3737179295 and https://bo3.gg/articles/cs2-shelter-callouts-complete-map-guide
-- **Positioning diagram checked:** 2026-07-13
-- **Positioning diagram attribution/license or permission basis:** Hand-authored by this repository from the cited current route relationships and existing attacker/defender plans; no source pixels were copied.
+- **Local annotated asset status:** Complete for `default-t.svg` and `default-ct.svg`; these hand-authored overlays preserve the sourced map photo behind the routes.
+- **Overlay source pages:** https://steamcommunity.com/sharedfiles/filedetails/?id=3737179295 and https://bo3.gg/articles/cs2-shelter-callouts-complete-map-guide
+- **Overlay source checked:** 2026-07-13
+- **Overlay attribution/license or permission basis:** Hand-authored by this repository from the cited current route relationships and existing attacker/defender plans; no source pixels were copied.
 - **Status:** Keep the sourced map photo behind the authored hostage/rescue overlays; utility cards remain source-linked until fixed lineups are verified.
 - **Replacement trigger:** Replace the source note and SVG when verified Shelter geometry, callouts, hostage-room access, or rescue routes change.
 

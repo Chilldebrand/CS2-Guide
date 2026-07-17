@@ -34,11 +34,6 @@
           </select>
         </div>
         <div id="map-body" data-map-body>
-          <img src="{{MAP_ASSET_BASE}}positioning-overview.svg"
-               alt="{{MAP_TITLE}} positioning context diagram">
-          <p>Context visual, not a pixel-perfect radar replacement.
-            <a href="https://github.com/Chilldebrand/CS2-Guide/blob/main/maps/{{MAP_SLUG}}/assets/map-overview-source.md">View source note</a>.
-          </p>
           <div class="default-grid" aria-label="{{MAP_TITLE}} five-player defaults">
             <figure class="default-card">
               <figcaption><strong>T default</strong> — routes and initial pressure</figcaption>
@@ -56,8 +51,12 @@
     </main>
     <dialog id="map-overlay" data-map-overlay aria-label="Expanded {{MAP_TITLE}} map">
       <button type="button" data-map-overlay-close>Close expanded map</button>
-      <img src="{{MAP_ASSET_BASE}}positioning-overview.svg"
-           alt="{{MAP_TITLE}} positioning context diagram">
+      <div class="default-grid" aria-label="Expanded {{MAP_TITLE}} five-player defaults">
+        <img src="{{MAP_ASSET_BASE}}default-t.svg"
+             alt="Expanded {{MAP_TITLE}} T-side five-player default showing roles, routes, and initial pressure">
+        <img src="{{MAP_ASSET_BASE}}default-ct.svg"
+             alt="Expanded {{MAP_TITLE}} CT-side five-player default showing roles, hold angles, and rotation trigger">
+      </div>
     </dialog>
   </body>
 </html>

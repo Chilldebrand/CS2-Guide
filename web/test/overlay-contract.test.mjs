@@ -70,10 +70,11 @@ for (const map of guideMaps) {
       'utf8',
     );
 
-    assert.match(note, /Positioning diagram background URL:\*\*?\s*https?:\/\//);
+    assert.match(note, /Overlay background URL:\*\*?\s*https?:\/\//);
     assert.match(note, new RegExp(`assets/${sourceMaps[map]}`));
     assert.match(note, /default-t\.svg/);
     assert.match(note, /default-ct\.svg/);
+    assert.doesNotMatch(note, /positioning-overview\.svg|Positioning diagram/);
   });
 
   for (const side of ['t', 'ct']) {

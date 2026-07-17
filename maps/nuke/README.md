@@ -11,16 +11,6 @@
 
 [Visual/source note](assets/map-overview-source.md)
 
-## Positioning visual
-
-![Nuke two-layer route teaching diagram showing Outside and Lobby pressure on the surface, vertical transitions through Secret, Ramp, and Vents, and lower-site isolation](assets/positioning-overview.svg)
-
-[Positioning source note](assets/map-overview-source.md) · [Visual utility cards](utility.md#visual-lineups)
-
-1. Starting roles: Ts show Outside, Lobby, and Ramp pressure without separating the bomb from a trade pair; CTs preserve one upper anchor, one Outside watcher, and a Ramp player who can report movement to the lower layer.
-2. Information trigger: an Outside smoke wall opens Secret, while a Ramp win or a Vent drop changes the call from upper pressure to lower control; every call includes the layer because identical horizontal callouts can be misleading.
-3. Rotation/trade path: dashed arrows mark the verified vertical transitions from Secret, Ramp, and Vents into the lower layer; surface arrows retain the Lobby-to-A option so the team does not rush B on incomplete information.
-
 ## How to use this folder
 
 - [Offense plan](offense.md)

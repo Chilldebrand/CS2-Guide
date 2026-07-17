@@ -4,7 +4,7 @@
 - **T overlay:** default-t.svg embeds assets/anubis-callouts.webp as the sourced map-photo layer and adds local annotations for five roles, spawn-based routes, and initial pressure.
 - **CT overlay:** default-ct.svg embeds the same sourced map-photo layer and adds local annotations for five roles, hold angles, and the first rotation trigger.
 - **Local map-photo layer:** assets/anubis-callouts.webp (copied into each built map page so the article and GitHub file preview retain the photo behind the overlay).
-- **Positioning diagram background URL:** https://pley.gg/app/uploads/2026/03/anubis-1024x1024.webp
+- **Overlay background URL:** https://pley.gg/app/uploads/2026/03/anubis-1024x1024.webp
 - **Source page:** https://www.csgold.net/en/maps/anubis
 - **Checked:** 2026-07-15
 - **Attribution/license or permission basis:** Map geometry remains documented against CSGold; the replacement callout image is attributed to Pley.gg and stored locally at the user's direction. The annotations are hand-authored editorial overlays.
@@ -18,11 +18,10 @@
 - **Map-version note:** CS2 Anubis callouts and Mid/Connector/Water/Canal route order were checked for the post-January-2026 Active Duty layout and this guide scope on 2026-07-13.
 - **Asset type:** Local sourced callout photo plus local hand-authored route teaching diagram.
 - **Attribution/license or permission basis:** Pley.gg is attributed as the source of this replacement callout photo; this review build stores the image locally at the user's direction. The annotations are hand-authored editorial overlays.
-- **Local annotated asset status:** Complete for `positioning-overview.svg`; the SVG is a route schematic, not a pixel-perfect radar replacement.
-- **Positioning diagram filename:** `positioning-overview.svg`
-- **Positioning diagram base overview source:** https://www.csgold.net/en/maps/anubis
-- **Positioning diagram checked:** 2026-07-13
-- **Positioning diagram attribution/license or permission basis:** Route annotations are hand-authored by this repository; the sourced photo is separately stored as the map layer.
+- **Local annotated asset status:** Complete for `default-t.svg` and `default-ct.svg`; these hand-authored overlays preserve the sourced map photo behind the routes.
+- **Overlay source page:** https://www.csgold.net/en/maps/anubis
+- **Overlay source checked:** 2026-07-13
+- **Overlay attribution/license or permission basis:** Route annotations are hand-authored by this repository; the sourced photo is separately stored as the map layer.
 - **Status:** Keep the sourced map photo and hand-authored route diagram local for this review build.
 - **Replacement trigger:** Replace the source note and SVG when verified Anubis geometry, callouts, route connections, or utility interactions change.
 

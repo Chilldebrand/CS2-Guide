@@ -7,7 +7,6 @@ const markdownFiles = {
 
 const assetFiles = {
   sourceNote: 'assets/map-overview-source.md',
-  context: 'assets/positioning-overview.svg',
   defaultT: 'assets/default-t.svg',
   defaultCt: 'assets/default-ct.svg',
 };
@@ -52,7 +51,6 @@ export function getRequiredInputs(map) {
     map.markdown.defense,
     map.markdown.utility,
     map.assets.sourceNote,
-    map.assets.context,
     map.assets.defaultT,
     map.assets.defaultCt,
     map.assets.sourceMap,

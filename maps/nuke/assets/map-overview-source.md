@@ -4,7 +4,7 @@
 - **T overlay:** default-t.svg embeds assets/nuke-callouts.jpg as the sourced map-photo layer and adds local annotations for five roles, spawn-based routes, and initial pressure.
 - **CT overlay:** default-ct.svg embeds the same sourced map-photo layer and adds local annotations for five roles, hold angles, and the first rotation trigger.
 - **Local map-photo layer:** assets/nuke-callouts.jpg (copied into each built map page so the article and GitHub file preview retain the photo behind the overlay).
-- **Positioning diagram background URL:** https://www.csgold.net/maps/nuke-callouts.jpg
+- **Overlay background URL:** https://www.csgold.net/maps/nuke-callouts.jpg
 - **Source page:** https://www.csgold.net/en/maps/nuke
 - **Checked:** 2026-07-15
 - **Attribution/license or permission basis:** Source map remains attributed to CSGold; this local copy is included for the review build at the user's direction. The annotations are hand-authored editorial overlays.
@@ -17,11 +17,10 @@
 - **Map-version note:** CS2 Nuke callouts, upper/lower route order, and utility interactions checked for the guide scope on 2026-07-13.
 - **Asset type:** Local sourced callout photo plus local hand-authored route teaching diagram.
 - **Attribution/license or permission basis:** CSGold remains attributed as the source; this review build stores the callout photo locally at the user's direction.
-- **Local annotated asset status:** Complete for `positioning-overview.svg`; the SVG separates surface/upper and lower routes and is not a pixel-perfect radar replacement.
-- **Positioning diagram filename:** `positioning-overview.svg`
-- **Positioning diagram base overview source:** https://www.csgold.net/en/maps/nuke
-- **Positioning diagram checked:** 2026-07-13
-- **Positioning diagram attribution/license or permission basis:** Route annotations are hand-authored by this repository; the sourced photo is separately stored as the map layer.
+- **Local annotated asset status:** Complete for `default-t.svg` and `default-ct.svg`; these hand-authored overlays preserve the sourced map photo behind the routes.
+- **Overlay source page:** https://www.csgold.net/en/maps/nuke
+- **Overlay source checked:** 2026-07-13
+- **Overlay attribution/license or permission basis:** Route annotations are hand-authored by this repository; the sourced photo is separately stored as the map layer.
 - **Status:** Keep the sourced map photo and hand-authored route diagram local for this review build.
 - **Replacement trigger:** Replace the source note and SVG when verified Nuke geometry, vertical transitions, callouts, route connections, or utility interactions change.
 

@@ -8,16 +8,6 @@
 
 [Visual/source note](assets/map-overview-source.md)
 
-## Positioning visual status
-
-The sourced overhead supports the authored five-player route and hold overlays below. Recheck the [Fachwerk Steam Workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=3442040035) after creator-build updates.
-
-[Geometry/source note](assets/map-overview-source.md) · [Pending visual utility cards](utility.md#visual-lineups)
-
-1. Starting roles: use A Main, A Apps, Mid/Connector, B Main, and a short split as the opening five-player default.
-2. Information trigger: confirm the outdoor-to-indoor transition in the installed build before calling a route clear or rotating a defender.
-3. Rotation/trade path: keep A Main and B Main separate until Mid/Connector information makes the site call clear.
-
 ## How to use this folder
 
 - [Offense plan](offense.md)

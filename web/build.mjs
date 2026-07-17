@@ -3,10 +3,6 @@ import path from 'node:path';
 import { marked } from 'marked';
 import { GUIDE_MAPS, getRequiredInputs } from './maps.mjs';
 
-const HEADING_ID_OVERRIDES = new Map([
-  ['Positioning visual', 'positioning-overview'],
-]);
-
 export function slugifyHeading(text) {
   return text.toLowerCase().trim()
     .replace(/[^a-z0-9]+/g, '-')
@@ -15,7 +11,7 @@ export function slugifyHeading(text) {
 function addHeadingIds(html, usedIds) {
   return html.replace(/<h2>([\s\S]*?)<\/h2>/g, (heading, contents) => {
     const text = contents.replace(/<[^>]+>/g, '');
-    const baseId = HEADING_ID_OVERRIDES.get(text) ?? slugifyHeading(text);
+    const baseId = slugifyHeading(text);
     const occurrence = usedIds.get(baseId) ?? 0;
     usedIds.set(baseId, occurrence + 1);
     const id = occurrence === 0 ? baseId : `${baseId}-${occurrence + 1}`;
@@ -115,7 +111,6 @@ export async function buildMapPage({ rootDir, outputDir, map, template }) {
   const outputAssetsDir = path.join(pageDir, 'assets');
   await mkdir(outputAssetsDir, { recursive: true });
   const assetCopies = [
-    ['context', 'positioning-overview.svg'],
     ['defaultT', 'default-t.svg'],
     ['defaultCt', 'default-ct.svg'],
     ['sourceMap', path.basename(map.assets.sourceMap)],
