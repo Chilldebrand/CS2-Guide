@@ -1,7 +1,7 @@
 import { access, copyFile, mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { marked } from 'marked';
-import { ACTIVE_DUTY_MAPS, getRequiredInputs } from './maps.mjs';
+import { GUIDE_MAPS, getRequiredInputs } from './maps.mjs';
 
 const HEADING_ID_OVERRIDES = new Map([
   ['Positioning visual', 'positioning-overview'],
@@ -70,7 +70,7 @@ function renderMapTemplate({ template, map, content }) {
 }
 
 function renderLandingPage() {
-  const links = ACTIVE_DUTY_MAPS.map(
+  const links = GUIDE_MAPS.map(
     (map) => `<li><a href="maps/${map.slug}/index.html">${map.title}</a> <span>${map.poolLabel}</span></li>`,
   ).join('\n');
 
@@ -79,13 +79,13 @@ function renderLandingPage() {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CS2 Guide | Active Duty maps</title>
+    <title>CS2 Guide | map guides</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <main class="landing">
       <p class="eyebrow">CS2 Guide</p>
-      <h1>Active Duty map guides</h1>
+      <h1>CS2 map guides</h1>
       <p>Choose a map for its round plan, offense, defense, utility priorities, and five-player defaults.</p>
       <ul class="map-index">${links}</ul>
     </main>
@@ -131,7 +131,7 @@ export async function buildMapPage({ rootDir, outputDir, map, template }) {
 }
 
 export async function buildSite({ rootDir, outputDir }) {
-  for (const map of ACTIVE_DUTY_MAPS) {
+  for (const map of GUIDE_MAPS) {
     await validateRequiredInputs(rootDir, map);
   }
 
@@ -141,7 +141,7 @@ export async function buildSite({ rootDir, outputDir }) {
     writeFile(path.join(outputDir, 'index.html'), renderLandingPage()),
     copyFile(path.join(import.meta.dirname, 'styles.css'), path.join(outputDir, 'styles.css')),
     copyFile(path.join(import.meta.dirname, 'app.js'), path.join(outputDir, 'app.js')),
-    ...ACTIVE_DUTY_MAPS.map((map) => buildMapPage({ rootDir, outputDir, map, template })),
+    ...GUIDE_MAPS.map((map) => buildMapPage({ rootDir, outputDir, map, template })),
   ]);
 }
 

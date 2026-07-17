@@ -4,7 +4,7 @@
 **Mode:** Hostage  
 **Key lesson:** tight alleys, balcony access, and rescue routes
 
-![Map callout overview](https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Fitaly-callouts.webp&w=3840)
+![Map callout overview](assets/italy-callouts.jpg)
 
 [Visual/source note](assets/map-overview-source.md)
 

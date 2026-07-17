@@ -4,7 +4,7 @@
 **Mode:** Defusal  
 **Key lesson:** Yard control, ladders, and upper/lower site information
 
-![Map callout overview](https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Ftrain-callouts.webp&w=3840)
+![Map callout overview](assets/train-callouts.webp)
 
 [Visual/source note](assets/map-overview-source.md)
 

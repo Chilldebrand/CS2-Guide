@@ -4,7 +4,7 @@
 **Mode:** Hostage  
 **Key lesson:** hostage rooms, circling corridors, and mixed-range fights
 
-**Visual status:** overview image pending; use the source page until a current diagram is verified.
+![Shelter sourced overhead hostage-rescue map](assets/shelter-map.webp)
 
 [Visual/source note](assets/map-overview-source.md)
 

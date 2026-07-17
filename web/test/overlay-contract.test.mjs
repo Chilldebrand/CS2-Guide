@@ -4,7 +4,10 @@ import path from 'node:path';
 import test from 'node:test';
 
 const repoRoot = path.resolve(import.meta.dirname, '..', '..');
-const activeDutyMaps = ['ancient', 'cache', 'dust2', 'inferno', 'mirage', 'nuke', 'anubis'];
+const guideMaps = [
+  'ancient', 'cache', 'dust2', 'inferno', 'mirage', 'nuke', 'anubis',
+  'train', 'vertigo', 'overpass', 'office', 'italy', 'boulder', 'fachwerk', 'shelter',
+];
 const sourceMaps = {
   ancient: 'ancient-callouts.png',
   cache: 'cache-callouts.webp',
@@ -13,6 +16,14 @@ const sourceMaps = {
   mirage: 'mirage-callouts.webp',
   nuke: 'nuke-callouts.jpg',
   anubis: 'anubis-callouts.webp',
+  train: 'train-callouts.webp',
+  vertigo: 'vertigo-callouts.webp',
+  overpass: 'overpass-callouts.webp',
+  office: 'office-callouts.png',
+  italy: 'italy-callouts.jpg',
+  boulder: 'boulder-map-1.webp',
+  fachwerk: 'fachwerk-map-detail.webp',
+  shelter: 'shelter-map.webp',
 };
 const sourceGeometry = {
   ancient: [1013, 1013],
@@ -22,6 +33,14 @@ const sourceGeometry = {
   mirage: [1920, 1080],
   nuke: [675, 659],
   anubis: [1024, 1024],
+  train: [1416, 1416],
+  vertigo: [1416, 1416],
+  overpass: [1080, 1080],
+  office: [1024, 1024],
+  italy: [440, 422],
+  boulder: [2048, 2048],
+  fachwerk: [2048, 2048],
+  shelter: [1672, 941],
 };
 
 function assertWellFormedSvg(svg, file) {
@@ -44,7 +63,7 @@ function assertWellFormedSvg(svg, file) {
   assert.deepEqual(stack, [], `${file}: unclosed SVG tags`);
 }
 
-for (const map of activeDutyMaps) {
+for (const map of guideMaps) {
   test(`${map} source note records the overlay background and assets`, async () => {
     const note = await readFile(
       path.join(repoRoot, 'maps', map, 'assets', 'map-overview-source.md'),

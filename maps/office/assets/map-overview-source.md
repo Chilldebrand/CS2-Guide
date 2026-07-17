@@ -6,6 +6,9 @@
 - **Checked:** 2026-07-13
 - **Map-version note:** Office hostage-room access, main and side approaches, long halls, return-route decisions, and rescue-zone objective language were checked for this guide scope on 2026-07-13.
 - **Asset type:** Remote annotated callout overview plus local hand-authored hostage-rescue teaching diagram.
+- **Positioning diagram background URL:** https://cs2pulse.com/wp-content/uploads/2025/08/Office.png
+- **Local map-photo layer:** `assets/office-callouts.png`; native source geometry is 1024 × 1024.
+- **Overlay files:** `assets/default-t.svg` and `assets/default-ct.svg` embed the sourced photo and place five authored hostage/rescue routes over its lanes.
 - **Attribution/license or permission basis:** CSGold and CSNADES.gg remain remote references; no source pixels were copied because local reuse permission was not verified.
 - **Local annotated asset status:** Complete for `positioning-overview.svg`; the SVG is an objective-route schematic, not a pixel-perfect radar replacement.
 - **Positioning diagram filename:** `positioning-overview.svg`

@@ -4,7 +4,7 @@
 **Mode:** Hostage  
 **Key lesson:** hostage-room access, long halls, and rescue timing
 
-![Map callout overview](https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Foffice-callouts.webp&w=3840)
+![Map callout overview](assets/office-callouts.png)
 
 [Visual/source note](assets/map-overview-source.md)
 

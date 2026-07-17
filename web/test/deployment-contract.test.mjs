@@ -8,7 +8,7 @@ const repoRoot = path.resolve(import.meta.dirname, '..', '..');
 test('README exposes the public web guide', async () => {
   const readme = await readFile(path.join(repoRoot, 'README.md'), 'utf8');
   assert.match(readme, /https:\/\/chilldebrand\.github\.io\/CS2-Guide\//);
-  assert.match(readme, /seven Active Duty map guides with round plans, map panels, and five-player T\/CT defaults/);
+  assert.match(readme, /15 map guides with round plans, map panels, and five-player T\/CT defaults/);
 });
 
 test('Pages workflow builds web/dist on main and manual dispatch', async () => {

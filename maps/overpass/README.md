@@ -4,7 +4,7 @@
 **Mode:** Defusal  
 **Key lesson:** Bathrooms/Connector control, Water pressure, and long rotations
 
-![Map callout overview](https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Foverpass-callouts.webp&w=3840)
+![Map callout overview](assets/overpass-callouts.webp)
 
 [Visual/source note](assets/map-overview-source.md)
 

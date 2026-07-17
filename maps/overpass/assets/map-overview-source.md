@@ -5,6 +5,9 @@
 - **Checked:** 2026-07-13
 - **Map-version note:** CS2 Overpass Bathrooms, Long, Connector, Monster, Water, and site-route relationships were checked for this guide scope on 2026-07-13.
 - **Asset type:** Remote annotated callout overview plus local hand-authored route teaching diagram.
+- **Positioning diagram background URL:** https://www.csgold.net/maps/overpass-callouts.webp
+- **Local map-photo layer:** `assets/overpass-callouts.webp`; native source geometry is 1080 × 1080.
+- **Overlay files:** `assets/default-t.svg` and `assets/default-ct.svg` embed the sourced photo and place five authored routes over its lanes.
 - **Attribution/license or permission basis:** CSGold and CSNADES.gg remain remote references; no source pixels were copied because local reuse permission was not verified.
 - **Local annotated asset status:** Complete for `positioning-overview.svg`; the SVG is a route schematic, not a pixel-perfect radar replacement.
 - **Positioning diagram filename:** `positioning-overview.svg`

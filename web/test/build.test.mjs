@@ -13,10 +13,18 @@ const sourceMaps = {
   inferno: 'inferno-callouts.webp',
   mirage: 'mirage-callouts.webp',
   nuke: 'nuke-callouts.jpg',
-  anubis: 'anubis-callouts.png',
+  anubis: 'anubis-callouts.webp',
+  train: 'train-callouts.webp',
+  vertigo: 'vertigo-callouts.webp',
+  overpass: 'overpass-callouts.webp',
+  office: 'office-callouts.png',
+  italy: 'italy-callouts.jpg',
+  boulder: 'boulder-map-1.webp',
+  fachwerk: 'fachwerk-map-detail.webp',
+  shelter: 'shelter-map.webp',
 };
 
-test('buildSite emits a landing page and one document per Active Duty map', async () => {
+test('buildSite emits a landing page and one document per guide map', async () => {
   const outputDir = await mkdtemp(path.join(os.tmpdir(), 'cs2-guide-web-'));
   await buildSite({ rootDir: repoRoot, outputDir });
 
@@ -24,8 +32,9 @@ test('buildSite emits a landing page and one document per Active Duty map', asyn
   assert.match(landing, /Ancient/);
   assert.match(landing, /href="maps\/inferno\/index\.html"/);
   assert.match(landing, /href="maps\/anubis\/index\.html"/);
+  assert.match(landing, /href="maps\/shelter\/index\.html"/);
 
-  for (const map of ['ancient', 'cache', 'dust2', 'inferno', 'mirage', 'nuke', 'anubis']) {
+  for (const map of ['ancient', 'cache', 'dust2', 'inferno', 'mirage', 'nuke', 'anubis', 'train', 'vertigo', 'overpass', 'office', 'italy', 'boulder', 'fachwerk', 'shelter']) {
     const html = await readFile(path.join(outputDir, 'maps', map, 'index.html'), 'utf8');
     assert.match(html, new RegExp(map === 'dust2' ? 'Dust II' : map[0].toUpperCase() + map.slice(1)));
     assert.match(html, /id="round-plan"/);

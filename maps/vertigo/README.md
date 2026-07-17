@@ -4,7 +4,7 @@
 **Mode:** Defusal  
 **Key lesson:** Ramp control, exposed spacing, and disciplined rotations
 
-![Map callout overview](https://www.csgold.net/_next/image?q=75&url=%2Fmaps%2Fvertigo-callouts.webp&w=3840)
+![Map callout overview](assets/vertigo-callouts.webp)
 
 [Visual/source note](assets/map-overview-source.md)
 

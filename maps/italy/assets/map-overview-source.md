@@ -6,6 +6,9 @@
 - **Checked:** 2026-07-13
 - **Map-version note:** Italy Long Alley, Upper Route, Balcony, hostage-room access, return-lane decisions, and rescue-zone objective language were checked for this guide scope on 2026-07-13.
 - **Asset type:** Remote annotated callout overview plus local hand-authored hostage-rescue teaching diagram.
+- **Positioning diagram background URL:** https://profilerr.net/static/content/thumbs/440x/c/77/pbaypm-587c73c4bb64bfe84e09b46d6b5b377c.jpg
+- **Local map-photo layer:** `assets/italy-callouts.jpg`; native source geometry is 440 × 422.
+- **Overlay files:** `assets/default-t.svg` and `assets/default-ct.svg` embed the sourced photo and place five authored hostage/rescue routes over its lanes.
 - **Attribution/license or permission basis:** CSGold and CSNADES.gg remain remote references; no source pixels were copied because local reuse permission was not verified.
 - **Local annotated asset status:** Complete for `positioning-overview.svg`; the SVG is an objective-route schematic, not a pixel-perfect radar replacement.
 - **Positioning diagram filename:** `positioning-overview.svg`
